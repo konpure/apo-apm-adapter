@@ -1,0 +1,78 @@
+{
+    "name": "skywalking-rabbitmq",
+    "traceId": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120001",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730777843112000000,
+                    "duration": 5000000,
+                    "serviceName": "rabbitmq-provider",
+                    "name": "GET:/send",
+                    "spanId": "ff775e9480c9d861",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120000-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "url.full": "http://localhost:19999/send"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730777843115000000,
+                    "duration": 1000000,
+                    "serviceName": "rabbitmq-provider",
+                    "name": "RabbitMQ/Topic/TestDirectExchangeQueue/TestDirectRouting/Producer",
+                    "spanId": "fe775e9480c9d861",
+                    "pSpanId": "ff775e9480c9d861",
+                    "nextSpanId": "86ea561347b29f7f",
+                    "kind": 4,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120000-1",
+                        "apm.span.type": "SKYWALKING",
+                        "messaging.destination.name": "TestDirectRouting",
+                        "messaging.system": "rabbitmq",
+                        "net.peer.name": "10.0.2.15:5672"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730777843119000000,
+                            "duration": 0,
+                            "serviceName": "rabbitmq-consumer",
+                            "name": "RabbitMQ/Topic/TestDirectExchangeQueue/TestDirectRouting/Consumer",
+                            "spanId": "86ea561347b29f7f",
+                            "pSpanId": "fe775e9480c9d861",
+                            "kind": 5,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "c51c97a154dc4fd5b3f5ff832813edaa.110.17307778431190000-0",
+                                "apm.span.type": "SKYWALKING",
+                                "messaging.destination.name": "TestDirectRouting",
+                                "messaging.system": "rabbitmq",
+                                "net.peer.name": "10.0.2.15:5672",
+                                "transmission.latency": "4"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

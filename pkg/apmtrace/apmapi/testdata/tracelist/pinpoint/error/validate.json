@@ -1,0 +1,99 @@
+{
+    "name": "pinpoint-error",
+    "traceId": "stuck-demo-tomcat^1718247680924^23",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1718247929554000000,
+                    "duration": 55000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "/wait/callOthers",
+                    "spanId": "1",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "http.status_code": "200",
+                        "http.url": "/wait/callOthers"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1718247929569000000,
+                    "duration": 1000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "DefaultClientExchangeHandlerImpl.start()",
+                    "spanId": "9",
+                    "pSpanId": "8",
+                    "nextSpanId": "10",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "http.url": "http://localhost:19999/wait/fail/aaa"
+                    }
+                },
+                {
+                    "startTime": 1718247929570000000,
+                    "duration": 31000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "BasicFuture.get(long timeout, TimeUnit unit)",
+                    "spanId": "19",
+                    "pSpanId": "7",
+                    "kind": 3,
+                    "code": 0
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1718247929577000000,
+                            "duration": 17000000,
+                            "serviceName": "stuck-demo-tomcat",
+                            "name": "/wait/fail/aaa",
+                            "spanId": "10",
+                            "pSpanId": "9",
+                            "kind": 2,
+                            "code": 2,
+                            "attributes":
+                            {
+                                "http.status_code": "500",
+                                "http.url": "/wait/fail/aaa"
+                            }
+                        }
+                    ],
+                    "errorSpans":
+                    [
+                        {
+                            "startTime": 1718247929579000000,
+                            "duration": 1000000,
+                            "serviceName": "stuck-demo-tomcat",
+                            "name": "WaitController.fail(String errorMsg)",
+                            "spanId": "15",
+                            "pSpanId": "14",
+                            "kind": 1,
+                            "code": 2,
+                            "exceptions":
+                            [
+                                {
+                                    "timestamp": 1718247929579000,
+                                    "type": "ApiException",
+                                    "message": "aaa",
+                                    "stack": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

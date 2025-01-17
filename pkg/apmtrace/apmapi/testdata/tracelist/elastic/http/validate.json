@@ -1,0 +1,214 @@
+{
+    "name": "elastic-http",
+    "traceId": "60f5bbc2ebffe7c886b108bee5be9b32",
+    "services": [
+        {
+            "entrySpans": [
+                {
+                    "startTime": 1712838062668019000,
+                    "duration": 3150090000,
+                    "serviceName": "spring-requesttemplate-gateway",
+                    "name": "ApiController#getData",
+                    "spanId": "bf884a39ae15b7f7",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes": {
+                        "http.status_code": "2xx",
+                        "http.url": "http://dev.kindling.lan:12380/api/jpa-demo/get?sleep=1000"
+                    }
+                }
+            ],
+            "exitSpans": [
+                {
+                    "startTime": 1712838062676581000,
+                    "duration": 3130705000,
+                    "serviceName": "spring-requesttemplate-gateway",
+                    "name": "GET spring-requesttemplate-demo-svc",
+                    "spanId": "287690d7576070c8",
+                    "pSpanId": "bf884a39ae15b7f7",
+                    "nextSpanId": "b429ab1608d0e881",
+                    "kind": 3,
+                    "code": 1,
+                    "attributes": {
+                        "http.status_code": "200",
+                        "http.url": "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=1000"
+                    }
+                }
+            ],
+            "children": [
+                {
+                    "entrySpans": [
+                        {
+                            "startTime": 1712838062686165000,
+                            "duration": 3125010000,
+                            "serviceName": "spring-requesttemplate-demo",
+                            "name": "ApiController#getData",
+                            "spanId": "b429ab1608d0e881",
+                            "pSpanId": "287690d7576070c8",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes": {
+                                "http.status_code": "2xx",
+                                "http.url": "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=1000"
+                            }
+                        }
+                    ],
+                    "exitSpans": [
+                        {
+                            "startTime": 1712838062689573000,
+                            "duration": 1037615000,
+                            "serviceName": "spring-requesttemplate-demo",
+                            "name": "GET jpa-demo",
+                            "spanId": "a731a5b2d20441f1",
+                            "pSpanId": "b429ab1608d0e881",
+                            "nextSpanId": "fec467c2694d8d8a",
+                            "kind": 3,
+                            "code": 1,
+                            "attributes": {
+                                "http.status_code": "200",
+                                "http.url": "http://jpa-demo:18888/get?sleep=1000"
+                            }
+                        },
+                        {
+                            "startTime": 1712838063730639000,
+                            "duration": 1027262000,
+                            "serviceName": "spring-requesttemplate-demo",
+                            "name": "GET jpa-demo",
+                            "spanId": "5a7cc25b00b12c94",
+                            "pSpanId": "b429ab1608d0e881",
+                            "nextSpanId": "0847fcb22c1b994d",
+                            "kind": 3,
+                            "code": 1,
+                            "attributes": {
+                                "http.status_code": "200",
+                                "http.url": "http://jpa-demo:18888/get?sleep=1000"
+                            }
+                        },
+                        {
+                            "startTime": 1712838064765128000,
+                            "duration": 1037297000,
+                            "serviceName": "spring-requesttemplate-demo",
+                            "name": "GET jpa-demo",
+                            "spanId": "046c9791807a7fce",
+                            "pSpanId": "b429ab1608d0e881",
+                            "nextSpanId": "5142634ce5adb968",
+                            "kind": 3,
+                            "code": 1,
+                            "attributes": {
+                                "http.status_code": "200",
+                                "http.url": "http://jpa-demo:18888/get?sleep=1000"
+                            }
+                        }
+                    ],
+                    "children": [
+                        {
+                            "entrySpans": [
+                                {
+                                    "startTime": 1712838062694100000,
+                                    "duration": 1034682000,
+                                    "serviceName": "spring-jpa-demo",
+                                    "name": "MainController#ListUsers",
+                                    "spanId": "fec467c2694d8d8a",
+                                    "pSpanId": "a731a5b2d20441f1",
+                                    "kind": 2,
+                                    "code": 1,
+                                    "attributes": {
+                                        "http.status_code": "2xx",
+                                        "http.url": "http://jpa-demo:18888/get?sleep=1000"
+                                    }
+                                }
+                            ],
+                            "exitSpans": [
+                                {
+                                    "startTime": 1712838062708508000,
+                                    "duration": 1011779000,
+                                    "serviceName": "spring-jpa-demo",
+                                    "name": "SELECT FROM user",
+                                    "spanId": "d3756726e3cffd6c",
+                                    "pSpanId": "fec467c2694d8d8a",
+                                    "kind": 3,
+                                    "code": 1,
+                                    "attributes": {
+                                        "db.name": "demo",
+                                        "db.statement": "SELECT user_id ,email ,name,timestamp FROM user  u JOIN (SELECT SLEEP(?) as ts ) t ON u.user_id != t.ts where name != ?",
+                                        "db.system": "sql"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entrySpans": [
+                                {
+                                    "startTime": 1712838063735098000,
+                                    "duration": 1026487000,
+                                    "serviceName": "spring-jpa-demo",
+                                    "name": "MainController#ListUsers",
+                                    "spanId": "0847fcb22c1b994d",
+                                    "pSpanId": "5a7cc25b00b12c94",
+                                    "kind": 2,
+                                    "code": 1,
+                                    "attributes": {
+                                        "http.status_code": "2xx",
+                                        "http.url": "http://jpa-demo:18888/get?sleep=1000"
+                                    }
+                                }
+                            ],
+                            "exitSpans": [
+                                {
+                                    "startTime": 1712838063742119000,
+                                    "duration": 1005920000,
+                                    "serviceName": "spring-jpa-demo",
+                                    "name": "SELECT FROM user",
+                                    "spanId": "cde01bf154212c76",
+                                    "pSpanId": "0847fcb22c1b994d",
+                                    "kind": 3,
+                                    "code": 1,
+                                    "attributes": {
+                                        "db.name": "demo",
+                                        "db.statement": "SELECT user_id ,email ,name,timestamp FROM user  u JOIN (SELECT SLEEP(?) as ts ) t ON u.user_id != t.ts where name != ?",
+                                        "db.system": "sql"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "entrySpans": [
+                                {
+                                    "startTime": 1712838064774125000,
+                                    "duration": 1031300000,
+                                    "serviceName": "spring-jpa-demo",
+                                    "name": "MainController#ListUsers",
+                                    "spanId": "5142634ce5adb968",
+                                    "pSpanId": "046c9791807a7fce",
+                                    "kind": 2,
+                                    "code": 1,
+                                    "attributes": {
+                                        "http.status_code": "2xx",
+                                        "http.url": "http://jpa-demo:18888/get?sleep=1000"
+                                    }
+                                }
+                            ],
+                            "exitSpans": [
+                                {
+                                    "startTime": 1712838064787538000,
+                                    "duration": 1006365000,
+                                    "serviceName": "spring-jpa-demo",
+                                    "name": "SELECT FROM user",
+                                    "spanId": "6cc9281fa58dfff8",
+                                    "pSpanId": "5142634ce5adb968",
+                                    "kind": 3,
+                                    "code": 1,
+                                    "attributes": {
+                                        "db.name": "demo",
+                                        "db.statement": "SELECT user_id ,email ,name,timestamp FROM user  u JOIN (SELECT SLEEP(?) as ts ) t ON u.user_id != t.ts where name != ?",
+                                        "db.system": "sql"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

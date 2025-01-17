@@ -1,0 +1,554 @@
+{
+    "data": [
+        {
+            "traceID": "f1f24ddbed941f50d8adcfaa12f713b1",
+            "spans": [
+                {
+                    "traceID": "f1f24ddbed941f50d8adcfaa12f713b1",
+                    "spanID": "4da0b3ecd83e0ea7",
+                    "operationName": "GET /send",
+                    "references": [],
+                    "startTime": 1730794227956000,
+                    "duration": 10111,
+                    "tags": [
+                        {
+                            "key": "http.request.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.route",
+                            "type": "string",
+                            "value": "/send"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 64251
+                        },
+                        {
+                            "key": "server.address",
+                            "type": "string",
+                            "value": "localhost"
+                        },
+                        {
+                            "key": "client.address",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "url.path",
+                            "type": "string",
+                            "value": "/send"
+                        },
+                        {
+                            "key": "url.query",
+                            "type": "string",
+                            "value": "name=ccc"
+                        },
+                        {
+                            "key": "url.scheme",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-10"
+                        },
+                        {
+                            "key": "http.response.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 159
+                        },
+                        {
+                            "key": "network.protocol.version",
+                            "type": "string",
+                            "value": "1.1"
+                        },
+                        {
+                            "key": "server.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "user_agent.original",
+                            "type": "string",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "f1f24ddbed941f50d8adcfaa12f713b1",
+                    "spanID": "b995e7beff970862",
+                    "operationName": "cart-item-add-topic publish",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "f1f24ddbed941f50d8adcfaa12f713b1",
+                            "spanID": "4da0b3ecd83e0ea7"
+                        }
+                    ],
+                    "startTime": 1730794227958438,
+                    "duration": 5673,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-10"
+                        },
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "cart-item-add-topic"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "publish"
+                        },
+                        {
+                            "key": "messaging.message.id",
+                            "type": "string",
+                            "value": "AC13000108661D02AF261811ECF70009"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 159
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rocketmq"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "producer"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "f1f24ddbed941f50d8adcfaa12f713b1",
+                    "spanID": "168e101115ac2b96",
+                    "operationName": "cart-item-add-topic process",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "f1f24ddbed941f50d8adcfaa12f713b1",
+                            "spanID": "b995e7beff970862"
+                        }
+                    ],
+                    "startTime": 1730794227970000,
+                    "duration": 457,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "ConsumeMessageThread_4"
+                        },
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "cart-item-add-topic"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "process"
+                        },
+                        {
+                            "key": "messaging.message.id",
+                            "type": "string",
+                            "value": "AC13000108661D02AF261811ECF70009"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 119
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rocketmq"
+                        },
+                        {
+                            "key": "messaging.message.body.size",
+                            "type": "int64",
+                            "value": 29
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": [
+                        "clock skew adjustment disabled; not applying calculated delta of -8.954114ms"
+                    ]
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "rocketmq-provider",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "34fcb2cb63b600318a2eefcca325e0b4d50e5d57f6958e69744a6f8decc39360"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=rocketmq-provider -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/rocketmq/rocketmq-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 2150
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "3273113d-3b82-42eb-b46a-a87bf1e479c8"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "rocketmq-provider",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "34fcb2cb63b600318a2eefcca325e0b4d50e5d57f6958e69744a6f8decc39360"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.rocketmq-client-4.8"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=rocketmq-provider -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/rocketmq/rocketmq-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 2150
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "3273113d-3b82-42eb-b46a-a87bf1e479c8"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "rocketmq-consumer",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "34fcb2cb63b600318a2eefcca325e0b4d50e5d57f6958e69744a6f8decc39360"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.rocketmq-client-4.8"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=rocketmq-consumer -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/rocketmq/rocketmq-consumer.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 2160
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "c7991800-2f52-40c8-912b-411970b800cc"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

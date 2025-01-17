@@ -1,0 +1,989 @@
+{
+    "data": [
+        {
+            "traceID": "a3a7c92e537063081936ea95ee935243",
+            "spans": [
+                {
+                    "traceID": "a3a7c92e537063081936ea95ee935243",
+                    "spanID": "dc6a7e596a5049ac",
+                    "operationName": "GET /send",
+                    "references": [],
+                    "startTime": 1730795027969000,
+                    "duration": 219026,
+                    "tags": [
+                        {
+                            "key": "http.request.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.route",
+                            "type": "string",
+                            "value": "/send"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 65057
+                        },
+                        {
+                            "key": "server.address",
+                            "type": "string",
+                            "value": "localhost"
+                        },
+                        {
+                            "key": "client.address",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "url.path",
+                            "type": "string",
+                            "value": "/send"
+                        },
+                        {
+                            "key": "url.query",
+                            "type": "string",
+                            "value": "name=ccc"
+                        },
+                        {
+                            "key": "url.scheme",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "http.response.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 141
+                        },
+                        {
+                            "key": "network.protocol.version",
+                            "type": "string",
+                            "value": "1.1"
+                        },
+                        {
+                            "key": "server.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "user_agent.original",
+                            "type": "string",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "a3a7c92e537063081936ea95ee935243",
+                    "spanID": "3eb721b51dab0e4f",
+                    "operationName": "exchange.declare",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "a3a7c92e537063081936ea95ee935243",
+                            "spanID": "dc6a7e596a5049ac"
+                        }
+                    ],
+                    "startTime": 1730795028149338,
+                    "duration": 3295,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "network.type",
+                            "type": "string",
+                            "value": "ipv4"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 141
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rabbitmq"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.15"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 5672
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "a3a7c92e537063081936ea95ee935243",
+                    "spanID": "93ca0e89a76a2c02",
+                    "operationName": "queue.declare",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "a3a7c92e537063081936ea95ee935243",
+                            "spanID": "dc6a7e596a5049ac"
+                        }
+                    ],
+                    "startTime": 1730795028152743,
+                    "duration": 7591,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "network.type",
+                            "type": "string",
+                            "value": "ipv4"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 141
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rabbitmq"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.15"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 5672
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "a3a7c92e537063081936ea95ee935243",
+                    "spanID": "c188ebaf97de0ee3",
+                    "operationName": "queue.bind",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "a3a7c92e537063081936ea95ee935243",
+                            "spanID": "dc6a7e596a5049ac"
+                        }
+                    ],
+                    "startTime": 1730795028160483,
+                    "duration": 4908,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "network.type",
+                            "type": "string",
+                            "value": "ipv4"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 141
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rabbitmq"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.15"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 5672
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "a3a7c92e537063081936ea95ee935243",
+                    "spanID": "56594e21f1eee2ad",
+                    "operationName": "TestDirectExchange publish",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "a3a7c92e537063081936ea95ee935243",
+                            "spanID": "dc6a7e596a5049ac"
+                        }
+                    ],
+                    "startTime": 1730795028167098,
+                    "duration": 1519,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "publish"
+                        },
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "TestDirectExchange"
+                        },
+                        {
+                            "key": "network.type",
+                            "type": "string",
+                            "value": "ipv4"
+                        },
+                        {
+                            "key": "messaging.rabbitmq.destination.routing_key",
+                            "type": "string",
+                            "value": "TestDirectRouting"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 141
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rabbitmq"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.15"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 5672
+                        },
+                        {
+                            "key": "messaging.message.body.size",
+                            "type": "int64",
+                            "value": 188
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "producer"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "a3a7c92e537063081936ea95ee935243",
+                    "spanID": "1bd4d4da0b897aab",
+                    "operationName": "exchange.declare",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "a3a7c92e537063081936ea95ee935243",
+                            "spanID": "dc6a7e596a5049ac"
+                        }
+                    ],
+                    "startTime": 1730795028143250,
+                    "duration": 5937,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "network.type",
+                            "type": "string",
+                            "value": "ipv4"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 141
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rabbitmq"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.15"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 5672
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "a3a7c92e537063081936ea95ee935243",
+                    "spanID": "2ea9f55628592905",
+                    "operationName": "TestDirectRouting process",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "a3a7c92e537063081936ea95ee935243",
+                            "spanID": "56594e21f1eee2ad"
+                        }
+                    ],
+                    "startTime": 1730795038818000,
+                    "duration": 10871,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1"
+                        },
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "TestDirectRouting"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "process"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 87
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rabbitmq"
+                        },
+                        {
+                            "key": "messaging.message.body.size",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": null
+                },
+                {
+                    "traceID": "a3a7c92e537063081936ea95ee935243",
+                    "spanID": "cfd0693a311e6ffb",
+                    "operationName": "TestDirectQueue process",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "a3a7c92e537063081936ea95ee935243",
+                            "spanID": "56594e21f1eee2ad"
+                        }
+                    ],
+                    "startTime": 1730795038815000,
+                    "duration": 115,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "pool-5-thread-4"
+                        },
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "TestDirectExchange"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "process"
+                        },
+                        {
+                            "key": "network.type",
+                            "type": "string",
+                            "value": "ipv4"
+                        },
+                        {
+                            "key": "messaging.rabbitmq.destination.routing_key",
+                            "type": "string",
+                            "value": "TestDirectRouting"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 89
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "rabbitmq"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.15"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 5672
+                        },
+                        {
+                            "key": "messaging.message.body.size",
+                            "type": "int64",
+                            "value": 188
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p4",
+                    "warnings": [
+                        "clock skew adjustment disabled; not applying calculated delta of -10.647199377s"
+                    ]
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "rabbitmq-provider",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "8d277b9dbb114a321d5ae96f69029f88c262c534390ad37d18c9c5d66f210cbe"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=rabbitmq-provider -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/rabbitmq/rabbitmq-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 8659
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "8ac75750-1de1-44ce-b0ee-5ffa7dacce76"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "rabbitmq-provider",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "8d277b9dbb114a321d5ae96f69029f88c262c534390ad37d18c9c5d66f210cbe"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.rabbitmq-2.7"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=rabbitmq-provider -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/rabbitmq/rabbitmq-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 8659
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "8ac75750-1de1-44ce-b0ee-5ffa7dacce76"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "rabbitmq-consumer",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "8d277b9dbb114a321d5ae96f69029f88c262c534390ad37d18c9c5d66f210cbe"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-rabbit-1.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=rabbitmq-consumer -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/rabbitmq/rabbitmq-consumer.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 8898
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "84a2aa2e-6cc0-4a40-9287-e24a262e86c1"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                },
+                "p4": {
+                    "serviceName": "rabbitmq-consumer",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "8d277b9dbb114a321d5ae96f69029f88c262c534390ad37d18c9c5d66f210cbe"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.rabbitmq-2.7"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=rabbitmq-consumer -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/rabbitmq/rabbitmq-consumer.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 8898
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "84a2aa2e-6cc0-4a40-9287-e24a262e86c1"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

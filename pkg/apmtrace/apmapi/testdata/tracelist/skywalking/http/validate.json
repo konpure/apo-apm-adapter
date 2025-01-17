@@ -1,0 +1,156 @@
+{
+    "name": "skywalking-http",
+    "traceId": "80dc099bc9344d68a95556c0b8096a43.40.17061683915530007",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1706168391553000000,
+                    "duration": 2744000000,
+                    "serviceName": "stuck-demo",
+                    "name": "GET:/callOthers",
+                    "spanId": "3f965182dba01b2b",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "80dc099bc9344d68a95556c0b8096a43.40.17061683915530006-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "url.full": "http://localhost:19999/callOthers"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1706168392719000000,
+                    "duration": 1563000000,
+                    "serviceName": "stuck-demo",
+                    "name": "/db/query",
+                    "spanId": "3e965182dba01b2b",
+                    "pSpanId": "3f965182dba01b2b",
+                    "nextSpanId": "63b6612e797615a7",
+                    "kind": 3,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "80dc099bc9344d68a95556c0b8096a43.40.17061683915530006-1",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "net.peer.name": "10.0.2.4:9999",
+                        "url.full": "http://10.0.2.4:9999/db/query"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1706168393097000000,
+                            "duration": 1147000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "GET:/db/query",
+                            "spanId": "63b6612e797615a7",
+                            "pSpanId": "3e965182dba01b2b",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "b6d22f099dff41779590b6fe4a1468d0.44.17061683930920000-0",
+                                "apm.span.type": "SKYWALKING",
+                                "http.method": "GET",
+                                "http.status_code": "200",
+                                "url.full": "http://10.0.2.4:9999/db/query"
+                            }
+                        },
+                        {
+                            "startTime": 1706168393172000000,
+                            "duration": 1091000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "UndertowDispatch",
+                            "spanId": "636b9c2d647615a7",
+                            "pSpanId": "63b6612e797615a7",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "b6d22f099dff41779590b6fe4a1468d0.49.17061683931720000-0",
+                                "apm.span.type": "SKYWALKING"
+                            }
+                        },
+                        {
+                            "startTime": 1706168393399000000,
+                            "duration": 600000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "GET:/db/query",
+                            "spanId": "626b9c2d647615a7",
+                            "pSpanId": "636b9c2d647615a7",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "b6d22f099dff41779590b6fe4a1468d0.49.17061683931720000-1",
+                                "apm.span.type": "SKYWALKING",
+                                "http.method": "GET",
+                                "http.status_code": "200",
+                                "url.full": "http://10.0.2.4:9999/db/query"
+                            }
+                        }
+                    ],
+                    "exitSpans":
+                    [
+                        {
+                            "startTime": 1706168393558000000,
+                            "duration": 100000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "Mysql/JDBC/PreparedStatement/executeQuery",
+                            "spanId": "606b9c2d647615a7",
+                            "pSpanId": "626b9c2d647615a7",
+                            "kind": 3,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "b6d22f099dff41779590b6fe4a1468d0.49.17061683931720000-3",
+                                "apm.span.type": "SKYWALKING",
+                                "db.name": "test",
+                                "db.operation": "SELECT",
+                                "db.sql.table": "weather",
+                                "db.statement": "select city, temp_lo, temp_hi, prcpe from weather where temp_lo<=? and temp_hi>=?",
+                                "db.system": "mysql",
+                                "net.peer.name": "localhost:3306"
+                            }
+                        },
+                        {
+                            "startTime": 1706168393671000000,
+                            "duration": 2000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "Mysql/JDBC/PreparedStatement/executeQuery",
+                            "spanId": "676b9c2d647615a7",
+                            "pSpanId": "626b9c2d647615a7",
+                            "kind": 3,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "b6d22f099dff41779590b6fe4a1468d0.49.17061683931720000-4",
+                                "apm.span.type": "SKYWALKING",
+                                "db.name": "test",
+                                "db.operation": "SELECT",
+                                "db.sql.table": "weather",
+                                "db.statement": "select city, temp_lo, temp_hi, prcpe from weather where temp_lo<=? and temp_hi>=?",
+                                "db.system": "mysql",
+                                "net.peer.name": "localhost:3306"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

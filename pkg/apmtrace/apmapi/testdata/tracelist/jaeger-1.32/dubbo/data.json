@@ -1,0 +1,751 @@
+{
+    "data": [
+        {
+            "traceID": "1dea5a0ef5251923406320277ce2dc11",
+            "spans": [
+                {
+                    "traceID": "1dea5a0ef5251923406320277ce2dc11",
+                    "spanID": "7e07b2ece6a18a58",
+                    "operationName": "io.kindling.dubbo.api.service.OrderService/order2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "1dea5a0ef5251923406320277ce2dc11",
+                            "spanID": "c33eeea5038d5daa"
+                        }
+                    ],
+                    "startTime": 1730959642414000,
+                    "duration": 178411,
+                    "tags": [
+                        {
+                            "key": "rpc.system",
+                            "type": "string",
+                            "value": "apache_dubbo"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "DubboServerHandler-10.0.2.4:30002-thread-2"
+                        },
+                        {
+                            "key": "net.sock.peer.name",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "rpc.method",
+                            "type": "string",
+                            "value": "order2"
+                        },
+                        {
+                            "key": "rpc.service",
+                            "type": "string",
+                            "value": "io.kindling.dubbo.api.service.OrderService"
+                        },
+                        {
+                            "key": "net.sock.peer.addr",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "net.sock.peer.port",
+                            "type": "int64",
+                            "value": 41422
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 235
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.apache-dubbo-2.7"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "1dea5a0ef5251923406320277ce2dc11",
+                    "spanID": "c33eeea5038d5daa",
+                    "operationName": "io.kindling.dubbo.api.service.OrderService/order2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "1dea5a0ef5251923406320277ce2dc11",
+                            "spanID": "721ba04854c1c4bd"
+                        }
+                    ],
+                    "startTime": 1730959641752503,
+                    "duration": 965725,
+                    "tags": [
+                        {
+                            "key": "rpc.system",
+                            "type": "string",
+                            "value": "apache_dubbo"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "net.peer.port",
+                            "type": "int64",
+                            "value": 30002
+                        },
+                        {
+                            "key": "rpc.method",
+                            "type": "string",
+                            "value": "order2"
+                        },
+                        {
+                            "key": "rpc.service",
+                            "type": "string",
+                            "value": "io.kindling.dubbo.api.service.OrderService"
+                        },
+                        {
+                            "key": "net.peer.name",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 265
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.apache-dubbo-2.7"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "1dea5a0ef5251923406320277ce2dc11",
+                    "spanID": "721ba04854c1c4bd",
+                    "operationName": "ProductController.order2",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "1dea5a0ef5251923406320277ce2dc11",
+                            "spanID": "1b2a511ffcb6ad86"
+                        }
+                    ],
+                    "startTime": 1730959641645772,
+                    "duration": 1180445,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 265
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-webmvc-3.1"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": null
+                },
+                {
+                    "traceID": "1dea5a0ef5251923406320277ce2dc11",
+                    "spanID": "1b2a511ffcb6ad86",
+                    "operationName": "GET /dubbo/{sleepA}/{sleepB}/{sleepC}",
+                    "references": [],
+                    "startTime": 1730959641255000,
+                    "duration": 1575944,
+                    "tags": [
+                        {
+                            "key": "http.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "net.protocol.version",
+                            "type": "string",
+                            "value": "1.1"
+                        },
+                        {
+                            "key": "http.scheme",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.response_content_length",
+                            "type": "int64",
+                            "value": 28
+                        },
+                        {
+                            "key": "net.protocol.name",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "net.host.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "http.route",
+                            "type": "string",
+                            "value": "/dubbo/{sleepA}/{sleepB}/{sleepC}"
+                        },
+                        {
+                            "key": "net.sock.host.addr",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "net.sock.peer.port",
+                            "type": "int64",
+                            "value": 55306
+                        },
+                        {
+                            "key": "net.sock.host.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 265
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "http.target",
+                            "type": "string",
+                            "value": "/dubbo/0/0/100"
+                        },
+                        {
+                            "key": "net.sock.peer.addr",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "net.host.name",
+                            "type": "string",
+                            "value": "localhost"
+                        },
+                        {
+                            "key": "user_agent.original",
+                            "type": "string",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p4",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "dubbo-provider",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.apache-dubbo-2.7"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=dubbo-provider -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m /root/app/apps/rpc/dubbo/dubbo-provider.jar --server.port=30002"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 28046
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "dubbo-provider"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "dubbo-consumer",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.apache-dubbo-2.7"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=dubbo-consumer -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m /root/app/apps/rpc/dubbo/dubbo-consumer.jar --server.port=19999"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 28059
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "dubbo-consumer"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "dubbo-consumer",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-webmvc-3.1"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=dubbo-consumer -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m /root/app/apps/rpc/dubbo/dubbo-consumer.jar --server.port=19999"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 28059
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "dubbo-consumer"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                },
+                "p4": {
+                    "serviceName": "dubbo-consumer",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=dubbo-consumer -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m /root/app/apps/rpc/dubbo/dubbo-consumer.jar --server.port=19999"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 28059
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "dubbo-consumer"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

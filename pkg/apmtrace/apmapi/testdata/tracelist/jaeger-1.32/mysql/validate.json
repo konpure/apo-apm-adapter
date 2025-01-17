@@ -1,0 +1,91 @@
+{
+    "name": "jaeger-1.32-mysql",
+    "traceId": "980ef9a7db1902e55d6ecb9cc7583de4",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730960035366000000,
+                    "duration": 1852569000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "GET /db/query",
+                    "spanId": "e71d73f777cfd371",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "e71d73f777cfd371",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.route": "/db/query",
+                        "http.scheme": "http",
+                        "http.status_code": "200",
+                        "http.target": "/db/query?value=12",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.host.port": "19999",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "55777",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730960037021003000,
+                    "duration": 75991000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "SELECT test.weather",
+                    "spanId": "8fc2daaf77bea002",
+                    "pSpanId": "8d6cd27df0e8ec22",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "8fc2daaf77bea002",
+                        "apm.span.type": "OTEL",
+                        "db.connection_string": "mysql://10.0.2.4:3306",
+                        "db.name": "test",
+                        "db.operation": "SELECT",
+                        "db.sql.table": "weather",
+                        "db.statement": "select count(?) from weather where temp_hi>?",
+                        "db.system": "mysql",
+                        "db.user": "root",
+                        "net.peer.name": "10.0.2.4",
+                        "net.peer.port": "3306"
+                    }
+                },
+                {
+                    "startTime": 1730960037171531000,
+                    "duration": 2948000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "SELECT test.weather",
+                    "spanId": "7db95a197465c5d4",
+                    "pSpanId": "8d6cd27df0e8ec22",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "7db95a197465c5d4",
+                        "apm.span.type": "OTEL",
+                        "db.connection_string": "mysql://10.0.2.4:3306",
+                        "db.name": "test",
+                        "db.operation": "SELECT",
+                        "db.sql.table": "weather",
+                        "db.statement": "select id, city, prcpe from weather where temp_lo<=? and temp_hi>=?",
+                        "db.system": "mysql",
+                        "db.user": "root",
+                        "net.peer.name": "10.0.2.4",
+                        "net.peer.port": "3306"
+                    }
+                }
+            ]
+        }
+    ]
+}

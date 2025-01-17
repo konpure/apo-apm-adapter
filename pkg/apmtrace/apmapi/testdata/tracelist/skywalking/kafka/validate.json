@@ -1,0 +1,78 @@
+{
+    "name": "skywalking-kafka",
+    "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730793356906000000,
+                    "duration": 2000000,
+                    "serviceName": "kafka-provider",
+                    "name": "GET:/send",
+                    "spanId": "dcded06df9ae8e79",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060000-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "url.full": "http://localhost:19999/send"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730793356907000000,
+                    "duration": 1000000,
+                    "serviceName": "kafka-provider",
+                    "name": "Kafka/topic_login/Producer",
+                    "spanId": "ddded06df9ae8e79",
+                    "pSpanId": "dcded06df9ae8e79",
+                    "nextSpanId": "cc5127d5787df687",
+                    "kind": 4,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060000-1",
+                        "apm.span.type": "SKYWALKING",
+                        "messaging.destination.name": "topic_login",
+                        "messaging.system": "kafka",
+                        "net.peer.name": "10.0.2.15:9092"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730793356916000000,
+                            "duration": 1000000,
+                            "serviceName": "kafka-consumer",
+                            "name": "Kafka/topic_login/Consumer/group1",
+                            "spanId": "cc5127d5787df687",
+                            "pSpanId": "ddded06df9ae8e79",
+                            "kind": 5,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "0d84b9fffaf14aa98546b17a62f1812e.153.17307933569160004-0",
+                                "apm.span.type": "SKYWALKING",
+                                "messaging.destination.name": "topic_login",
+                                "messaging.system": "kafka",
+                                "net.peer.name": "10.0.2.15:9092",
+                                "transmission.latency": "9"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "elastic-dubbo",
+    "traceId": "1dcf15cf28a536f7d6fc65c10ff9cfbd",
+    "services": [
+        {
+            "entrySpans": [
+                {
+                    "startTime": 1713508224565026,
+                    "duration": 628929,
+                    "serviceName": "dubbo-consumer",
+                    "name": "ProductController#order",
+                    "spanId": "c0e95c3ca3362a93",
+                    "kind": 2,
+                    "code": 2
+                }
+            ],
+            "exitSpans": [
+                {
+                    "startTime": 1713508224567566,
+                    "duration": 621004,
+                    "serviceName": "dubbo-consumer",
+                    "name": "OrderService#order",
+                    "spanId": "6f46a75c83334a91",
+                    "pSpanId": "c0e95c3ca3362a93",
+                    "nextSpanId": "6ca551b5fb3c5e46",
+                    "kind": 3,
+                    "code": -1
+                }
+            ],
+            "children": [
+                {
+                    "entrySpans": [
+                        {
+                            "startTime": 1713508224572128,
+                            "duration": 606596,
+                            "serviceName": "dubbo-provider-order",
+                            "name": "OrderService#order",
+                            "spanId": "6ca551b5fb3c5e46",
+                            "pSpanId": "6f46a75c83334a91",
+                            "kind": 2,
+                            "code": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "data": {
+        "trace": {
+            "spans": [
+                {
+                    "traceId": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100001",
+                    "segmentId": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [],
+                    "serviceCode": "rocketmq-provider",
+                    "serviceInstanceName": "8ffd4739e11e4c4bb9d0609ded412116@172.18.0.1",
+                    "startTime": 1730778870710,
+                    "endTime": 1730778872675,
+                    "endpointName": "GET:/send",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "SpringMVC",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "http://localhost:19999/send"
+                        },
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100001",
+                    "segmentId": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100000",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "rocketmq-provider",
+                    "serviceInstanceName": "8ffd4739e11e4c4bb9d0609ded412116@172.18.0.1",
+                    "startTime": 1730778870713,
+                    "endTime": 1730778872674,
+                    "endpointName": "RocketMQ/cart-item-add-topic/Producer",
+                    "type": "Exit",
+                    "peer": "10.0.2.15:9876",
+                    "component": "rocketMQ-producer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.broker",
+                            "value": "10.0.2.15:10911"
+                        },
+                        {
+                            "key": "mq.topic",
+                            "value": "cart-item-add-topic"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100001",
+                    "segmentId": "3de1d82f6d3847bea5d5cc3678fbc22a.125.17307788731630000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100001",
+                            "parentSegmentId": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100000",
+                            "parentSpanId": 1,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "rocketmq-consumer",
+                    "serviceInstanceName": "7d7ca66dad8248f78468e30dba2ba3b6@172.18.0.1",
+                    "startTime": 1730778873163,
+                    "endTime": 1730778873164,
+                    "endpointName": "RocketMQ/cart-item-add-topic/Consumer",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "rocketMQ-consumer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "transmission.latency",
+                            "value": "2450"
+                        },
+                        {
+                            "key": "mq.topic",
+                            "value": "cart-item-add-topic"
+                        },
+                        {
+                            "key": "mq.broker",
+                            "value": "10.0.2.15:10911"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                }
+            ]
+        }
+    }
+}

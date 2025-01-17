@@ -1,0 +1,91 @@
+{
+    "name": "jaeger-1.32-activemq",
+    "traceId": "0f6d0fbf08c1a2d71749a4930467c24a",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730960622564000000,
+                    "duration": 839549000,
+                    "serviceName": "activemq-provider",
+                    "name": "GET /send",
+                    "spanId": "16cfe3650b5edc18",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "16cfe3650b5edc18",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.response_content_length": "0",
+                        "http.route": "/send",
+                        "http.scheme": "http",
+                        "http.status_code": "200",
+                        "http.target": "/send?name=ccc",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.host.port": "19999",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "56253",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730960623274512000,
+                    "duration": 66282000,
+                    "serviceName": "activemq-provider",
+                    "name": "ActiveMQQueue publish",
+                    "spanId": "d71f931ffd9ee234",
+                    "pSpanId": "7c9808990a8ad933",
+                    "nextSpanId": "aefa1c4fa3f8a3d4",
+                    "kind": 4,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "d71f931ffd9ee234",
+                        "apm.span.type": "OTEL",
+                        "messaging.destination.name": "ActiveMQQueue",
+                        "messaging.message.id": "ID:localhost.localdomain-42669-1730960622825-1:1:1:1:1",
+                        "messaging.operation": "publish",
+                        "messaging.system": "jms"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730960623484000000,
+                            "duration": 15395000,
+                            "serviceName": "activemq-consumer",
+                            "name": "ActiveMQQueue process",
+                            "spanId": "aefa1c4fa3f8a3d4",
+                            "pSpanId": "d71f931ffd9ee234",
+                            "kind": 5,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "aefa1c4fa3f8a3d4",
+                                "apm.span.type": "OTEL",
+                                "messaging.destination.name": "ActiveMQQueue",
+                                "messaging.message.id": "ID:localhost.localdomain-42669-1730960622825-1:1:1:1:1",
+                                "messaging.operation": "process",
+                                "messaging.system": "jms"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

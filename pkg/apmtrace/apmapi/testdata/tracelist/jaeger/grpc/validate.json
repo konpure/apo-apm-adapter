@@ -1,0 +1,100 @@
+{
+    "name": "jaeger-grpc",
+    "traceId": "057ca71c3bcb0e812eaf1fcdbbebe2d0",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1707269776411000000,
+                    "duration": 636836000,
+                    "serviceName": "grpc-client",
+                    "name": "GET /test",
+                    "spanId": "47df06483d41e41c",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "47df06483d41e41c",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.response_content_length": "10",
+                        "http.route": "/test",
+                        "http.scheme": "http",
+                        "http.status_code": "200",
+                        "http.target": "/test?grpc=1",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "52567",
+                        "net.transport": "ip_tcp",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1707269776413106000,
+                    "duration": 631392000,
+                    "serviceName": "grpc-client",
+                    "name": "Greeter/SayHello",
+                    "spanId": "6924412511e95bbb",
+                    "pSpanId": "756f50a292e72b8c",
+                    "nextSpanId": "73a9e1a23971f5cd",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "6924412511e95bbb",
+                        "apm.span.type": "OTEL",
+                        "net.peer.name": "springboot-grpc-server",
+                        "net.sock.peer.addr": "10.0.2.4",
+                        "net.sock.peer.name": "10.0.2.4",
+                        "net.sock.peer.port": "9002",
+                        "net.transport": "ip_tcp",
+                        "rpc.grpc.status_code": "0",
+                        "rpc.method": "SayHello",
+                        "rpc.service": "Greeter",
+                        "rpc.system": "grpc"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1707269776437000000,
+                            "duration": 604047000,
+                            "serviceName": "grpc-server",
+                            "name": "Greeter/SayHello",
+                            "spanId": "73a9e1a23971f5cd",
+                            "pSpanId": "6924412511e95bbb",
+                            "kind": 2,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "73a9e1a23971f5cd",
+                                "apm.span.type": "OTEL",
+                                "net.host.name": "springboot-grpc-server",
+                                "net.sock.peer.addr": "10.0.2.4",
+                                "net.sock.peer.port": "54782",
+                                "net.transport": "ip_tcp",
+                                "rpc.grpc.status_code": "0",
+                                "rpc.method": "SayHello",
+                                "rpc.service": "Greeter",
+                                "rpc.system": "grpc"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

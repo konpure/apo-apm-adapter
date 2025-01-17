@@ -1,0 +1,492 @@
+{
+    "data": [
+        {
+            "traceID": "c0300dcff2ae79a3dc4263ef18907af0",
+            "spans": [
+                {
+                    "traceID": "c0300dcff2ae79a3dc4263ef18907af0",
+                    "spanID": "91ed719bee9e4b3d",
+                    "operationName": "GET /db/query",
+                    "references": [],
+                    "startTime": 1730795478043000,
+                    "duration": 260370,
+                    "tags": [
+                        {
+                            "key": "http.request.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.route",
+                            "type": "string",
+                            "value": "/db/query"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 49163
+                        },
+                        {
+                            "key": "server.address",
+                            "type": "string",
+                            "value": "localhost"
+                        },
+                        {
+                            "key": "client.address",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "url.path",
+                            "type": "string",
+                            "value": "/db/query"
+                        },
+                        {
+                            "key": "url.query",
+                            "type": "string",
+                            "value": "value=10"
+                        },
+                        {
+                            "key": "url.scheme",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-4"
+                        },
+                        {
+                            "key": "http.response.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 27
+                        },
+                        {
+                            "key": "network.protocol.version",
+                            "type": "string",
+                            "value": "1.1"
+                        },
+                        {
+                            "key": "server.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "user_agent.original",
+                            "type": "string",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "c0300dcff2ae79a3dc4263ef18907af0",
+                    "spanID": "8dfe43d97b8c5225",
+                    "operationName": "SELECT test.weather",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "c0300dcff2ae79a3dc4263ef18907af0",
+                            "spanID": "91ed719bee9e4b3d"
+                        }
+                    ],
+                    "startTime": 1730795478275216,
+                    "duration": 7864,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-4"
+                        },
+                        {
+                            "key": "db.name",
+                            "type": "string",
+                            "value": "test"
+                        },
+                        {
+                            "key": "db.operation",
+                            "type": "string",
+                            "value": "SELECT"
+                        },
+                        {
+                            "key": "db.sql.table",
+                            "type": "string",
+                            "value": "weather"
+                        },
+                        {
+                            "key": "db.statement",
+                            "type": "string",
+                            "value": "select count(?) from weather where temp_hi\u003e?"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 27
+                        },
+                        {
+                            "key": "db.system",
+                            "type": "string",
+                            "value": "mysql"
+                        },
+                        {
+                            "key": "db.connection_string",
+                            "type": "string",
+                            "value": "mysql://10.0.2.4:3306"
+                        },
+                        {
+                            "key": "server.port",
+                            "type": "int64",
+                            "value": 3306
+                        },
+                        {
+                            "key": "server.address",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "db.user",
+                            "type": "string",
+                            "value": "root"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "c0300dcff2ae79a3dc4263ef18907af0",
+                    "spanID": "85771ae9e0604460",
+                    "operationName": "SELECT test.weather",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "c0300dcff2ae79a3dc4263ef18907af0",
+                            "spanID": "91ed719bee9e4b3d"
+                        }
+                    ],
+                    "startTime": 1730795478295825,
+                    "duration": 553,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-4"
+                        },
+                        {
+                            "key": "db.name",
+                            "type": "string",
+                            "value": "test"
+                        },
+                        {
+                            "key": "db.operation",
+                            "type": "string",
+                            "value": "SELECT"
+                        },
+                        {
+                            "key": "db.sql.table",
+                            "type": "string",
+                            "value": "weather"
+                        },
+                        {
+                            "key": "db.statement",
+                            "type": "string",
+                            "value": "select id, city, prcpe from weather where temp_lo\u003c=? and temp_hi\u003e=?"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 27
+                        },
+                        {
+                            "key": "db.system",
+                            "type": "string",
+                            "value": "mysql"
+                        },
+                        {
+                            "key": "db.connection_string",
+                            "type": "string",
+                            "value": "mysql://10.0.2.4:3306"
+                        },
+                        {
+                            "key": "server.port",
+                            "type": "int64",
+                            "value": 3306
+                        },
+                        {
+                            "key": "server.address",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "db.user",
+                            "type": "string",
+                            "value": "root"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "stuck-demo-tomcat",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "8d277b9dbb114a321d5ae96f69029f88c262c534390ad37d18c9c5d66f210cbe"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=stuck-demo-tomcat -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m /root/app/apps/http/stuck-demo-tomcat.jar --server.port=19999"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 11311
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "3ce76095-1b4f-47c5-a586-828e8437459b"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "stuck-demo-tomcat",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "8d277b9dbb114a321d5ae96f69029f88c262c534390ad37d18c9c5d66f210cbe"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.jdbc"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=stuck-demo-tomcat -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m /root/app/apps/http/stuck-demo-tomcat.jar --server.port=19999"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 11311
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "3ce76095-1b4f-47c5-a586-828e8437459b"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

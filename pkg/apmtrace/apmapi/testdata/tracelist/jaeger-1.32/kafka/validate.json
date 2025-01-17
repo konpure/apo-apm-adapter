@@ -1,0 +1,97 @@
+{
+    "name": "jaeger-1.32-kafka",
+    "traceId": "1afe617bebe06a85c3f0e30d4851cd44",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730961482039000000,
+                    "duration": 12163000,
+                    "serviceName": "kafka-provider",
+                    "name": "GET /send",
+                    "spanId": "be7dd55ce5119c62",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "be7dd55ce5119c62",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.response_content_length": "0",
+                        "http.route": "/send",
+                        "http.scheme": "http",
+                        "http.status_code": "200",
+                        "http.target": "/send?name=ccc",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.host.port": "19999",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "56970",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730961482041553000,
+                    "duration": 17667000,
+                    "serviceName": "kafka-provider",
+                    "name": "topic_login publish",
+                    "spanId": "99aa616b8e73d37a",
+                    "pSpanId": "dceb512b0bb37afd",
+                    "nextSpanId": "0bbaca1352d8993a",
+                    "kind": 4,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "99aa616b8e73d37a",
+                        "apm.span.type": "OTEL",
+                        "messaging.client_id": "producer-1",
+                        "messaging.destination.name": "topic_login",
+                        "messaging.kafka.destination.partition": "2",
+                        "messaging.kafka.message.offset": "0",
+                        "messaging.operation": "publish",
+                        "messaging.system": "kafka"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730961482061000000,
+                            "duration": 1434000,
+                            "serviceName": "kafka-consumer",
+                            "name": "topic_login process",
+                            "spanId": "0bbaca1352d8993a",
+                            "pSpanId": "99aa616b8e73d37a",
+                            "kind": 5,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "0bbaca1352d8993a",
+                                "apm.span.type": "OTEL",
+                                "messaging.client_id": "consumer-group1-1",
+                                "messaging.destination.name": "topic_login",
+                                "messaging.kafka.consumer.group": "group1",
+                                "messaging.kafka.destination.partition": "2",
+                                "messaging.kafka.message.offset": "0",
+                                "messaging.message.payload_size_bytes": "80",
+                                "messaging.operation": "process",
+                                "messaging.system": "kafka"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4200 @@
+{
+    "took" : 21,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 3,
+      "successful" : 3,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : {
+        "value" : 10,
+        "relation" : "eq"
+      },
+      "max_score" : null,
+      "hits" : [
+        {
+          "_index" : "apm-7.17.20-transaction-000001",
+          "_type" : "_doc",
+          "_id" : "RjYB8I4BjhTFpXIcQaVk",
+          "_score" : null,
+          "_source" : {
+            "source" : {
+              "ip" : "192.168.1.6"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "transaction"
+            },
+            "url" : {
+              "path" : "/api/jpa-demo/get",
+              "scheme" : "http",
+              "port" : 12380,
+              "domain" : "dev.kindling.lan",
+              "query" : "sleep=20000",
+              "full" : "http://dev.kindling.lan:12380/api/jpa-demo/get?sleep=20000"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:24.875Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "f8c410b300af4ad29b7f241830fd294a8c598e6a06d012a496aff0c0b41836e7"
+              },
+              "framework" : {
+                "name" : "Spring Web MVC",
+                "version" : "5.2.15.RELEASE"
+              },
+              "name" : "spring-requesttemplate-gateway",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "10.244.0.46",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "192.168.1.6"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 500,
+                "finished" : true,
+                "headers_sent" : false
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-18T06:59:57.924479270Z",
+              "outcome" : "failure"
+            },
+            "transaction" : {
+              "result" : "HTTP 5xx",
+              "duration" : {
+                "us" : 22004752
+              },
+              "name" : "ApiController#getData",
+              "id" : "6d8c8e19ae73d2c2",
+              "span_count" : {
+                "dropped" : 0,
+                "started" : 1
+              },
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1713423564875076
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "transaction"
+            ]
+          },
+          "sort" : [
+            1713423564875076
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "RDYB8I4BjhTFpXIcQaVk",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "6d8c8e19ae73d2c2"
+            },
+            "destination" : {
+              "address" : "spring-requesttemplate-demo-svc",
+              "port" : 8080
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "url" : {
+              "original" : "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=20000"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:26.110Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-requesttemplate-gateway"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              }
+            },
+            "event" : {
+              "outcome" : "failure"
+            },
+            "transaction" : {
+              "id" : "6d8c8e19ae73d2c2"
+            },
+            "span" : {
+              "duration" : {
+                "us" : 20677472
+              },
+              "subtype" : "http",
+              "destination" : {
+                "service" : {
+                  "resource" : "spring-requesttemplate-demo-svc:8080"
+                }
+              },
+              "name" : "GET spring-requesttemplate-demo-svc",
+              "http" : {
+                "method" : "GET"
+              },
+              "http.url.original" : "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=20000",
+              "id" : "b0e98a582d01fc94",
+              "type" : "external"
+            },
+            "timestamp" : {
+              "us" : 1713423566110159
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1713423566110159
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-transaction-000001",
+          "_type" : "_doc",
+          "_id" : "-TYB8I4BjhTFpXIcUaaP",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "b0e98a582d01fc94"
+            },
+            "source" : {
+              "ip" : "10.244.236.101"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "transaction"
+            },
+            "url" : {
+              "path" : "/api/jpa-demo/get",
+              "scheme" : "http",
+              "port" : 8080,
+              "query" : "sleep=20000",
+              "domain" : "spring-requesttemplate-demo-svc",
+              "full" : "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=20000"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:31.783Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "6108185f84edc39538f9435b120420004d97b0db0608e3a3aa072b7b6859415d"
+              },
+              "framework" : {
+                "name" : "Spring Web MVC",
+                "version" : "5.2.15.RELEASE"
+              },
+              "name" : "spring-requesttemplate-demo",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "10.244.0.46",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "10.244.236.101"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 500,
+                "finished" : true,
+                "headers_sent" : false
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-18T07:00:02.056375879Z",
+              "outcome" : "failure"
+            },
+            "transaction" : {
+              "duration" : {
+                "us" : 19404852
+              },
+              "result" : "HTTP 5xx",
+              "name" : "ApiController#getData",
+              "id" : "4c3ace7925da598a",
+              "span_count" : {
+                "dropped" : 0,
+                "started" : 1
+              },
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1713423571783650
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "transaction"
+            ]
+          },
+          "sort" : [
+            1713423571783650
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "9zYB8I4BjhTFpXIcUaaP",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "4c3ace7925da598a"
+            },
+            "destination" : {
+              "address" : "jpa-demo",
+              "port" : 18888
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "url" : {
+              "original" : "http://jpa-demo:18888/get?sleep=20000"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:33.999Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-requesttemplate-demo"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              }
+            },
+            "event" : {
+              "outcome" : "failure"
+            },
+            "transaction" : {
+              "id" : "4c3ace7925da598a"
+            },
+            "timestamp" : {
+              "us" : 1713423573999015
+            },
+            "span" : {
+              "duration" : {
+                "us" : 16901777
+              },
+              "subtype" : "http",
+              "name" : "GET jpa-demo",
+              "destination" : {
+                "service" : {
+                  "resource" : "jpa-demo:18888"
+                }
+              },
+              "http" : {
+                "method" : "GET"
+              },
+              "http.url.original" : "http://jpa-demo:18888/get?sleep=20000",
+              "id" : "d07a83f1a95c6d1f",
+              "type" : "external"
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1713423573999015
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-error-000001",
+          "_type" : "_doc",
+          "_id" : "QzYB8I4BjhTFpXIcQaVk",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "b0e98a582d01fc94"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:46.779Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "f8c410b300af4ad29b7f241830fd294a8c598e6a06d012a496aff0c0b41836e7"
+              },
+              "name" : "spring-requesttemplate-gateway",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "10.244.0.46",
+              "architecture" : "amd64"
+            },
+            "message" : "Read timed out",
+            "error" : {
+              "exception" : [
+                {
+                  "stacktrace" : [
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : -2
+                      },
+                      "module" : "java.net",
+                      "function" : "socketRead0"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 115
+                      },
+                      "module" : "java.net",
+                      "function" : "socketRead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 168
+                      },
+                      "module" : "java.net",
+                      "function" : "read"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 140
+                      },
+                      "module" : "java.net",
+                      "function" : "read"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 137
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "streamRead"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 153
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "fillBuffer"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 280
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "readLine"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultHttpResponseParser.java",
+                      "classname" : "org.apache.http.impl.conn.DefaultHttpResponseParser",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "function" : "parseHead",
+                      "module" : "org.apache.http.impl.conn"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultHttpResponseParser.java",
+                      "classname" : "org.apache.http.impl.conn.DefaultHttpResponseParser",
+                      "line" : {
+                        "number" : 56
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "parseHead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractMessageParser.java",
+                      "classname" : "org.apache.http.impl.io.AbstractMessageParser",
+                      "line" : {
+                        "number" : 259
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "parse"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultBHttpClientConnection.java",
+                      "classname" : "org.apache.http.impl.DefaultBHttpClientConnection",
+                      "line" : {
+                        "number" : 163
+                      },
+                      "module" : "org.apache.http.impl",
+                      "function" : "receiveResponseHeader"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "CPoolProxy.java",
+                      "classname" : "org.apache.http.impl.conn.CPoolProxy",
+                      "line" : {
+                        "number" : 157
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "receiveResponseHeader"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "HttpRequestExecutor.java",
+                      "classname" : "org.apache.http.protocol.HttpRequestExecutor",
+                      "line" : {
+                        "number" : 273
+                      },
+                      "module" : "org.apache.http.protocol",
+                      "function" : "doReceiveResponse"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpRequestExecutor.java",
+                      "classname" : "org.apache.http.protocol.HttpRequestExecutor",
+                      "line" : {
+                        "number" : 125
+                      },
+                      "module" : "org.apache.http.protocol",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "MainClientExec.java",
+                      "classname" : "org.apache.http.impl.execchain.MainClientExec",
+                      "line" : {
+                        "number" : 272
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ProtocolExec.java",
+                      "classname" : "org.apache.http.impl.execchain.ProtocolExec",
+                      "line" : {
+                        "number" : 186
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RetryExec.java",
+                      "classname" : "org.apache.http.impl.execchain.RetryExec",
+                      "line" : {
+                        "number" : 89
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RedirectExec.java",
+                      "classname" : "org.apache.http.impl.execchain.RedirectExec",
+                      "line" : {
+                        "number" : 110
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InternalHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.InternalHttpClient",
+                      "line" : {
+                        "number" : 185
+                      },
+                      "module" : "org.apache.http.impl.client",
+                      "function" : "doExecute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CloseableHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.CloseableHttpClient",
+                      "line" : {
+                        "number" : 83
+                      },
+                      "function" : "execute",
+                      "module" : "org.apache.http.impl.client"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "CloseableHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.CloseableHttpClient",
+                      "line" : {
+                        "number" : 56
+                      },
+                      "module" : "org.apache.http.impl.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "HttpComponentsClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.HttpComponentsClientHttpRequest",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "executeInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractBufferingClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.AbstractBufferingClientHttpRequest",
+                      "line" : {
+                        "number" : 48
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "executeInternal"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "AbstractClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.AbstractClientHttpRequest",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 737
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "doExecute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 672
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 610
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "exchange"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiService.java",
+                      "classname" : "com.app.demo.service.ApiService",
+                      "line" : {
+                        "number" : 57
+                      },
+                      "function" : "repeatGetInfo",
+                      "module" : "com.app.demo.service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiController.java",
+                      "classname" : "com.app.demo.controller.ApiController",
+                      "line" : {
+                        "number" : 19
+                      },
+                      "module" : "com.app.demo.controller",
+                      "function" : "getData"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 190
+                      },
+                      "function" : "doInvoke",
+                      "module" : "org.springframework.web.method.support"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "invokeForRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ServletInvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod",
+                      "line" : {
+                        "number" : 105
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeAndHandle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 878
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeHandlerMethod"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 792
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "handleInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractHandlerMethodAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "function" : "handle",
+                      "module" : "org.springframework.web.servlet.mvc.method"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 1040
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doDispatch"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 943
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doService"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 1006
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "processRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 898
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doGet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 626
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 883
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 733
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 227
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "WsFilter.java",
+                      "classname" : "org.apache.tomcat.websocket.server.WsFilter",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "function" : "doFilter",
+                      "module" : "org.apache.tomcat.websocket.server"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestContextFilter.java",
+                      "classname" : "org.springframework.web.filter.RequestContextFilter",
+                      "line" : {
+                        "number" : 100
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "function" : "doFilter",
+                      "module" : "org.springframework.web.filter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    }
+                  ],
+                  "message" : "Read timed out",
+                  "type" : "java.net.SocketTimeoutException"
+                }
+              ],
+              "id" : "e6f7d74fd6db7aee21ced7baf234dbd9",
+              "grouping_key" : "32dede97203de10b8a7ca6618db78047",
+              "grouping_name" : "Read timed out"
+            },
+            "event" : {
+              "ingested" : "2024-04-18T06:59:57.918971681Z"
+            },
+            "processor" : {
+              "name" : "error",
+              "event" : "error"
+            },
+            "transaction" : {
+              "id" : "6d8c8e19ae73d2c2",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1713423586779700
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "error"
+            ]
+          },
+          "sort" : [
+            1713423586779700
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-error-000001",
+          "_type" : "_doc",
+          "_id" : "RTYB8I4BjhTFpXIcQaVk",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "6d8c8e19ae73d2c2"
+            },
+            "source" : {
+              "ip" : "192.168.1.6"
+            },
+            "error" : {
+              "exception" : [
+                {
+                  "stacktrace" : [
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 746
+                      },
+                      "function" : "doExecute",
+                      "module" : "org.springframework.web.client"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 672
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 610
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "exchange"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiService.java",
+                      "classname" : "com.app.demo.service.ApiService",
+                      "line" : {
+                        "number" : 57
+                      },
+                      "module" : "com.app.demo.service",
+                      "function" : "repeatGetInfo"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiController.java",
+                      "classname" : "com.app.demo.controller.ApiController",
+                      "line" : {
+                        "number" : 19
+                      },
+                      "module" : "com.app.demo.controller",
+                      "function" : "getData"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 190
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "doInvoke"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "invokeForRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ServletInvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod",
+                      "line" : {
+                        "number" : 105
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeAndHandle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 878
+                      },
+                      "function" : "invokeHandlerMethod",
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 792
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "handleInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractHandlerMethodAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method",
+                      "function" : "handle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 1040
+                      },
+                      "function" : "doDispatch",
+                      "module" : "org.springframework.web.servlet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 943
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doService"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 1006
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "processRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 898
+                      },
+                      "function" : "doGet",
+                      "module" : "org.springframework.web.servlet"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 626
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 883
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 733
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 227
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "WsFilter.java",
+                      "classname" : "org.apache.tomcat.websocket.server.WsFilter",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "module" : "org.apache.tomcat.websocket.server",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestContextFilter.java",
+                      "classname" : "org.springframework.web.filter.RequestContextFilter",
+                      "line" : {
+                        "number" : 100
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FormContentFilter.java",
+                      "classname" : "org.springframework.web.filter.FormContentFilter",
+                      "line" : {
+                        "number" : 93
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "CharacterEncodingFilter.java",
+                      "classname" : "org.springframework.web.filter.CharacterEncodingFilter",
+                      "line" : {
+                        "number" : 201
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "StandardWrapperValve.java",
+                      "classname" : "org.apache.catalina.core.StandardWrapperValve",
+                      "line" : {
+                        "number" : 202
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "StandardContextValve.java",
+                      "classname" : "org.apache.catalina.core.StandardContextValve",
+                      "line" : {
+                        "number" : 97
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AuthenticatorBase.java",
+                      "classname" : "org.apache.catalina.authenticator.AuthenticatorBase",
+                      "line" : {
+                        "number" : 542
+                      },
+                      "function" : "invoke",
+                      "module" : "org.apache.catalina.authenticator"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "StandardHostValve.java",
+                      "classname" : "org.apache.catalina.core.StandardHostValve",
+                      "line" : {
+                        "number" : 143
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ErrorReportValve.java",
+                      "classname" : "org.apache.catalina.valves.ErrorReportValve",
+                      "line" : {
+                        "number" : 92
+                      },
+                      "module" : "org.apache.catalina.valves",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "StandardEngineValve.java",
+                      "classname" : "org.apache.catalina.core.StandardEngineValve",
+                      "line" : {
+                        "number" : 78
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RemoteIpValve.java",
+                      "classname" : "org.apache.catalina.valves.RemoteIpValve",
+                      "line" : {
+                        "number" : 764
+                      },
+                      "module" : "org.apache.catalina.valves",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CoyoteAdapter.java",
+                      "classname" : "org.apache.catalina.connector.CoyoteAdapter",
+                      "line" : {
+                        "number" : 357
+                      },
+                      "module" : "org.apache.catalina.connector",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "Http11Processor.java",
+                      "classname" : "org.apache.coyote.http11.Http11Processor",
+                      "line" : {
+                        "number" : 374
+                      },
+                      "module" : "org.apache.coyote.http11",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractProcessorLight.java",
+                      "classname" : "org.apache.coyote.AbstractProcessorLight",
+                      "line" : {
+                        "number" : 65
+                      },
+                      "module" : "org.apache.coyote",
+                      "function" : "process"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractProtocol.java",
+                      "classname" : "org.apache.coyote.AbstractProtocol$ConnectionHandler",
+                      "line" : {
+                        "number" : 893
+                      },
+                      "module" : "org.apache.coyote",
+                      "function" : "process"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "NioEndpoint.java",
+                      "classname" : "org.apache.tomcat.util.net.NioEndpoint$SocketProcessor",
+                      "line" : {
+                        "number" : 1707
+                      },
+                      "module" : "org.apache.tomcat.util.net",
+                      "function" : "doRun"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketProcessorBase.java",
+                      "classname" : "org.apache.tomcat.util.net.SocketProcessorBase",
+                      "line" : {
+                        "number" : 49
+                      },
+                      "module" : "org.apache.tomcat.util.net",
+                      "function" : "run"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ThreadPoolExecutor.java",
+                      "classname" : "java.util.concurrent.ThreadPoolExecutor$Worker",
+                      "line" : {
+                        "number" : 628
+                      },
+                      "module" : "java.util.concurrent",
+                      "function" : "run"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "TaskThread.java",
+                      "classname" : "org.apache.tomcat.util.threads.TaskThread$WrappingRunnable",
+                      "line" : {
+                        "number" : 61
+                      },
+                      "module" : "org.apache.tomcat.util.threads",
+                      "function" : "run"
+                    }
+                  ],
+                  "message" : "I/O error on GET request for \"http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get\": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out",
+                  "type" : "org.springframework.web.client.ResourceAccessException"
+                },
+                {
+                  "stacktrace" : [
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : -2
+                      },
+                      "module" : "java.net",
+                      "function" : "socketRead0"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 115
+                      },
+                      "function" : "socketRead",
+                      "module" : "java.net"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 168
+                      },
+                      "module" : "java.net",
+                      "function" : "read"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 140
+                      },
+                      "module" : "java.net",
+                      "function" : "read"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 137
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "streamRead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 153
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "fillBuffer"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 280
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "readLine"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultHttpResponseParser.java",
+                      "classname" : "org.apache.http.impl.conn.DefaultHttpResponseParser",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "parseHead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultHttpResponseParser.java",
+                      "classname" : "org.apache.http.impl.conn.DefaultHttpResponseParser",
+                      "line" : {
+                        "number" : 56
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "parseHead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractMessageParser.java",
+                      "classname" : "org.apache.http.impl.io.AbstractMessageParser",
+                      "line" : {
+                        "number" : 259
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "parse"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultBHttpClientConnection.java",
+                      "classname" : "org.apache.http.impl.DefaultBHttpClientConnection",
+                      "line" : {
+                        "number" : 163
+                      },
+                      "function" : "receiveResponseHeader",
+                      "module" : "org.apache.http.impl"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CPoolProxy.java",
+                      "classname" : "org.apache.http.impl.conn.CPoolProxy",
+                      "line" : {
+                        "number" : 157
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "receiveResponseHeader"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpRequestExecutor.java",
+                      "classname" : "org.apache.http.protocol.HttpRequestExecutor",
+                      "line" : {
+                        "number" : 273
+                      },
+                      "module" : "org.apache.http.protocol",
+                      "function" : "doReceiveResponse"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpRequestExecutor.java",
+                      "classname" : "org.apache.http.protocol.HttpRequestExecutor",
+                      "line" : {
+                        "number" : 125
+                      },
+                      "module" : "org.apache.http.protocol",
+                      "function" : "execute"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "MainClientExec.java",
+                      "classname" : "org.apache.http.impl.execchain.MainClientExec",
+                      "line" : {
+                        "number" : 272
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ProtocolExec.java",
+                      "classname" : "org.apache.http.impl.execchain.ProtocolExec",
+                      "line" : {
+                        "number" : 186
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RetryExec.java",
+                      "classname" : "org.apache.http.impl.execchain.RetryExec",
+                      "line" : {
+                        "number" : 89
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RedirectExec.java",
+                      "classname" : "org.apache.http.impl.execchain.RedirectExec",
+                      "line" : {
+                        "number" : 110
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InternalHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.InternalHttpClient",
+                      "line" : {
+                        "number" : 185
+                      },
+                      "module" : "org.apache.http.impl.client",
+                      "function" : "doExecute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CloseableHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.CloseableHttpClient",
+                      "line" : {
+                        "number" : 83
+                      },
+                      "module" : "org.apache.http.impl.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CloseableHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.CloseableHttpClient",
+                      "line" : {
+                        "number" : 56
+                      },
+                      "function" : "execute",
+                      "module" : "org.apache.http.impl.client"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpComponentsClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.HttpComponentsClientHttpRequest",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "executeInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractBufferingClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.AbstractBufferingClientHttpRequest",
+                      "line" : {
+                        "number" : 48
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "executeInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.AbstractClientHttpRequest",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 737
+                      },
+                      "function" : "doExecute",
+                      "module" : "org.springframework.web.client"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 672
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 610
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "exchange"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiService.java",
+                      "classname" : "com.app.demo.service.ApiService",
+                      "line" : {
+                        "number" : 57
+                      },
+                      "module" : "com.app.demo.service",
+                      "function" : "repeatGetInfo"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiController.java",
+                      "classname" : "com.app.demo.controller.ApiController",
+                      "line" : {
+                        "number" : 19
+                      },
+                      "module" : "com.app.demo.controller",
+                      "function" : "getData"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 190
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "doInvoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "invokeForRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ServletInvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod",
+                      "line" : {
+                        "number" : 105
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeAndHandle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 878
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeHandlerMethod"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 792
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "handleInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractHandlerMethodAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method",
+                      "function" : "handle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 1040
+                      },
+                      "function" : "doDispatch",
+                      "module" : "org.springframework.web.servlet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 943
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doService"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 1006
+                      },
+                      "function" : "processRequest",
+                      "module" : "org.springframework.web.servlet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 898
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doGet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 626
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 883
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "service"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 733
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 227
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "WsFilter.java",
+                      "classname" : "org.apache.tomcat.websocket.server.WsFilter",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "function" : "doFilter",
+                      "module" : "org.apache.tomcat.websocket.server"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestContextFilter.java",
+                      "classname" : "org.springframework.web.filter.RequestContextFilter",
+                      "line" : {
+                        "number" : 100
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    }
+                  ],
+                  "type" : "java.net.SocketTimeoutException",
+                  "message" : "Read timed out"
+                }
+              ],
+              "id" : "c5744695af17fc05efc22db669dd120e",
+              "grouping_key" : "f71ded5b1aa97e9c7e3000c14031d492",
+              "grouping_name" : "I/O error on GET request for \"http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get\": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out"
+            },
+            "message" : "I/O error on GET request for \"http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get\": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out",
+            "processor" : {
+              "name" : "error",
+              "event" : "error"
+            },
+            "url" : {
+              "path" : "/api/jpa-demo/get",
+              "scheme" : "http",
+              "port" : 12380,
+              "domain" : "dev.kindling.lan",
+              "query" : "sleep=20000",
+              "full" : "http://dev.kindling.lan:12380/api/jpa-demo/get?sleep=20000"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:46.877Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "f8c410b300af4ad29b7f241830fd294a8c598e6a06d012a496aff0c0b41836e7"
+              },
+              "name" : "spring-requesttemplate-gateway",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "10.244.0.46",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "192.168.1.6"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 500,
+                "finished" : true,
+                "headers_sent" : false
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-18T06:59:57.921886585Z"
+            },
+            "transaction" : {
+              "id" : "6d8c8e19ae73d2c2",
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1713423586877471
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "error"
+            ]
+          },
+          "sort" : [
+            1713423586877471
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-error-000001",
+          "_type" : "_doc",
+          "_id" : "9jYB8I4BjhTFpXIcUaaP",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "d07a83f1a95c6d1f"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:50.895Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "6108185f84edc39538f9435b120420004d97b0db0608e3a3aa072b7b6859415d"
+              },
+              "name" : "spring-requesttemplate-demo",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "10.244.0.46",
+              "architecture" : "amd64"
+            },
+            "error" : {
+              "exception" : [
+                {
+                  "stacktrace" : [
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : -2
+                      },
+                      "module" : "java.net",
+                      "function" : "socketRead0"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 115
+                      },
+                      "module" : "java.net",
+                      "function" : "socketRead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 168
+                      },
+                      "module" : "java.net",
+                      "function" : "read"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 140
+                      },
+                      "module" : "java.net",
+                      "function" : "read"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 137
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "streamRead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 153
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "fillBuffer"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 280
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "readLine"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultHttpResponseParser.java",
+                      "classname" : "org.apache.http.impl.conn.DefaultHttpResponseParser",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "parseHead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultHttpResponseParser.java",
+                      "classname" : "org.apache.http.impl.conn.DefaultHttpResponseParser",
+                      "line" : {
+                        "number" : 56
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "parseHead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractMessageParser.java",
+                      "classname" : "org.apache.http.impl.io.AbstractMessageParser",
+                      "line" : {
+                        "number" : 259
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "parse"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "DefaultBHttpClientConnection.java",
+                      "classname" : "org.apache.http.impl.DefaultBHttpClientConnection",
+                      "line" : {
+                        "number" : 163
+                      },
+                      "module" : "org.apache.http.impl",
+                      "function" : "receiveResponseHeader"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CPoolProxy.java",
+                      "classname" : "org.apache.http.impl.conn.CPoolProxy",
+                      "line" : {
+                        "number" : 157
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "receiveResponseHeader"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpRequestExecutor.java",
+                      "classname" : "org.apache.http.protocol.HttpRequestExecutor",
+                      "line" : {
+                        "number" : 273
+                      },
+                      "module" : "org.apache.http.protocol",
+                      "function" : "doReceiveResponse"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpRequestExecutor.java",
+                      "classname" : "org.apache.http.protocol.HttpRequestExecutor",
+                      "line" : {
+                        "number" : 125
+                      },
+                      "module" : "org.apache.http.protocol",
+                      "function" : "execute"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "MainClientExec.java",
+                      "classname" : "org.apache.http.impl.execchain.MainClientExec",
+                      "line" : {
+                        "number" : 272
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ProtocolExec.java",
+                      "classname" : "org.apache.http.impl.execchain.ProtocolExec",
+                      "line" : {
+                        "number" : 186
+                      },
+                      "function" : "execute",
+                      "module" : "org.apache.http.impl.execchain"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RetryExec.java",
+                      "classname" : "org.apache.http.impl.execchain.RetryExec",
+                      "line" : {
+                        "number" : 89
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RedirectExec.java",
+                      "classname" : "org.apache.http.impl.execchain.RedirectExec",
+                      "line" : {
+                        "number" : 110
+                      },
+                      "function" : "execute",
+                      "module" : "org.apache.http.impl.execchain"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InternalHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.InternalHttpClient",
+                      "line" : {
+                        "number" : 185
+                      },
+                      "module" : "org.apache.http.impl.client",
+                      "function" : "doExecute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CloseableHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.CloseableHttpClient",
+                      "line" : {
+                        "number" : 83
+                      },
+                      "function" : "execute",
+                      "module" : "org.apache.http.impl.client"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CloseableHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.CloseableHttpClient",
+                      "line" : {
+                        "number" : 56
+                      },
+                      "function" : "execute",
+                      "module" : "org.apache.http.impl.client"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "HttpComponentsClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.HttpComponentsClientHttpRequest",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "executeInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractBufferingClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.AbstractBufferingClientHttpRequest",
+                      "line" : {
+                        "number" : 48
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "executeInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.AbstractClientHttpRequest",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 737
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "doExecute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 672
+                      },
+                      "function" : "execute",
+                      "module" : "org.springframework.web.client"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 610
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "exchange"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiService.java",
+                      "classname" : "com.app.demo.service.ApiService",
+                      "line" : {
+                        "number" : 57
+                      },
+                      "module" : "com.app.demo.service",
+                      "function" : "repeatGetInfo"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiController.java",
+                      "classname" : "com.app.demo.controller.ApiController",
+                      "line" : {
+                        "number" : 19
+                      },
+                      "module" : "com.app.demo.controller",
+                      "function" : "getData"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 190
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "doInvoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "function" : "invokeForRequest",
+                      "module" : "org.springframework.web.method.support"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ServletInvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod",
+                      "line" : {
+                        "number" : 105
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeAndHandle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 878
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeHandlerMethod"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 792
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "handleInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractHandlerMethodAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method",
+                      "function" : "handle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 1040
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doDispatch"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 943
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doService"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 1006
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "processRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 898
+                      },
+                      "function" : "doGet",
+                      "module" : "org.springframework.web.servlet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 626
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 883
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 733
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 227
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "WsFilter.java",
+                      "classname" : "org.apache.tomcat.websocket.server.WsFilter",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "module" : "org.apache.tomcat.websocket.server",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestContextFilter.java",
+                      "classname" : "org.springframework.web.filter.RequestContextFilter",
+                      "line" : {
+                        "number" : 100
+                      },
+                      "function" : "doFilterInternal",
+                      "module" : "org.springframework.web.filter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "function" : "doFilter",
+                      "module" : "org.springframework.web.filter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    }
+                  ],
+                  "message" : "Read timed out",
+                  "type" : "java.net.SocketTimeoutException"
+                }
+              ],
+              "id" : "93a46925bc110dfe32c31e7254db7fe8",
+              "grouping_key" : "32dede97203de10b8a7ca6618db78047",
+              "grouping_name" : "Read timed out"
+            },
+            "message" : "Read timed out",
+            "event" : {
+              "ingested" : "2024-04-18T07:00:02.050375407Z"
+            },
+            "processor" : {
+              "name" : "error",
+              "event" : "error"
+            },
+            "transaction" : {
+              "id" : "4c3ace7925da598a",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1713423590895546
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "error"
+            ]
+          },
+          "sort" : [
+            1713423590895546
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-error-000001",
+          "_type" : "_doc",
+          "_id" : "-DYB8I4BjhTFpXIcUaaP",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "4c3ace7925da598a"
+            },
+            "source" : {
+              "ip" : "10.244.236.101"
+            },
+            "error" : {
+              "exception" : [
+                {
+                  "stacktrace" : [
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 746
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "doExecute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 672
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 610
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "exchange"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiService.java",
+                      "classname" : "com.app.demo.service.ApiService",
+                      "line" : {
+                        "number" : 57
+                      },
+                      "module" : "com.app.demo.service",
+                      "function" : "repeatGetInfo"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiController.java",
+                      "classname" : "com.app.demo.controller.ApiController",
+                      "line" : {
+                        "number" : 19
+                      },
+                      "module" : "com.app.demo.controller",
+                      "function" : "getData"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 190
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "doInvoke"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "invokeForRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ServletInvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod",
+                      "line" : {
+                        "number" : 105
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeAndHandle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 878
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeHandlerMethod"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 792
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "handleInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractHandlerMethodAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method",
+                      "function" : "handle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 1040
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doDispatch"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 943
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doService"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 1006
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "processRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 898
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doGet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 626
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 883
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 733
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 227
+                      },
+                      "function" : "internalDoFilter",
+                      "module" : "org.apache.catalina.core"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "WsFilter.java",
+                      "classname" : "org.apache.tomcat.websocket.server.WsFilter",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "module" : "org.apache.tomcat.websocket.server",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestContextFilter.java",
+                      "classname" : "org.springframework.web.filter.RequestContextFilter",
+                      "line" : {
+                        "number" : 100
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "function" : "doFilter",
+                      "module" : "org.springframework.web.filter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FormContentFilter.java",
+                      "classname" : "org.springframework.web.filter.FormContentFilter",
+                      "line" : {
+                        "number" : 93
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CharacterEncodingFilter.java",
+                      "classname" : "org.springframework.web.filter.CharacterEncodingFilter",
+                      "line" : {
+                        "number" : 201
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "StandardWrapperValve.java",
+                      "classname" : "org.apache.catalina.core.StandardWrapperValve",
+                      "line" : {
+                        "number" : 202
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "StandardContextValve.java",
+                      "classname" : "org.apache.catalina.core.StandardContextValve",
+                      "line" : {
+                        "number" : 97
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AuthenticatorBase.java",
+                      "classname" : "org.apache.catalina.authenticator.AuthenticatorBase",
+                      "line" : {
+                        "number" : 542
+                      },
+                      "module" : "org.apache.catalina.authenticator",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "StandardHostValve.java",
+                      "classname" : "org.apache.catalina.core.StandardHostValve",
+                      "line" : {
+                        "number" : 143
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "invoke"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "ErrorReportValve.java",
+                      "classname" : "org.apache.catalina.valves.ErrorReportValve",
+                      "line" : {
+                        "number" : 92
+                      },
+                      "module" : "org.apache.catalina.valves",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "StandardEngineValve.java",
+                      "classname" : "org.apache.catalina.core.StandardEngineValve",
+                      "line" : {
+                        "number" : 78
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "invoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RemoteIpValve.java",
+                      "classname" : "org.apache.catalina.valves.RemoteIpValve",
+                      "line" : {
+                        "number" : 764
+                      },
+                      "function" : "invoke",
+                      "module" : "org.apache.catalina.valves"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CoyoteAdapter.java",
+                      "classname" : "org.apache.catalina.connector.CoyoteAdapter",
+                      "line" : {
+                        "number" : 357
+                      },
+                      "module" : "org.apache.catalina.connector",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "Http11Processor.java",
+                      "classname" : "org.apache.coyote.http11.Http11Processor",
+                      "line" : {
+                        "number" : 374
+                      },
+                      "module" : "org.apache.coyote.http11",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractProcessorLight.java",
+                      "classname" : "org.apache.coyote.AbstractProcessorLight",
+                      "line" : {
+                        "number" : 65
+                      },
+                      "module" : "org.apache.coyote",
+                      "function" : "process"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractProtocol.java",
+                      "classname" : "org.apache.coyote.AbstractProtocol$ConnectionHandler",
+                      "line" : {
+                        "number" : 893
+                      },
+                      "module" : "org.apache.coyote",
+                      "function" : "process"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "NioEndpoint.java",
+                      "classname" : "org.apache.tomcat.util.net.NioEndpoint$SocketProcessor",
+                      "line" : {
+                        "number" : 1707
+                      },
+                      "function" : "doRun",
+                      "module" : "org.apache.tomcat.util.net"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketProcessorBase.java",
+                      "classname" : "org.apache.tomcat.util.net.SocketProcessorBase",
+                      "line" : {
+                        "number" : 49
+                      },
+                      "module" : "org.apache.tomcat.util.net",
+                      "function" : "run"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ThreadPoolExecutor.java",
+                      "classname" : "java.util.concurrent.ThreadPoolExecutor$Worker",
+                      "line" : {
+                        "number" : 628
+                      },
+                      "module" : "java.util.concurrent",
+                      "function" : "run"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "TaskThread.java",
+                      "classname" : "org.apache.tomcat.util.threads.TaskThread$WrappingRunnable",
+                      "line" : {
+                        "number" : 61
+                      },
+                      "module" : "org.apache.tomcat.util.threads",
+                      "function" : "run"
+                    }
+                  ],
+                  "type" : "org.springframework.web.client.ResourceAccessException",
+                  "message" : "I/O error on GET request for \"http://jpa-demo:18888/get\": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out"
+                },
+                {
+                  "stacktrace" : [
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : -2
+                      },
+                      "module" : "java.net",
+                      "function" : "socketRead0"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 115
+                      },
+                      "module" : "java.net",
+                      "function" : "socketRead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 168
+                      },
+                      "module" : "java.net",
+                      "function" : "read"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SocketInputStream.java",
+                      "classname" : "java.net.SocketInputStream",
+                      "line" : {
+                        "number" : 140
+                      },
+                      "module" : "java.net",
+                      "function" : "read"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 137
+                      },
+                      "function" : "streamRead",
+                      "module" : "org.apache.http.impl.io"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 153
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "fillBuffer"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "SessionInputBufferImpl.java",
+                      "classname" : "org.apache.http.impl.io.SessionInputBufferImpl",
+                      "line" : {
+                        "number" : 280
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "readLine"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultHttpResponseParser.java",
+                      "classname" : "org.apache.http.impl.conn.DefaultHttpResponseParser",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "parseHead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultHttpResponseParser.java",
+                      "classname" : "org.apache.http.impl.conn.DefaultHttpResponseParser",
+                      "line" : {
+                        "number" : 56
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "parseHead"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractMessageParser.java",
+                      "classname" : "org.apache.http.impl.io.AbstractMessageParser",
+                      "line" : {
+                        "number" : 259
+                      },
+                      "module" : "org.apache.http.impl.io",
+                      "function" : "parse"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DefaultBHttpClientConnection.java",
+                      "classname" : "org.apache.http.impl.DefaultBHttpClientConnection",
+                      "line" : {
+                        "number" : 163
+                      },
+                      "module" : "org.apache.http.impl",
+                      "function" : "receiveResponseHeader"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CPoolProxy.java",
+                      "classname" : "org.apache.http.impl.conn.CPoolProxy",
+                      "line" : {
+                        "number" : 157
+                      },
+                      "module" : "org.apache.http.impl.conn",
+                      "function" : "receiveResponseHeader"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpRequestExecutor.java",
+                      "classname" : "org.apache.http.protocol.HttpRequestExecutor",
+                      "line" : {
+                        "number" : 273
+                      },
+                      "module" : "org.apache.http.protocol",
+                      "function" : "doReceiveResponse"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpRequestExecutor.java",
+                      "classname" : "org.apache.http.protocol.HttpRequestExecutor",
+                      "line" : {
+                        "number" : 125
+                      },
+                      "module" : "org.apache.http.protocol",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "MainClientExec.java",
+                      "classname" : "org.apache.http.impl.execchain.MainClientExec",
+                      "line" : {
+                        "number" : 272
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ProtocolExec.java",
+                      "classname" : "org.apache.http.impl.execchain.ProtocolExec",
+                      "line" : {
+                        "number" : 186
+                      },
+                      "function" : "execute",
+                      "module" : "org.apache.http.impl.execchain"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RetryExec.java",
+                      "classname" : "org.apache.http.impl.execchain.RetryExec",
+                      "line" : {
+                        "number" : 89
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RedirectExec.java",
+                      "classname" : "org.apache.http.impl.execchain.RedirectExec",
+                      "line" : {
+                        "number" : 110
+                      },
+                      "module" : "org.apache.http.impl.execchain",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InternalHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.InternalHttpClient",
+                      "line" : {
+                        "number" : 185
+                      },
+                      "module" : "org.apache.http.impl.client",
+                      "function" : "doExecute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CloseableHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.CloseableHttpClient",
+                      "line" : {
+                        "number" : 83
+                      },
+                      "module" : "org.apache.http.impl.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "CloseableHttpClient.java",
+                      "classname" : "org.apache.http.impl.client.CloseableHttpClient",
+                      "line" : {
+                        "number" : 56
+                      },
+                      "module" : "org.apache.http.impl.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpComponentsClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.HttpComponentsClientHttpRequest",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "executeInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractBufferingClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.AbstractBufferingClientHttpRequest",
+                      "line" : {
+                        "number" : 48
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "executeInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractClientHttpRequest.java",
+                      "classname" : "org.springframework.http.client.AbstractClientHttpRequest",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "module" : "org.springframework.http.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 737
+                      },
+                      "function" : "doExecute",
+                      "module" : "org.springframework.web.client"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 672
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "execute"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RestTemplate.java",
+                      "classname" : "org.springframework.web.client.RestTemplate",
+                      "line" : {
+                        "number" : 610
+                      },
+                      "module" : "org.springframework.web.client",
+                      "function" : "exchange"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiService.java",
+                      "classname" : "com.app.demo.service.ApiService",
+                      "line" : {
+                        "number" : 57
+                      },
+                      "module" : "com.app.demo.service",
+                      "function" : "repeatGetInfo"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApiController.java",
+                      "classname" : "com.app.demo.controller.ApiController",
+                      "line" : {
+                        "number" : 19
+                      },
+                      "module" : "com.app.demo.controller",
+                      "function" : "getData"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 190
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "doInvoke"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "InvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.method.support.InvocableHandlerMethod",
+                      "line" : {
+                        "number" : 138
+                      },
+                      "module" : "org.springframework.web.method.support",
+                      "function" : "invokeForRequest"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ServletInvocableHandlerMethod.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod",
+                      "line" : {
+                        "number" : 105
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "invokeAndHandle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 878
+                      },
+                      "function" : "invokeHandlerMethod",
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "RequestMappingHandlerAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter",
+                      "line" : {
+                        "number" : 792
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method.annotation",
+                      "function" : "handleInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "AbstractHandlerMethodAdapter.java",
+                      "classname" : "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter",
+                      "line" : {
+                        "number" : 87
+                      },
+                      "module" : "org.springframework.web.servlet.mvc.method",
+                      "function" : "handle"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 1040
+                      },
+                      "function" : "doDispatch",
+                      "module" : "org.springframework.web.servlet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "DispatcherServlet.java",
+                      "classname" : "org.springframework.web.servlet.DispatcherServlet",
+                      "line" : {
+                        "number" : 943
+                      },
+                      "function" : "doService",
+                      "module" : "org.springframework.web.servlet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 1006
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "processRequest"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 898
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "doGet"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 626
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "FrameworkServlet.java",
+                      "classname" : "org.springframework.web.servlet.FrameworkServlet",
+                      "line" : {
+                        "number" : 883
+                      },
+                      "module" : "org.springframework.web.servlet",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "HttpServlet.java",
+                      "classname" : "javax.servlet.http.HttpServlet",
+                      "line" : {
+                        "number" : 733
+                      },
+                      "module" : "javax.servlet.http",
+                      "function" : "service"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 227
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "WsFilter.java",
+                      "classname" : "org.apache.tomcat.websocket.server.WsFilter",
+                      "line" : {
+                        "number" : 53
+                      },
+                      "module" : "org.apache.tomcat.websocket.server",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 162
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "exclude_from_grouping" : false,
+                      "library_frame" : true,
+                      "filename" : "RequestContextFilter.java",
+                      "classname" : "org.springframework.web.filter.RequestContextFilter",
+                      "line" : {
+                        "number" : 100
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilterInternal"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "OncePerRequestFilter.java",
+                      "classname" : "org.springframework.web.filter.OncePerRequestFilter",
+                      "line" : {
+                        "number" : 119
+                      },
+                      "module" : "org.springframework.web.filter",
+                      "function" : "doFilter"
+                    },
+                    {
+                      "library_frame" : true,
+                      "exclude_from_grouping" : false,
+                      "filename" : "ApplicationFilterChain.java",
+                      "classname" : "org.apache.catalina.core.ApplicationFilterChain",
+                      "line" : {
+                        "number" : 189
+                      },
+                      "module" : "org.apache.catalina.core",
+                      "function" : "internalDoFilter"
+                    }
+                  ],
+                  "message" : "Read timed out",
+                  "type" : "java.net.SocketTimeoutException"
+                }
+              ],
+              "id" : "dd54bd09467ed73162ff9703c010ce85",
+              "grouping_key" : "f71ded5b1aa97e9c7e3000c14031d492",
+              "grouping_name" : "I/O error on GET request for \"http://jpa-demo:18888/get\": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out"
+            },
+            "message" : "I/O error on GET request for \"http://jpa-demo:18888/get\": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out",
+            "processor" : {
+              "name" : "error",
+              "event" : "error"
+            },
+            "url" : {
+              "path" : "/api/jpa-demo/get",
+              "scheme" : "http",
+              "port" : 8080,
+              "domain" : "spring-requesttemplate-demo-svc",
+              "query" : "sleep=20000",
+              "full" : "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=20000"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:51.185Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "6108185f84edc39538f9435b120420004d97b0db0608e3a3aa072b7b6859415d"
+              },
+              "name" : "spring-requesttemplate-demo",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "10.244.0.46",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "10.244.236.101"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 500,
+                "finished" : true,
+                "headers_sent" : false
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-18T07:00:02.053831474Z"
+            },
+            "transaction" : {
+              "id" : "4c3ace7925da598a",
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1713423591185421
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "error"
+            ]
+          },
+          "sort" : [
+            1713423591185421
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-transaction-000001",
+          "_type" : "_doc",
+          "_id" : "yjYB8I4BjhTFpXIc2LFo",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "d07a83f1a95c6d1f"
+            },
+            "source" : {
+              "ip" : "10.244.68.71"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "transaction"
+            },
+            "url" : {
+              "path" : "/get",
+              "scheme" : "http",
+              "port" : 18888,
+              "domain" : "jpa-demo",
+              "query" : "sleep=20000",
+              "full" : "http://jpa-demo:18888/get?sleep=20000"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T06:59:52.485Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "64ffe94f5f7f64c60562b445818dc4249574817e344f13f6a38f0b166f1abdeb"
+              },
+              "framework" : {
+                "name" : "Spring Web MVC",
+                "version" : "5.2.15.RELEASE"
+              },
+              "name" : "spring-jpa-demo",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "10.244.0.46",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "10.244.68.71"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200,
+                "finished" : true,
+                "headers_sent" : true
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-18T07:00:36.582104508Z",
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "duration" : {
+                "us" : 32999597
+              },
+              "result" : "HTTP 2xx",
+              "name" : "MainController#ListUsers",
+              "id" : "c49b4e95a2fb5a9c",
+              "span_count" : {
+                "dropped" : 0,
+                "started" : 1
+              },
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1713423592485999
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "transaction"
+            ]
+          },
+          "sort" : [
+            1713423592485999
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "yDYB8I4BjhTFpXIc2LFo",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "c49b4e95a2fb5a9c"
+            },
+            "trace" : {
+              "id" : "7c2d3a6c36ac74f747fe6aad2fad42ba"
+            },
+            "@timestamp" : "2024-04-18T07:00:04.690Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-jpa-demo"
+            },
+            "destination" : {
+              "address" : "mysql-nejan-test",
+              "port" : 3306
+            },
+            "event" : {
+              "outcome" : "success"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "transaction" : {
+              "id" : "c49b4e95a2fb5a9c"
+            },
+            "timestamp" : {
+              "us" : 1713423604690630
+            },
+            "span" : {
+              "duration" : {
+                "us" : 20007329
+              },
+              "subtype" : "mysql",
+              "destination" : {
+                "service" : {
+                  "resource" : "mysql/demo"
+                }
+              },
+              "name" : "SELECT FROM user",
+              "action" : "query",
+              "id" : "25000fd6a8bc18e5",
+              "type" : "db",
+              "db" : {
+                "instance" : "demo",
+                "statement" : "SELECT user_id ,email ,name,timestamp FROM user  u JOIN (SELECT SLEEP(?) as ts ) t ON u.user_id != t.ts where name != ?",
+                "type" : "sql"
+              }
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1713423604690630
+          ]
+        }
+      ]
+    }
+  }

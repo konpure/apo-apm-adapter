@@ -1,0 +1,197 @@
+{
+    "name": "jaeger-rabbitmq",
+    "traceId": "a3a7c92e537063081936ea95ee935243",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730795027969000000,
+                    "duration": 219026000,
+                    "serviceName": "rabbitmq-provider",
+                    "name": "GET /send",
+                    "spanId": "dc6a7e596a5049ac",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "dc6a7e596a5049ac",
+                        "apm.span.type": "OTEL",
+                        "client.address": "10.0.2.2",
+                        "http.request.method": "GET",
+                        "http.response.status_code": "200",
+                        "http.route": "/send",
+                        "network.peer.address": "10.0.2.2",
+                        "network.peer.port": "65057",
+                        "network.protocol.version": "1.1",
+                        "server.address": "localhost",
+                        "server.port": "19999",
+                        "url.path": "/send",
+                        "url.query": "name=ccc",
+                        "url.scheme": "http",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730795028149338000,
+                    "duration": 3295000,
+                    "serviceName": "rabbitmq-provider",
+                    "name": "exchange.declare",
+                    "spanId": "3eb721b51dab0e4f",
+                    "pSpanId": "dc6a7e596a5049ac",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "3eb721b51dab0e4f",
+                        "apm.span.type": "OTEL",
+                        "messaging.system": "rabbitmq",
+                        "network.peer.address": "10.0.2.15",
+                        "network.peer.port": "5672",
+                        "network.type": "ipv4"
+                    }
+                },
+                {
+                    "startTime": 1730795028152743000,
+                    "duration": 7591000,
+                    "serviceName": "rabbitmq-provider",
+                    "name": "queue.declare",
+                    "spanId": "93ca0e89a76a2c02",
+                    "pSpanId": "dc6a7e596a5049ac",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "93ca0e89a76a2c02",
+                        "apm.span.type": "OTEL",
+                        "messaging.system": "rabbitmq",
+                        "network.peer.address": "10.0.2.15",
+                        "network.peer.port": "5672",
+                        "network.type": "ipv4"
+                    }
+                },
+                {
+                    "startTime": 1730795028160483000,
+                    "duration": 4908000,
+                    "serviceName": "rabbitmq-provider",
+                    "name": "queue.bind",
+                    "spanId": "c188ebaf97de0ee3",
+                    "pSpanId": "dc6a7e596a5049ac",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "c188ebaf97de0ee3",
+                        "apm.span.type": "OTEL",
+                        "messaging.system": "rabbitmq",
+                        "network.peer.address": "10.0.2.15",
+                        "network.peer.port": "5672",
+                        "network.type": "ipv4"
+                    }
+                },
+                {
+                    "startTime": 1730795028167098000,
+                    "duration": 1519000,
+                    "serviceName": "rabbitmq-provider",
+                    "name": "TestDirectExchange publish",
+                    "spanId": "56594e21f1eee2ad",
+                    "pSpanId": "dc6a7e596a5049ac",
+                    "nextSpanId": "cfd0693a311e6ffb",
+                    "kind": 4,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "56594e21f1eee2ad",
+                        "apm.span.type": "OTEL",
+                        "messaging.destination.name": "TestDirectExchange",
+                        "messaging.message.body.size": "188",
+                        "messaging.operation": "publish",
+                        "messaging.rabbitmq.destination.routing_key": "TestDirectRouting",
+                        "messaging.system": "rabbitmq",
+                        "network.peer.address": "10.0.2.15",
+                        "network.peer.port": "5672",
+                        "network.type": "ipv4"
+                    }
+                },
+                {
+                    "startTime": 1730795028143250000,
+                    "duration": 5937000,
+                    "serviceName": "rabbitmq-provider",
+                    "name": "exchange.declare",
+                    "spanId": "1bd4d4da0b897aab",
+                    "pSpanId": "dc6a7e596a5049ac",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "1bd4d4da0b897aab",
+                        "apm.span.type": "OTEL",
+                        "messaging.system": "rabbitmq",
+                        "network.peer.address": "10.0.2.15",
+                        "network.peer.port": "5672",
+                        "network.type": "ipv4"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730795038818000000,
+                            "duration": 10871000,
+                            "serviceName": "rabbitmq-consumer",
+                            "name": "TestDirectRouting process",
+                            "spanId": "2ea9f55628592905",
+                            "pSpanId": "56594e21f1eee2ad",
+                            "kind": 5,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "2ea9f55628592905",
+                                "apm.span.type": "OTEL",
+                                "messaging.destination.name": "TestDirectRouting",
+                                "messaging.message.body.size": "0",
+                                "messaging.operation": "process",
+                                "messaging.system": "rabbitmq"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730795038815000000,
+                            "duration": 115000,
+                            "serviceName": "rabbitmq-consumer",
+                            "name": "TestDirectQueue process",
+                            "spanId": "cfd0693a311e6ffb",
+                            "pSpanId": "56594e21f1eee2ad",
+                            "kind": 5,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "cfd0693a311e6ffb",
+                                "apm.span.type": "OTEL",
+                                "messaging.destination.name": "TestDirectExchange",
+                                "messaging.message.body.size": "188",
+                                "messaging.operation": "process",
+                                "messaging.rabbitmq.destination.routing_key": "TestDirectRouting",
+                                "messaging.system": "rabbitmq",
+                                "network.peer.address": "10.0.2.15",
+                                "network.peer.port": "5672",
+                                "network.type": "ipv4"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

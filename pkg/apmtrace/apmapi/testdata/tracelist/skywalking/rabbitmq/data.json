@@ -1,0 +1,118 @@
+{
+    "data": {
+        "trace": {
+            "spans": [
+                {
+                    "traceId": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120001",
+                    "segmentId": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [],
+                    "serviceCode": "rabbitmq-provider",
+                    "serviceInstanceName": "24e546f45ebf4b67accd9908ce74d0e7@172.18.0.1",
+                    "startTime": 1730777843112,
+                    "endTime": 1730777843117,
+                    "endpointName": "GET:/send",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "SpringMVC",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "http://localhost:19999/send"
+                        },
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120001",
+                    "segmentId": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120000",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "rabbitmq-provider",
+                    "serviceInstanceName": "24e546f45ebf4b67accd9908ce74d0e7@172.18.0.1",
+                    "startTime": 1730777843115,
+                    "endTime": 1730777843116,
+                    "endpointName": "RabbitMQ/Topic/TestDirectExchangeQueue/TestDirectRouting/Producer",
+                    "type": "Exit",
+                    "peer": "10.0.2.15:5672",
+                    "component": "rabbitmq-producer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.broker",
+                            "value": "10.0.2.15:5672"
+                        },
+                        {
+                            "key": "mq.queue",
+                            "value": "TestDirectRouting"
+                        },
+                        {
+                            "key": "mq.topic",
+                            "value": "TestDirectExchange"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120001",
+                    "segmentId": "c51c97a154dc4fd5b3f5ff832813edaa.110.17307778431190000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120001",
+                            "parentSegmentId": "f31bf94a53e54b828c9e9bef2251aee3.164.17307778431120000",
+                            "parentSpanId": 1,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "rabbitmq-consumer",
+                    "serviceInstanceName": "623a7735388943019bb2b74ae681beb2@172.18.0.1",
+                    "startTime": 1730777843119,
+                    "endTime": 1730777843119,
+                    "endpointName": "RabbitMQ/Topic/TestDirectExchangeQueue/TestDirectRouting/Consumer",
+                    "type": "Entry",
+                    "peer": "10.0.2.15:5672",
+                    "component": "rabbitmq-consumer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.broker",
+                            "value": "10.0.2.15:5672"
+                        },
+                        {
+                            "key": "mq.topic",
+                            "value": "TestDirectExchange"
+                        },
+                        {
+                            "key": "mq.queue",
+                            "value": "TestDirectRouting"
+                        },
+                        {
+                            "key": "transmission.latency",
+                            "value": "4"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                }
+            ]
+        }
+    }
+}

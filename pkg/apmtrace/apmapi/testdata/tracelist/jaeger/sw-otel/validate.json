@@ -1,0 +1,127 @@
+{
+    "name": "jaeger-sw-otel",
+    "traceId": "78df57dce75848db2a0c04b13e785261",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1723791731912000000,
+                    "duration": 603000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "GET:/wait/callOthers",
+                    "spanId": "53d3536dd9201aba",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "53d3536dd9201aba",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "otel.status_description": "SUCCESS",
+                        "sw8.segment_id": "78df57dcc85848dbab487dd3f5456f61.47.17237917319120000",
+                        "sw8.span_id": "0",
+                        "url": "http://localhost:19999/wait/callOthers"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1723791731924000000,
+                    "duration": 584000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "/cpu/loop/1",
+                    "spanId": "52d3536dd9201aba",
+                    "pSpanId": "53d3536dd9201aba",
+                    "nextSpanId": "5b4fac07ec48f8ce",
+                    "kind": 3,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "52d3536dd9201aba",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "otel.status_description": "SUCCESS",
+                        "sw8.parent_span_id": "0",
+                        "sw8.segment_id": "78df57dcc85848dbab487dd3f5456f61.47.17237917319120000",
+                        "sw8.span_id": "1",
+                        "url": "http://localhost:9999/cpu/loop/1"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1723791731928000000,
+                            "duration": 580000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "GET:/cpu/loop/1",
+                            "spanId": "5b4fac07ec48f8ce",
+                            "pSpanId": "52d3536dd9201aba",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "5b4fac07ec48f8ce",
+                                "apm.span.type": "OTEL",
+                                "http.method": "GET",
+                                "http.status_code": "200",
+                                "otel.status_description": "SUCCESS",
+                                "sw8.segment_id": "4efab95a827847a195006e3f860d826f.35.17237917319280000",
+                                "sw8.span_id": "0",
+                                "url": "http://localhost:9999/cpu/loop/1"
+                            }
+                        },
+                        {
+                            "startTime": 1723791731934000000,
+                            "duration": 574000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "UndertowDispatch",
+                            "spanId": "3965ab07e348f8ce",
+                            "pSpanId": "5b4fac07ec48f8ce",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "3965ab07e348f8ce",
+                                "apm.span.type": "OTEL",
+                                "otel.status_description": "SUCCESS",
+                                "sw8.segment_id": "4efab95a827847a195006e3f860d826f.44.17237917319340002",
+                                "sw8.span_id": "0"
+                            }
+                        },
+                        {
+                            "startTime": 1723791731936000000,
+                            "duration": 571000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "GET:/cpu/loop/{times}",
+                            "spanId": "3865ab07e348f8ce",
+                            "pSpanId": "3965ab07e348f8ce",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "3865ab07e348f8ce",
+                                "apm.span.type": "OTEL",
+                                "http.method": "GET",
+                                "http.status_code": "200",
+                                "otel.status_description": "SUCCESS",
+                                "sw8.parent_span_id": "0",
+                                "sw8.segment_id": "4efab95a827847a195006e3f860d826f.44.17237917319340002",
+                                "sw8.span_id": "1",
+                                "url": "http://localhost:9999/cpu/loop/1"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

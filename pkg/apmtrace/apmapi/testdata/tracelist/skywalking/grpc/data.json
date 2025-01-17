@@ -1,0 +1,187 @@
+{
+    "data": {
+        "trace": {
+            "spans": [
+                {
+                    "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                    "segmentId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [],
+                    "serviceCode": "grpc-client",
+                    "serviceInstanceName": "cfa9144307924a52980690e0e17f2f52@172.17.0.1",
+                    "startTime": 1730811346637,
+                    "endTime": 1730811346764,
+                    "endpointName": "POST:/grpc",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "SpringMVC",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "http://localhost:19999/grpc"
+                        },
+                        {
+                            "key": "http.method",
+                            "value": "POST"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                    "segmentId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370000",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "grpc-client",
+                    "serviceInstanceName": "cfa9144307924a52980690e0e17f2f52@172.17.0.1",
+                    "startTime": 1730811346638,
+                    "endTime": 1730811346762,
+                    "endpointName": "Greeter.sayHello",
+                    "type": "Exit",
+                    "peer": "springboot-grpc-server",
+                    "component": "GRPC",
+                    "isError": false,
+                    "layer": "RPCFramework",
+                    "tags": [],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                    "segmentId": "9232d5cbbd044ba0bf419ed00fc0d17d.75.17308113466550000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                            "parentSegmentId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370000",
+                            "parentSpanId": 1,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "grpc-server",
+                    "serviceInstanceName": "9ef8eb1915a54e7f8f7fe1b0423aa5bd@172.17.0.1",
+                    "startTime": 1730811346655,
+                    "endTime": 1730811346758,
+                    "endpointName": "Greeter.sayHello",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "GRPC",
+                    "isError": false,
+                    "layer": "RPCFramework",
+                    "tags": [],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                    "segmentId": "9232d5cbbd044ba0bf419ed00fc0d17d.75.17308113466560002",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [
+                        {
+                            "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                            "parentSegmentId": "9232d5cbbd044ba0bf419ed00fc0d17d.75.17308113466550000",
+                            "parentSpanId": 0,
+                            "type": "CROSS_THREAD"
+                        }
+                    ],
+                    "serviceCode": "grpc-server",
+                    "serviceInstanceName": "9ef8eb1915a54e7f8f7fe1b0423aa5bd@172.17.0.1",
+                    "startTime": 1730811346758,
+                    "endTime": 1730811346758,
+                    "endpointName": "Greeter.sayHello/server/Response/onClose",
+                    "type": "Local",
+                    "peer": "",
+                    "component": "GRPC",
+                    "isError": false,
+                    "layer": "RPCFramework",
+                    "tags": [
+                        {
+                            "key": "rpc.status_code",
+                            "value": "OK"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                    "segmentId": "9232d5cbbd044ba0bf419ed00fc0d17d.75.17308113466560002",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                            "parentSegmentId": "9232d5cbbd044ba0bf419ed00fc0d17d.75.17308113466550000",
+                            "parentSpanId": 0,
+                            "type": "CROSS_THREAD"
+                        }
+                    ],
+                    "serviceCode": "grpc-server",
+                    "serviceInstanceName": "9ef8eb1915a54e7f8f7fe1b0423aa5bd@172.17.0.1",
+                    "startTime": 1730811346656,
+                    "endTime": 1730811346758,
+                    "endpointName": "Greeter.sayHello/server/Request/onHalfClose",
+                    "type": "Local",
+                    "peer": "",
+                    "component": "GRPC",
+                    "isError": false,
+                    "layer": "RPCFramework",
+                    "tags": [],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                    "segmentId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370000",
+                    "spanId": 2,
+                    "parentSpanId": 1,
+                    "refs": [],
+                    "serviceCode": "grpc-client",
+                    "serviceInstanceName": "cfa9144307924a52980690e0e17f2f52@172.17.0.1",
+                    "startTime": 1730811346639,
+                    "endTime": 1730811346639,
+                    "endpointName": "Greeter.sayHello/client/Request/onComplete",
+                    "type": "Local",
+                    "peer": "",
+                    "component": "GRPC",
+                    "isError": false,
+                    "layer": "RPCFramework",
+                    "tags": [],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+                    "segmentId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370000",
+                    "spanId": 3,
+                    "parentSpanId": 1,
+                    "refs": [],
+                    "serviceCode": "grpc-client",
+                    "serviceInstanceName": "cfa9144307924a52980690e0e17f2f52@172.17.0.1",
+                    "startTime": 1730811346762,
+                    "endTime": 1730811346762,
+                    "endpointName": "Greeter.sayHello/client/Response/onClose",
+                    "type": "Local",
+                    "peer": "",
+                    "component": "GRPC",
+                    "isError": false,
+                    "layer": "RPCFramework",
+                    "tags": [],
+                    "logs": [],
+                    "attachedEvents": []
+                }
+            ]
+        }
+    }
+}

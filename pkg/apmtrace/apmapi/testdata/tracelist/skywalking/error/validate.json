@@ -1,0 +1,152 @@
+{
+    "name": "skywalking-error",
+    "traceId": "f8c437361df649e08da3830a8dac3131.37.17065971160810001",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1706597116081000000,
+                    "duration": 2593000000,
+                    "serviceName": "stuck-demo",
+                    "name": "GET:/wait/callOthers",
+                    "spanId": "65e57d30dcfb44d1",
+                    "kind": 2,
+                    "code": 2,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "f8c437361df649e08da3830a8dac3131.37.17065971160810000-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "500",
+                        "url.full": "http://localhost:19999/wait/callOthers"
+                    },
+                    "exceptions":
+                    [
+                        {
+                            "timestamp": 1706597118661000,
+                            "type": "io.kindling.tomcat.exception.ApiException",
+                            "message": "Mock Failed",
+                            "stack": "io.kindling.tomcat.exception.ApiException: Mock Failed\nat io.kindling.tomcat.exception.Asserts.fail(Asserts.java:10)\nat io.kindling.tomcat.web.WaitController.$sw$original$callOther$43mmft2(WaitController.java:62)\nat io.kindling.tomcat.web.WaitController.$sw$original$callOther$43mmft2$accessor$$sw$p1907m1(WaitController.java)\nat io.kindling.tomcat.web.WaitController$$sw$auxiliary$ulfkvc1.call(Unknown Source)\nat org.apache.skywalking.apm.agent.core.plugin.interceptor.enhance.InstMethodsInter.intercept(InstMethodsInter.java:86)\nat io.kindling.tomcat.web.WaitController.callOther(WaitController.java)\nat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\nat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.lang.reflect.Method.invoke(Method.java:498)\nat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\nat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\nat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)\nat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)\nat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)\nat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\nat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)\nat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)\nat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\nat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\nat javax.servlet.http.HttpServlet.service(HttpServlet.java:626)\nat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\nat javax.servlet.http.HttpServlet.service(HttpServlet.java:733)\nat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\nat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\nat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\nat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\nat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\nat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\nat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\nat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\nat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\nat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\nat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\nat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\nat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\nat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\nat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\nat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\nat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\nat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\nat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n"
+                        }
+                    ]
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1706597117363000000,
+                    "duration": 998000000,
+                    "serviceName": "stuck-demo",
+                    "name": "/wait/fail",
+                    "spanId": "64e57d30dcfb44d1",
+                    "pSpanId": "65e57d30dcfb44d1",
+                    "nextSpanId": "4a24251a957f2bf3",
+                    "kind": 3,
+                    "code": 2,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "f8c437361df649e08da3830a8dac3131.37.17065971160810000-1",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "500",
+                        "net.peer.name": "10.0.2.4:9999",
+                        "url.full": "http://10.0.2.4:9999/wait/fail"
+                    }
+                }
+            ],
+            "errorSpans":
+            [
+                {
+                    "startTime": 1706597117363000000,
+                    "duration": 998000000,
+                    "serviceName": "stuck-demo",
+                    "name": "/wait/fail",
+                    "spanId": "64e57d30dcfb44d1",
+                    "pSpanId": "65e57d30dcfb44d1",
+                    "nextSpanId": "4a24251a957f2bf3",
+                    "kind": 3,
+                    "code": 2,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "f8c437361df649e08da3830a8dac3131.37.17065971160810000-1",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "500",
+                        "net.peer.name": "10.0.2.4:9999",
+                        "url.full": "http://10.0.2.4:9999/wait/fail"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1706597117788000000,
+                            "duration": 546000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "GET:/wait/fail",
+                            "spanId": "4a24251a957f2bf3",
+                            "pSpanId": "64e57d30dcfb44d1",
+                            "kind": 2,
+                            "code": 2,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "777de834d130400a9df200230eee57f9.35.17065971177860000-0",
+                                "apm.span.type": "SKYWALKING",
+                                "http.method": "GET",
+                                "http.status_code": "500",
+                                "url.full": "http://10.0.2.4:9999/wait/fail"
+                            }
+                        },
+                        {
+                            "startTime": 1706597117870000000,
+                            "duration": 485000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "UndertowDispatch",
+                            "spanId": "0af3321a9d7f2bf3",
+                            "pSpanId": "4a24251a957f2bf3",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "777de834d130400a9df200230eee57f9.43.17065971178700000-0",
+                                "apm.span.type": "SKYWALKING"
+                            }
+                        },
+                        {
+                            "startTime": 1706597118050000000,
+                            "duration": 30000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "GET:/wait/fail",
+                            "spanId": "0bf3321a9d7f2bf3",
+                            "pSpanId": "0af3321a9d7f2bf3",
+                            "kind": 2,
+                            "code": 2,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "777de834d130400a9df200230eee57f9.43.17065971178700000-1",
+                                "apm.span.type": "SKYWALKING",
+                                "http.method": "GET",
+                                "http.status_code": "200",
+                                "url.full": "http://10.0.2.4:9999/wait/fail"
+                            },
+                            "exceptions":
+                            [
+                                {
+                                    "timestamp": 1706597118079000,
+                                    "type": "io.kindling.undertow.exception.ApiException",
+                                    "message": "Mock Failed",
+                                    "stack": "io.kindling.undertow.exception.ApiException: Mock Failed\nat io.kindling.undertow.exception.Asserts.fail(Asserts.java:10)\nat io.kindling.undertow.web.WaitController.$sw$original$fail$g0tu750(WaitController.java:71)\nat io.kindling.undertow.web.WaitController.$sw$original$fail$g0tu750$accessor$$sw$p7qgo33(WaitController.java)\nat io.kindling.undertow.web.WaitController$$sw$auxiliary$15q55d0.call(Unknown Source)\nat org.apache.skywalking.apm.agent.core.plugin.interceptor.enhance.InstMethodsInter.intercept(InstMethodsInter.java:86)\nat io.kindling.undertow.web.WaitController.fail(WaitController.java)\nat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\nat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\nat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\nat java.lang.reflect.Method.invoke(Method.java:498)\nat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\nat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\nat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)\nat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)\nat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)\nat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\nat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)\nat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)\nat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\nat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\nat javax.servlet.http.HttpServlet.service(HttpServlet.java:497)\nat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\nat javax.servlet.http.HttpServlet.service(HttpServlet.java:584)\nat io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)\nat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)\nat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\nat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\nat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\nat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\nat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\nat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\nat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\nat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\nat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\nat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\nat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\nat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\nat io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)\nat io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)\nat io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)\nat io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)\nat io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)\nat io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:111)\n"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1084 @@
+{
+    "transactionId": "dubbo-consumer^1718250796910^1",
+    "completeState": "Complete",
+    "logLinkEnable": false,
+    "logButtonName": "",
+    "logPageUrl": "",
+    "disableButtonMessage": "",
+    "applicationName": "OrderService:order2",
+    "agentId": "dubbo-provider",
+    "applicationId": "dubbo-provider",
+    "loggingTransactionInfo": false,
+    "applicationMapData": {
+        "nodeDataArray": [
+            {
+                "key": "dubbo-provider^SPRING_BOOT",
+                "applicationName": "dubbo-provider",
+                "category": "SPRING_BOOT",
+                "serviceType": "SPRING_BOOT",
+                "serviceTypeCode": "1210",
+                "isWas": true,
+                "isQueue": false,
+                "isAuthorized": true,
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "hasAlert": false,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "agentHistogram": {
+                    "dubbo-provider": {
+                        "1s": 1,
+                        "3s": 0,
+                        "5s": 0,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "agentTimeSeriesHistogram": {
+                    "dubbo-provider": [
+                        {
+                            "key": "1s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    1
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "3s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "5s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Slow",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Error",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "instanceCount": 0,
+                "instanceErrorCount": 0,
+                "agentIds": [],
+                "serverList": {}
+            },
+            {
+                "key": "dubbo-consumer^SPRING_BOOT",
+                "applicationName": "dubbo-consumer",
+                "category": "SPRING_BOOT",
+                "serviceType": "SPRING_BOOT",
+                "serviceTypeCode": "1210",
+                "isWas": true,
+                "isQueue": false,
+                "isAuthorized": true,
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "hasAlert": false,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "agentHistogram": {
+                    "dubbo-consumer": {
+                        "1s": 1,
+                        "3s": 0,
+                        "5s": 0,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "agentTimeSeriesHistogram": {
+                    "dubbo-consumer": [
+                        {
+                            "key": "1s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    1
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "3s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "5s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Slow",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Error",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "instanceCount": 0,
+                "instanceErrorCount": 0,
+                "agentIds": [],
+                "serverList": {}
+            },
+            {
+                "key": "dubbo-consumer^USER",
+                "applicationName": "USER",
+                "category": "USER",
+                "serviceType": "USER",
+                "serviceTypeCode": "2",
+                "isWas": false,
+                "isQueue": false,
+                "isAuthorized": true,
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "hasAlert": false,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "agentHistogram": {},
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "agentTimeSeriesHistogram": {},
+                "instanceCount": 0,
+                "instanceErrorCount": 0,
+                "agentIds": [],
+                "serverList": {}
+            }
+        ],
+        "linkDataArray": [
+            {
+                "key": "dubbo-consumer^USER~dubbo-consumer^SPRING_BOOT",
+                "from": "dubbo-consumer^USER",
+                "to": "dubbo-consumer^SPRING_BOOT",
+                "toAgent": [],
+                "sourceInfo": {
+                    "applicationName": "dubbo-consumer",
+                    "serviceType": "USER",
+                    "serviceTypeCode": 2,
+                    "isWas": false
+                },
+                "targetInfo": {
+                    "applicationName": "dubbo-consumer",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "filterApplicationName": "dubbo-consumer",
+                "filterApplicationServiceTypeCode": 1210,
+                "filterApplicationServiceTypeName": "SPRING_BOOT",
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "sourceHistogram": {
+                    "dubbo-consumer": {
+                        "1s": 1,
+                        "3s": 0,
+                        "5s": 0,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "targetHistogram": {
+                    "dubbo-consumer": {
+                        "1s": 1,
+                        "3s": 0,
+                        "5s": 0,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "sourceTimeSeriesHistogram": {
+                    "dubbo-consumer": [
+                        {
+                            "key": "1s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    1
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "3s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "5s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Slow",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Error",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718250900000,
+                                    0
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "hasAlert": false
+            },
+            {
+                "key": "dubbo-consumer^SPRING_BOOT~dubbo-provider^SPRING_BOOT",
+                "from": "dubbo-consumer^SPRING_BOOT",
+                "to": "dubbo-provider^SPRING_BOOT",
+                "fromAgent": [],
+                "toAgent": [],
+                "sourceInfo": {
+                    "applicationName": "dubbo-consumer",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "targetInfo": {
+                    "applicationName": "dubbo-provider",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "filterApplicationName": "dubbo-consumer",
+                "filterApplicationServiceTypeCode": 1210,
+                "filterApplicationServiceTypeName": "SPRING_BOOT",
+                "filterTargetRpcList": [],
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718250900000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "sourceHistogram": {},
+                "targetHistogram": {},
+                "sourceTimeSeriesHistogram": {},
+                "hasAlert": false
+            }
+        ]
+    },
+    "callStackEnd": 1718250907288,
+    "callStackStart": 1718250906685,
+    "callStackIndex": {
+        "barWidth": 15,
+        "executionMilliseconds": 16,
+        "agent": 20,
+        "hasException": 22,
+        "simpleClassName": 17,
+        "title": 10,
+        "isFocused": 21,
+        "parentId": 7,
+        "excludeFromTimeline": 3,
+        "isAuthorized": 23,
+        "depth": 0,
+        "methodType": 18,
+        "tab": 5,
+        "hasChild": 9,
+        "gap": 13,
+        "isMethod": 8,
+        "end": 2,
+        "arguments": 11,
+        "id": 6,
+        "begin": 1,
+        "applicationName": 4,
+        "apiType": 19,
+        "executeTime": 12,
+        "elapsedTime": 14
+    },
+    "callStack": [
+        [
+            "",
+            1718250906685,
+            1718250907288,
+            false,
+            "dubbo-consumer",
+            0,
+            "1",
+            "",
+            true,
+            true,
+            "Servlet Process",
+            "/dubbo/0/0/100",
+            "11:55:06 685",
+            "0",
+            "603",
+            "0",
+            "22",
+            "",
+            "100",
+            "TOMCAT",
+            "dubbo-consumer",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            1,
+            "2",
+            "1",
+            false,
+            false,
+            "http.status.code",
+            "200",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            1,
+            "3",
+            "1",
+            false,
+            false,
+            "REMOTE_ADDRESS",
+            "10.0.2.2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718250906705,
+            1718250907286,
+            false,
+            "dubbo-consumer",
+            1,
+            "4",
+            "1",
+            true,
+            false,
+            "invoke(Request request, Response response)",
+            "",
+            "11:55:06 705",
+            "20",
+            "581",
+            "0",
+            "197",
+            "StandardHostValve",
+            "0",
+            "TOMCAT_METHOD",
+            "dubbo-consumer",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718250906901,
+            1718250907285,
+            false,
+            "dubbo-consumer",
+            2,
+            "5",
+            "4",
+            true,
+            false,
+            "doGet(HttpServletRequest request, HttpServletResponse response)",
+            "",
+            "11:55:06 901",
+            "196",
+            "384",
+            "0",
+            "154",
+            "FrameworkServlet",
+            "0",
+            "SPRING",
+            "dubbo-consumer",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718250907005,
+            1718250907235,
+            false,
+            "dubbo-consumer",
+            3,
+            "6",
+            "5",
+            true,
+            false,
+            "order2(long sleepAms, long sleepBms, long sleepCms)",
+            "",
+            "11:55:07 005",
+            "104",
+            "230",
+            "0",
+            "8",
+            "ProductController",
+            "0",
+            "SPRING_BEAN",
+            "dubbo-consumer",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718250907013,
+            1718250907235,
+            false,
+            "dubbo-consumer",
+            4,
+            "7",
+            "6",
+            true,
+            false,
+            "order2(long index, long sleepTime)",
+            "",
+            "11:55:07 013",
+            "8",
+            "222",
+            "0",
+            "12",
+            "ProductServiceImpl",
+            "0",
+            "SPRING_BEAN",
+            "dubbo-consumer",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718250907025,
+            1718250907235,
+            false,
+            "dubbo-consumer",
+            5,
+            "8",
+            "7",
+            true,
+            false,
+            "invoke(Invocation inv)",
+            "",
+            "11:55:07 025",
+            "12",
+            "210",
+            "0",
+            "210",
+            "AbstractInvoker",
+            "0",
+            "DUBBO_CONSUMER",
+            "dubbo-consumer",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718250907055,
+            1718250907197,
+            false,
+            "dubbo-provider",
+            6,
+            "9",
+            "8",
+            true,
+            true,
+            "Dubbo Provider Process",
+            "OrderService:order2",
+            "11:55:07 055",
+            "30",
+            "142",
+            "0",
+            "24",
+            "",
+            "100",
+            "DUBBO_PROVIDER",
+            "dubbo-provider",
+            true,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            7,
+            "10",
+            "9",
+            false,
+            false,
+            "REMOTE_ADDRESS",
+            "10.0.2.4:34136",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718250907079,
+            1718250907197,
+            false,
+            "dubbo-provider",
+            7,
+            "11",
+            "9",
+            true,
+            false,
+            "invoke(Invocation invocation)",
+            "",
+            "11:55:07 079",
+            "24",
+            "118",
+            "0",
+            "118",
+            "AbstractProxyInvoker",
+            "0",
+            "DUBBO",
+            "dubbo-provider",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            8,
+            "12",
+            "11",
+            false,
+            false,
+            "dubbo.rpc",
+            "OrderService:order2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ]
+    ]
+}

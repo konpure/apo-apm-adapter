@@ -1,0 +1,103 @@
+{
+    "data": {
+        "trace": {
+            "spans": [
+                {
+                    "traceId": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800003",
+                    "segmentId": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800002",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [],
+                    "serviceCode": "stuck-demo-tomcat",
+                    "serviceInstanceName": "e7e77ac40c8d4fd4a477d2d0dc87fab6@172.19.0.1",
+                    "startTime": 1730791981180,
+                    "endTime": 1730791981679,
+                    "endpointName": "GET:/redis/query",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "SpringMVC",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "http://localhost:19999/redis/query"
+                        },
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800003",
+                    "segmentId": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800002",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "stuck-demo-tomcat",
+                    "serviceInstanceName": "e7e77ac40c8d4fd4a477d2d0dc87fab6@172.19.0.1",
+                    "startTime": 1730791981640,
+                    "endTime": 1730791981661,
+                    "endpointName": "Lettuce/EXISTS",
+                    "type": "Exit",
+                    "peer": "10.0.2.4:6379",
+                    "component": "Lettuce",
+                    "isError": false,
+                    "layer": "Cache",
+                    "tags": [
+                        {
+                            "key": "cache.type",
+                            "value": "Redis"
+                        },
+                        {
+                            "key": "cache.cmd",
+                            "value": "EXISTS"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800003",
+                    "segmentId": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800002",
+                    "spanId": 2,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "stuck-demo-tomcat",
+                    "serviceInstanceName": "e7e77ac40c8d4fd4a477d2d0dc87fab6@172.19.0.1",
+                    "startTime": 1730791981670,
+                    "endTime": 1730791981672,
+                    "endpointName": "Lettuce/SET",
+                    "type": "Exit",
+                    "peer": "10.0.2.4:6379",
+                    "component": "Lettuce",
+                    "isError": false,
+                    "layer": "Cache",
+                    "tags": [
+                        {
+                            "key": "cache.type",
+                            "value": "Redis"
+                        },
+                        {
+                            "key": "cache.cmd",
+                            "value": "SET"
+                        },
+                        {
+                            "key": "cache.op",
+                            "value": "write"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                }
+            ]
+        }
+    }
+}

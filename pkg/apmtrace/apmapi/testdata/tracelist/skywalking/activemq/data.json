@@ -1,0 +1,110 @@
+{
+    "data": {
+        "trace": {
+            "spans": [
+                {
+                    "traceId": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130001",
+                    "segmentId": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [],
+                    "serviceCode": "activemq-provider",
+                    "serviceInstanceName": "be36ee50794644669719709d78e42a3a@172.18.0.1",
+                    "startTime": 1730778283217,
+                    "endTime": 1730778284693,
+                    "endpointName": "GET:/send",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "SpringMVC",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "http://localhost:19999/send"
+                        },
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130001",
+                    "segmentId": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130000",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "activemq-provider",
+                    "serviceInstanceName": "be36ee50794644669719709d78e42a3a@172.18.0.1",
+                    "startTime": 1730778284548,
+                    "endTime": 1730778284600,
+                    "endpointName": "ActiveMQ/Queue/ActiveMQQueue/Producer",
+                    "type": "Exit",
+                    "peer": "10.0.2.15:61616",
+                    "component": "activemq-producer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.broker",
+                            "value": "10.0.2.15:61616"
+                        },
+                        {
+                            "key": "mq.queue",
+                            "value": "ActiveMQQueue"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130001",
+                    "segmentId": "5c7ad325d0e24e0891d1535a86e3374e.38.17307782846770000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130001",
+                            "parentSegmentId": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130000",
+                            "parentSpanId": 1,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "activemq-consumer",
+                    "serviceInstanceName": "94566ef862384327aa45f388d628afea@172.18.0.1",
+                    "startTime": 1730778284680,
+                    "endTime": 1730778284700,
+                    "endpointName": "ActiveMQ/Queue/ActiveMQQueue/Consumer",
+                    "type": "Entry",
+                    "peer": "10.0.2.15:61616",
+                    "component": "activemq-consumer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.broker",
+                            "value": "10.0.2.15:61616"
+                        },
+                        {
+                            "key": "mq.queue",
+                            "value": "ActiveMQQueue"
+                        },
+                        {
+                            "key": "transmission.latency",
+                            "value": "141"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                }
+            ]
+        }
+    }
+}

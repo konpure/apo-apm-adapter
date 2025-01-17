@@ -1,0 +1,18 @@
+adapter:
+  http_port: 8079
+  timeout: 10
+  trace_api:
+    apm_list: [skywalking, jaeger]
+    skywalking:
+      address: "demo.skywalking.apache.org"
+      user: "skywalking"
+      password: "skywalking"
+    jaeger:
+      address: "127.0.0.1:16686"
+    elastic:
+      address: ""
+      user: ""
+      password: ""
+    pinpoint:
+      address: ""
+

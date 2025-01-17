@@ -1,0 +1,74 @@
+{
+    "name": "skywalking-dubbo",
+    "traceId": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370001",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1706164669139000000,
+                    "duration": 918000000,
+                    "serviceName": "dubbo-consumer",
+                    "name": "GET:/dubbo/{sleepA}/{sleepB}/{sleepC}",
+                    "spanId": "98d26201482ece3e",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370000-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "url.full": "http://localhost:19999/dubbo/0/0/100"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1706164669451000000,
+                    "duration": 536000000,
+                    "serviceName": "dubbo-consumer",
+                    "name": "io.kindling.dubbo.api.service.OrderService.order2(long,long)",
+                    "spanId": "99d26201482ece3e",
+                    "pSpanId": "98d26201482ece3e",
+                    "nextSpanId": "627391567b7849b8",
+                    "kind": 3,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370000-1",
+                        "apm.span.type": "SKYWALKING",
+                        "net.peer.name": "10.0.2.4:30002",
+                        "rpc.system": "dubbo",
+                        "url.full": "dubbo://10.0.2.4:30002/io.kindling.dubbo.api.service.OrderService.order2(long,long)"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1706164669803000000,
+                            "duration": 115000000,
+                            "serviceName": "dubbo-provider",
+                            "name": "io.kindling.dubbo.api.service.OrderService.order2(long,long)",
+                            "spanId": "627391567b7849b8",
+                            "pSpanId": "99d26201482ece3e",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "40a7589d1cff47eea27a7ee5321a3256.47.17061646698000000-0",
+                                "apm.span.type": "SKYWALKING",
+                                "url.full": "dubbo://10.0.2.4:30002/io.kindling.dubbo.api.service.OrderService.order2(long,long)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1096 @@
+{
+    "transactionId": "stuck-demo-tomcat^1718247680924^23",
+    "completeState": "Complete",
+    "logLinkEnable": false,
+    "logButtonName": "",
+    "logPageUrl": "",
+    "disableButtonMessage": "",
+    "applicationName": "/wait/fail/aaa",
+    "agentId": "stuck-demo-tomcat",
+    "applicationId": "stuck-demo-tomcat",
+    "loggingTransactionInfo": false,
+    "applicationMapData": {
+        "nodeDataArray": [
+            {
+                "key": "stuck-demo-tomcat^USER",
+                "applicationName": "USER",
+                "category": "USER",
+                "serviceType": "USER",
+                "serviceTypeCode": "2",
+                "isWas": false,
+                "isQueue": false,
+                "isAuthorized": true,
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "hasAlert": false,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "agentHistogram": {},
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "agentTimeSeriesHistogram": {},
+                "instanceCount": 0,
+                "instanceErrorCount": 0,
+                "agentIds": [],
+                "serverList": {}
+            },
+            {
+                "key": "stuck-demo-tomcat^SPRING_BOOT",
+                "applicationName": "stuck-demo-tomcat",
+                "category": "SPRING_BOOT",
+                "serviceType": "SPRING_BOOT",
+                "serviceTypeCode": "1210",
+                "isWas": true,
+                "isQueue": false,
+                "isAuthorized": true,
+                "totalCount": 2,
+                "errorCount": 1,
+                "slowCount": 0,
+                "hasAlert": false,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 1
+                },
+                "agentHistogram": {
+                    "stuck-demo-tomcat": {
+                        "1s": 1,
+                        "3s": 0,
+                        "5s": 0,
+                        "Slow": 0,
+                        "Error": 1
+                    }
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                1
+                            ]
+                        ]
+                    }
+                ],
+                "agentTimeSeriesHistogram": {
+                    "stuck-demo-tomcat": [
+                        {
+                            "key": "1s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    1
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "3s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "5s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Slow",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Error",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    1
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "instanceCount": 0,
+                "instanceErrorCount": 1,
+                "agentIds": [],
+                "serverList": {}
+            }
+        ],
+        "linkDataArray": [
+            {
+                "key": "stuck-demo-tomcat^USER~stuck-demo-tomcat^SPRING_BOOT",
+                "from": "stuck-demo-tomcat^USER",
+                "to": "stuck-demo-tomcat^SPRING_BOOT",
+                "toAgent": [],
+                "sourceInfo": {
+                    "applicationName": "stuck-demo-tomcat",
+                    "serviceType": "USER",
+                    "serviceTypeCode": 2,
+                    "isWas": false
+                },
+                "targetInfo": {
+                    "applicationName": "stuck-demo-tomcat",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "filterApplicationName": "stuck-demo-tomcat",
+                "filterApplicationServiceTypeCode": 1210,
+                "filterApplicationServiceTypeName": "SPRING_BOOT",
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "sourceHistogram": {
+                    "stuck-demo-tomcat": {
+                        "1s": 1,
+                        "3s": 0,
+                        "5s": 0,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "targetHistogram": {
+                    "stuck-demo-tomcat": {
+                        "1s": 1,
+                        "3s": 0,
+                        "5s": 0,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "sourceTimeSeriesHistogram": {
+                    "stuck-demo-tomcat": [
+                        {
+                            "key": "1s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    1
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "3s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "5s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Slow",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Error",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718247900000,
+                                    0
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "hasAlert": false
+            },
+            {
+                "key": "stuck-demo-tomcat^SPRING_BOOT~stuck-demo-tomcat^SPRING_BOOT",
+                "from": "stuck-demo-tomcat^SPRING_BOOT",
+                "to": "stuck-demo-tomcat^SPRING_BOOT",
+                "fromAgent": [],
+                "toAgent": [],
+                "sourceInfo": {
+                    "applicationName": "stuck-demo-tomcat",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "targetInfo": {
+                    "applicationName": "stuck-demo-tomcat",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "filterApplicationName": "stuck-demo-tomcat",
+                "filterApplicationServiceTypeCode": 1210,
+                "filterApplicationServiceTypeName": "SPRING_BOOT",
+                "filterTargetRpcList": [],
+                "totalCount": 1,
+                "errorCount": 1,
+                "slowCount": 0,
+                "histogram": {
+                    "1s": 0,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 1
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718247900000,
+                                1
+                            ]
+                        ]
+                    }
+                ],
+                "sourceHistogram": {},
+                "targetHistogram": {},
+                "sourceTimeSeriesHistogram": {},
+                "hasAlert": true
+            }
+        ]
+    },
+    "callStackEnd": 1718247929609,
+    "callStackStart": 1718247929554,
+    "callStackIndex": {
+        "barWidth": 15,
+        "executionMilliseconds": 16,
+        "agent": 20,
+        "hasException": 22,
+        "simpleClassName": 17,
+        "title": 10,
+        "isFocused": 21,
+        "parentId": 7,
+        "excludeFromTimeline": 3,
+        "isAuthorized": 23,
+        "depth": 0,
+        "methodType": 18,
+        "tab": 5,
+        "hasChild": 9,
+        "gap": 13,
+        "isMethod": 8,
+        "end": 2,
+        "arguments": 11,
+        "id": 6,
+        "begin": 1,
+        "applicationName": 4,
+        "apiType": 19,
+        "executeTime": 12,
+        "elapsedTime": 14
+    },
+    "callStack": [
+        [
+            "",
+            1718247929554,
+            1718247929609,
+            false,
+            "stuck-demo-tomcat",
+            0,
+            "1",
+            "",
+            true,
+            true,
+            "Servlet Process",
+            "/wait/callOthers",
+            "11:05:29 554",
+            "0",
+            "55",
+            "55",
+            "1",
+            "",
+            "100",
+            "TOMCAT",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            1,
+            "2",
+            "1",
+            false,
+            false,
+            "http.status.code",
+            "200",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            1,
+            "3",
+            "1",
+            false,
+            false,
+            "REMOTE_ADDRESS",
+            "10.0.2.2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929555,
+            1718247929609,
+            false,
+            "stuck-demo-tomcat",
+            1,
+            "4",
+            "1",
+            true,
+            false,
+            "invoke(Request request, Response response)",
+            "",
+            "11:05:29 555",
+            "1",
+            "54",
+            "54",
+            "0",
+            "StandardHostValve",
+            "0",
+            "TOMCAT_METHOD",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            2,
+            "5",
+            "4",
+            false,
+            false,
+            "http.param",
+            "httpClient=ApacheAsyncClient4&timeout=1&url=http://localhost:19999/wait/fail/aaa",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929555,
+            1718247929609,
+            false,
+            "stuck-demo-tomcat",
+            2,
+            "6",
+            "4",
+            true,
+            false,
+            "doGet(HttpServletRequest request, HttpServletResponse response)",
+            "",
+            "11:05:29 555",
+            "0",
+            "54",
+            "54",
+            "4",
+            "FrameworkServlet",
+            "0",
+            "SPRING",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929557,
+            1718247929607,
+            false,
+            "stuck-demo-tomcat",
+            3,
+            "7",
+            "6",
+            true,
+            false,
+            "callOthers(String url, String param, int timeout, String httpClient)",
+            "",
+            "11:05:29 557",
+            "2",
+            "50",
+            "50",
+            "17",
+            "WaitController",
+            "0",
+            "SPRING_BEAN",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929568,
+            1718247929570,
+            false,
+            "stuck-demo-tomcat",
+            4,
+            "8",
+            "7",
+            true,
+            false,
+            "execute(HttpUriRequest request, FutureCallback callback)",
+            "",
+            "11:05:29 568",
+            "11",
+            "2",
+            "2",
+            "1",
+            "CloseableHttpAsyncClient",
+            "0",
+            "HTTP_CLIENT_4",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929569,
+            1718247929570,
+            false,
+            "stuck-demo-tomcat",
+            5,
+            "9",
+            "8",
+            true,
+            false,
+            "start()",
+            "http://localhost:19999/wait/fail/aaa",
+            "11:05:29 569",
+            "1",
+            "1",
+            "1",
+            "1",
+            "DefaultClientExchangeHandlerImpl",
+            "0",
+            "HTTP_CLIENT_4",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929577,
+            1718247929594,
+            false,
+            "stuck-demo-tomcat",
+            6,
+            "10",
+            "9",
+            true,
+            true,
+            "Servlet Process",
+            "/wait/fail/aaa",
+            "11:05:29 577",
+            "8",
+            "17",
+            "17",
+            "0",
+            "",
+            "100",
+            "TOMCAT",
+            "stuck-demo-tomcat",
+            true,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            7,
+            "11",
+            "10",
+            false,
+            false,
+            "http.status.code",
+            "500",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            7,
+            "12",
+            "10",
+            false,
+            false,
+            "REMOTE_ADDRESS",
+            "127.0.0.1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929577,
+            1718247929594,
+            false,
+            "stuck-demo-tomcat",
+            7,
+            "13",
+            "10",
+            true,
+            false,
+            "invoke(Request request, Response response)",
+            "",
+            "11:05:29 577",
+            "0",
+            "17",
+            "17",
+            "0",
+            "StandardHostValve",
+            "0",
+            "TOMCAT_METHOD",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929577,
+            1718247929594,
+            false,
+            "stuck-demo-tomcat",
+            8,
+            "14",
+            "13",
+            true,
+            false,
+            "doGet(HttpServletRequest request, HttpServletResponse response)",
+            "",
+            "11:05:29 577",
+            "0",
+            "17",
+            "17",
+            "16",
+            "FrameworkServlet",
+            "0",
+            "SPRING",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929579,
+            1718247929580,
+            false,
+            "stuck-demo-tomcat",
+            9,
+            "15",
+            "14",
+            true,
+            false,
+            "fail(String errorMsg)",
+            "",
+            "11:05:29 579",
+            "2",
+            "1",
+            "1",
+            "1",
+            "WaitController",
+            "0",
+            "SPRING_BEAN",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            10,
+            "16",
+            "15",
+            false,
+            false,
+            "ApiException",
+            "aaa",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            true,
+            true
+        ],
+        [
+            "",
+            1718247929598,
+            1718247929600,
+            false,
+            "stuck-demo-tomcat",
+            6,
+            "17",
+            "9",
+            true,
+            false,
+            "Asynchronous Invocation",
+            "",
+            "11:05:29 598",
+            "29",
+            "2",
+            "2",
+            "0",
+            "",
+            "200",
+            "ASYNC",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929598,
+            1718247929600,
+            false,
+            "stuck-demo-tomcat",
+            7,
+            "18",
+            "17",
+            true,
+            false,
+            "completed(Object result)",
+            "",
+            "11:05:29 598",
+            "0",
+            "2",
+            "2",
+            "2",
+            "BasicFuture",
+            "0",
+            "HTTP_CLIENT_4",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718247929570,
+            1718247929601,
+            false,
+            "stuck-demo-tomcat",
+            4,
+            "19",
+            "7",
+            true,
+            false,
+            "get(long timeout, TimeUnit unit)",
+            "",
+            "11:05:29 570",
+            "0",
+            "31",
+            "31",
+            "31",
+            "BasicFuture",
+            "0",
+            "HTTP_CLIENT_4",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ]
+    ]
+}

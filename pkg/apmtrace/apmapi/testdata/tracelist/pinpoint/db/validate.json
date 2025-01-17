@@ -1,0 +1,39 @@
+{
+    "name": "pinpoint-db",
+    "traceId": "stuck-demo-tomcat^1718247680924^24",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1718249914010000000,
+                    "duration": 1579000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "/db/query",
+                    "spanId": "1",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "http.status_code": "200",
+                        "http.url": "/db/query"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1718249915254000000,
+                    "duration": 127000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "ConnectionImpl.prepareStatement(String sql)",
+                    "spanId": "13",
+                    "pSpanId": "9",
+                    "kind": 3,
+                    "code": 0
+                }
+            ]
+        }
+    ]
+}

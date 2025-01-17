@@ -1,0 +1,73 @@
+{
+    "name": "skywalking-grpc",
+    "traceId": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370001",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730811346637000000,
+                    "duration": 127000000,
+                    "serviceName": "grpc-client",
+                    "name": "POST:/grpc",
+                    "spanId": "c5d652e60b91ad8c",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370000-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "POST",
+                        "http.status_code": "200",
+                        "url.full": "http://localhost:19999/grpc"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730811346638000000,
+                    "duration": 124000000,
+                    "serviceName": "grpc-client",
+                    "name": "Greeter.sayHello",
+                    "spanId": "c4d652e60b91ad8c",
+                    "pSpanId": "c5d652e60b91ad8c",
+                    "nextSpanId": "dd95ac295ab9a7dd",
+                    "kind": 3,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "ae44ed7978a34b23bbb55aadff4fdbaf.47.17308113466370000-1",
+                        "apm.span.type": "SKYWALKING",
+                        "net.peer.name": "springboot-grpc-server",
+                        "rpc.system": "grpc"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730811346655000000,
+                            "duration": 103000000,
+                            "serviceName": "grpc-server",
+                            "name": "Greeter.sayHello",
+                            "spanId": "dd95ac295ab9a7dd",
+                            "pSpanId": "c4d652e60b91ad8c",
+                            "kind": 2,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "9232d5cbbd044ba0bf419ed00fc0d17d.75.17308113466550000-0",
+                                "apm.span.type": "SKYWALKING"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

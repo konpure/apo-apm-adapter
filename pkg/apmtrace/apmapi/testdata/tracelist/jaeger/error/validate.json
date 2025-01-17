@@ -1,0 +1,181 @@
+{
+    "name": "jaeger-error",
+    "traceId": "46615e70d1c32c0d8ddb5ffddf827b37",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1707269289263000000,
+                    "duration": 26446000,
+                    "serviceName": "stuck-tomcat",
+                    "name": "GET /wait/callOthers",
+                    "spanId": "c5d52d22cfaba2de",
+                    "kind": 2,
+                    "code": 2,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "c5d52d22cfaba2de",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.route": "/wait/callOthers",
+                        "http.scheme": "http",
+                        "http.status_code": "500",
+                        "http.target": "/wait/callOthers?url=http%3A%2F%2F10.0.2.4%3A9999%2Fwait%2Ffail",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "52026",
+                        "net.transport": "ip_tcp",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1707269289268482000,
+                    "duration": 12937000,
+                    "serviceName": "stuck-tomcat",
+                    "name": "GET",
+                    "spanId": "3c50837b5ebd4199",
+                    "pSpanId": "be8e850bc97a5f8e",
+                    "nextSpanId": "044eaa25409246f4",
+                    "kind": 3,
+                    "code": 2,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "3c50837b5ebd4199",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.status_code": "500",
+                        "http.url": "http://10.0.2.4:9999/wait/fail",
+                        "net.peer.name": "10.0.2.4",
+                        "net.peer.port": "9999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.transport": "ip_tcp"
+                    }
+                }
+            ],
+            "errorSpans":
+            [
+                {
+                    "startTime": 1707269289263876000,
+                    "duration": 20624000,
+                    "serviceName": "stuck-tomcat",
+                    "name": "WaitController.callOther",
+                    "spanId": "be8e850bc97a5f8e",
+                    "pSpanId": "c5d52d22cfaba2de",
+                    "kind": 0,
+                    "code": 2,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "be8e850bc97a5f8e",
+                        "apm.span.type": "OTEL"
+                    },
+                    "exceptions":
+                    [
+                        {
+                            "timestamp": 1707269289283174,
+                            "type": "io.kindling.tomcat.exception.ApiException",
+                            "message": "Mock Failed",
+                            "stack": "io.kindling.tomcat.exception.ApiException: Mock Failed\n\tat io.kindling.tomcat.exception.Asserts.fail(Asserts.java:10)\n\tat io.kindling.tomcat.web.WaitController.callOther(WaitController.java:62)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:626)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:733)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.servlet.v3_1.OpenTelemetryHandlerMappingFilter.doFilter(OpenTelemetryHandlerMappingFilter.java:83)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tat java.lang.Thread.run(Thread.java:748)\n"
+                        }
+                    ]
+                },
+                {
+                    "startTime": 1707269289268482000,
+                    "duration": 12937000,
+                    "serviceName": "stuck-tomcat",
+                    "name": "GET",
+                    "spanId": "3c50837b5ebd4199",
+                    "pSpanId": "be8e850bc97a5f8e",
+                    "nextSpanId": "044eaa25409246f4",
+                    "kind": 3,
+                    "code": 2,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "3c50837b5ebd4199",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.status_code": "500",
+                        "http.url": "http://10.0.2.4:9999/wait/fail",
+                        "net.peer.name": "10.0.2.4",
+                        "net.peer.port": "9999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.transport": "ip_tcp"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1707269289270000000,
+                            "duration": 10714000,
+                            "serviceName": "stuck-undertow",
+                            "name": "GET /wait/fail",
+                            "spanId": "044eaa25409246f4",
+                            "pSpanId": "3c50837b5ebd4199",
+                            "kind": 2,
+                            "code": 2,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "044eaa25409246f4",
+                                "apm.span.type": "OTEL",
+                                "http.method": "GET",
+                                "http.route": "/wait/fail",
+                                "http.scheme": "http",
+                                "http.status_code": "500",
+                                "http.target": "/wait/fail",
+                                "net.host.name": "10.0.2.4",
+                                "net.host.port": "9999",
+                                "net.protocol.name": "http",
+                                "net.protocol.version": "1.1",
+                                "net.sock.peer.addr": "10.0.2.4",
+                                "net.sock.peer.port": "34590",
+                                "net.transport": "ip_tcp",
+                                "user_agent.original": "Apache-HttpClient/4.5.13 (Java/1.8.0_162)"
+                            }
+                        }
+                    ],
+                    "errorSpans":
+                    [
+                        {
+                            "startTime": 1707269289272076000,
+                            "duration": 3460000,
+                            "serviceName": "stuck-undertow",
+                            "name": "WaitController.fail",
+                            "spanId": "bc126762a26559f5",
+                            "pSpanId": "044eaa25409246f4",
+                            "kind": 0,
+                            "code": 2,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "bc126762a26559f5",
+                                "apm.span.type": "OTEL"
+                            },
+                            "exceptions":
+                            [
+                                {
+                                    "timestamp": 1707269289273508,
+                                    "type": "io.kindling.undertow.exception.ApiException",
+                                    "message": "Mock Failed",
+                                    "stack": "io.kindling.undertow.exception.ApiException: Mock Failed\n\tat io.kindling.undertow.exception.Asserts.fail(Asserts.java:10)\n\tat io.kindling.undertow.web.WaitController.fail(WaitController.java:71)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:497)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:584)\n\tat io.undertow.servlet.handlers.ServletHandler.handleRequest(ServletHandler.java:74)\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:129)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\n\tat org.springframework.web.servlet.v3_1.OpenTelemetryHandlerMappingFilter.doFilter(OpenTelemetryHandlerMappingFilter.java:83)\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)\n\tat io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)\n\tat io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)\n\tat io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)\n\tat io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)\n\tat io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)\n\tat io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)\n\tat io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:111)\n\tat io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\n\tat io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)\n\tat io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)\n\tat io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)\n\tat io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)\n\tat io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\n\tat io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)\n\tat io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:269)\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)\n\tat io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)\n\tat io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)\n\tat io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)\n\tat io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)\n\tat io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)\n\tat io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)\n\tat io.undertow.server.Connectors.executeRootHandler(Connectors.java:390)\n\tat io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:836)\n\tat org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)\n\tat org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:2019)\n\tat org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1558)\n\tat org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1449)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.lang.Throwable\n\t... 67 more\n"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

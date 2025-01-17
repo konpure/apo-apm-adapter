@@ -1,0 +1,94 @@
+{
+    "name": "jaeger-1.32-dubbo",
+    "traceId": "1dea5a0ef5251923406320277ce2dc11",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730959641255000000,
+                    "duration": 1575944000,
+                    "serviceName": "dubbo-consumer",
+                    "name": "GET /dubbo/{sleepA}/{sleepB}/{sleepC}",
+                    "spanId": "1b2a511ffcb6ad86",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "1b2a511ffcb6ad86",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.response_content_length": "28",
+                        "http.route": "/dubbo/{sleepA}/{sleepB}/{sleepC}",
+                        "http.scheme": "http",
+                        "http.status_code": "200",
+                        "http.target": "/dubbo/0/0/100",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.host.port": "19999",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "55306",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730959641752503000,
+                    "duration": 965725000,
+                    "serviceName": "dubbo-consumer",
+                    "name": "io.kindling.dubbo.api.service.OrderService/order2",
+                    "spanId": "c33eeea5038d5daa",
+                    "pSpanId": "721ba04854c1c4bd",
+                    "nextSpanId": "7e07b2ece6a18a58",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "c33eeea5038d5daa",
+                        "apm.span.type": "OTEL",
+                        "net.peer.name": "10.0.2.4",
+                        "net.peer.port": "30002",
+                        "rpc.method": "order2",
+                        "rpc.service": "io.kindling.dubbo.api.service.OrderService",
+                        "rpc.system": "apache_dubbo"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730959642414000000,
+                            "duration": 178411000,
+                            "serviceName": "dubbo-provider",
+                            "name": "io.kindling.dubbo.api.service.OrderService/order2",
+                            "spanId": "7e07b2ece6a18a58",
+                            "pSpanId": "c33eeea5038d5daa",
+                            "kind": 2,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "7e07b2ece6a18a58",
+                                "apm.span.type": "OTEL",
+                                "net.sock.peer.addr": "10.0.2.4",
+                                "net.sock.peer.name": "10.0.2.4",
+                                "net.sock.peer.port": "41422",
+                                "rpc.method": "order2",
+                                "rpc.service": "io.kindling.dubbo.api.service.OrderService",
+                                "rpc.system": "apache_dubbo"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

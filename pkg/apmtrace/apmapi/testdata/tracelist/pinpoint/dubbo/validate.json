@@ -1,0 +1,62 @@
+{
+    "name": "pinpoint-dubbo",
+    "traceId": "dubbo-consumer^1718250796910^1",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1718250906685000000,
+                    "duration": 603000000,
+                    "serviceName": "dubbo-consumer",
+                    "name": "/dubbo/0/0/100",
+                    "spanId": "1",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "http.status_code": "200",
+                        "http.url": "/dubbo/0/0/100"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1718250907025000000,
+                    "duration": 210000000,
+                    "serviceName": "dubbo-consumer",
+                    "name": "AbstractInvoker.invoke(Invocation inv)",
+                    "spanId": "8",
+                    "pSpanId": "7",
+                    "nextSpanId": "9",
+                    "kind": 3,
+                    "code": 0
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1718250907055000000,
+                            "duration": 142000000,
+                            "serviceName": "dubbo-provider",
+                            "name": "OrderService:order2",
+                            "spanId": "9",
+                            "pSpanId": "8",
+                            "kind": 2,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "http.url": "OrderService:order2"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

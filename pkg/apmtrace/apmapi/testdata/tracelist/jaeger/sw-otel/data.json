@@ -1,0 +1,385 @@
+{
+    "data": [
+        {
+            "traceID": "78df57dce75848db2a0c04b13e785261",
+            "spans": [
+                {
+                    "traceID": "78df57dce75848db2a0c04b13e785261",
+                    "spanID": "5b4fac07ec48f8ce",
+                    "operationName": "GET:/cpu/loop/1",
+                    "references": [
+                        {
+                            "refType": "FOLLOWS_FROM",
+                            "traceID": "78df57dce75848db2a0c04b13e785261",
+                            "spanID": "52d3536dd9201aba"
+                        }
+                    ],
+                    "startTime": 1723791731928000,
+                    "duration": 580000,
+                    "tags": [
+                        {
+                            "key": "url",
+                            "type": "string",
+                            "value": "http://localhost:9999/cpu/loop/1"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "string",
+                            "value": "200"
+                        },
+                        {
+                            "key": "sw8.segment_id",
+                            "type": "string",
+                            "value": "4efab95a827847a195006e3f860d826f.35.17237917319280000"
+                        },
+                        {
+                            "key": "sw8.span_id",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "otel.status_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "otel.status_description",
+                            "type": "string",
+                            "value": "SUCCESS"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "78df57dce75848db2a0c04b13e785261",
+                    "spanID": "3865ab07e348f8ce",
+                    "operationName": "GET:/cpu/loop/{times}",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "78df57dce75848db2a0c04b13e785261",
+                            "spanID": "3965ab07e348f8ce"
+                        },
+                        {
+                            "refType": "FOLLOWS_FROM",
+                            "traceID": "78df57dce75848db2a0c04b13e785261",
+                            "spanID": "52d3536dd9201aba"
+                        }
+                    ],
+                    "startTime": 1723791731936000,
+                    "duration": 571000,
+                    "tags": [
+                        {
+                            "key": "url",
+                            "type": "string",
+                            "value": "http://localhost:9999/cpu/loop/1"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "string",
+                            "value": "200"
+                        },
+                        {
+                            "key": "sw8.segment_id",
+                            "type": "string",
+                            "value": "4efab95a827847a195006e3f860d826f.44.17237917319340002"
+                        },
+                        {
+                            "key": "sw8.span_id",
+                            "type": "int64",
+                            "value": 1
+                        },
+                        {
+                            "key": "sw8.parent_span_id",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "otel.status_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "otel.status_description",
+                            "type": "string",
+                            "value": "SUCCESS"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "78df57dce75848db2a0c04b13e785261",
+                    "spanID": "3965ab07e348f8ce",
+                    "operationName": "UndertowDispatch",
+                    "references": [
+                        {
+                            "refType": "FOLLOWS_FROM",
+                            "traceID": "78df57dce75848db2a0c04b13e785261",
+                            "spanID": "5b4fac07ec48f8ce"
+                        }
+                    ],
+                    "startTime": 1723791731934000,
+                    "duration": 574000,
+                    "tags": [
+                        {
+                            "key": "sw8.segment_id",
+                            "type": "string",
+                            "value": "4efab95a827847a195006e3f860d826f.44.17237917319340002"
+                        },
+                        {
+                            "key": "sw8.span_id",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "internal"
+                        },
+                        {
+                            "key": "otel.status_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "otel.status_description",
+                            "type": "string",
+                            "value": "SUCCESS"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "78df57dce75848db2a0c04b13e785261",
+                    "spanID": "53d3536dd9201aba",
+                    "operationName": "GET:/wait/callOthers",
+                    "references": [],
+                    "startTime": 1723791731912000,
+                    "duration": 603000,
+                    "tags": [
+                        {
+                            "key": "url",
+                            "type": "string",
+                            "value": "http://localhost:19999/wait/callOthers"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "string",
+                            "value": "200"
+                        },
+                        {
+                            "key": "sw8.segment_id",
+                            "type": "string",
+                            "value": "78df57dcc85848dbab487dd3f5456f61.47.17237917319120000"
+                        },
+                        {
+                            "key": "sw8.span_id",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "otel.status_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "otel.status_description",
+                            "type": "string",
+                            "value": "SUCCESS"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": null
+                },
+                {
+                    "traceID": "78df57dce75848db2a0c04b13e785261",
+                    "spanID": "52d3536dd9201aba",
+                    "operationName": "/cpu/loop/1",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "78df57dce75848db2a0c04b13e785261",
+                            "spanID": "53d3536dd9201aba"
+                        }
+                    ],
+                    "startTime": 1723791731924000,
+                    "duration": 584000,
+                    "tags": [
+                        {
+                            "key": "url",
+                            "type": "string",
+                            "value": "http://localhost:9999/cpu/loop/1"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "string",
+                            "value": "200"
+                        },
+                        {
+                            "key": "sw8.segment_id",
+                            "type": "string",
+                            "value": "78df57dcc85848dbab487dd3f5456f61.47.17237917319120000"
+                        },
+                        {
+                            "key": "sw8.span_id",
+                            "type": "int64",
+                            "value": 1
+                        },
+                        {
+                            "key": "sw8.parent_span_id",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "otel.status_code",
+                            "type": "string",
+                            "value": "OK"
+                        },
+                        {
+                            "key": "otel.status_description",
+                            "type": "string",
+                            "value": "SUCCESS"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "stuck-demo-undertow",
+                    "tags": [
+                        {
+                            "key": "http.url",
+                            "type": "string",
+                            "value": "http://localhost:9999/cpu/loop/1"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "2f7c1be62d224c60a30d80e5eea89c37@172.17.0.1"
+                        },
+                        {
+                            "key": "sw8.trace_id",
+                            "type": "string",
+                            "value": "78df57dcc85848dbab487dd3f5456f61.47.17237917319120001"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "stuck-demo-undertow",
+                    "tags": [
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "2f7c1be62d224c60a30d80e5eea89c37@172.17.0.1"
+                        },
+                        {
+                            "key": "sw8.trace_id",
+                            "type": "string",
+                            "value": "78df57dcc85848dbab487dd3f5456f61.47.17237917319120001"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "stuck-demo-tomcat",
+                    "tags": [
+                        {
+                            "key": "http.url",
+                            "type": "string",
+                            "value": "http://localhost:19999/wait/callOthers"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "e13e0b7a86fa49b69fbc18168ebd9256@172.17.0.1"
+                        },
+                        {
+                            "key": "sw8.trace_id",
+                            "type": "string",
+                            "value": "78df57dcc85848dbab487dd3f5456f61.47.17237917319120001"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

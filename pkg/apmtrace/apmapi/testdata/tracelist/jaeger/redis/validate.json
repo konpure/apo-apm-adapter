@@ -1,0 +1,86 @@
+{
+    "name": "jaeger-redis",
+    "traceId": "0621d2764514b2bc1a8efcd034bfba80",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730795483939000000,
+                    "duration": 403587000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "GET /redis/query",
+                    "spanId": "a0a95ae3da065bce",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "a0a95ae3da065bce",
+                        "apm.span.type": "OTEL",
+                        "client.address": "10.0.2.2",
+                        "http.request.method": "GET",
+                        "http.response.status_code": "200",
+                        "http.route": "/redis/query",
+                        "network.peer.address": "10.0.2.2",
+                        "network.peer.port": "49172",
+                        "network.protocol.version": "1.1",
+                        "server.address": "localhost",
+                        "server.port": "19999",
+                        "url.path": "/redis/query",
+                        "url.query": "name=bb",
+                        "url.scheme": "http",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730795484338703000,
+                    "duration": 772000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "SET",
+                    "spanId": "df6b090361d8fa0e",
+                    "pSpanId": "a0a95ae3da065bce",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "df6b090361d8fa0e",
+                        "apm.span.type": "OTEL",
+                        "db.statement": "SET bb ?",
+                        "db.system": "redis",
+                        "network.peer.address": "10.0.2.4",
+                        "network.peer.port": "6379",
+                        "network.type": "ipv4",
+                        "server.address": "10.0.2.4",
+                        "server.port": "6379"
+                    }
+                },
+                {
+                    "startTime": 1730795484318900000,
+                    "duration": 11698000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "EXISTS",
+                    "spanId": "7d37c9c2a7ac9ddb",
+                    "pSpanId": "a0a95ae3da065bce",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "7d37c9c2a7ac9ddb",
+                        "apm.span.type": "OTEL",
+                        "db.statement": "EXISTS bb",
+                        "db.system": "redis",
+                        "network.peer.address": "10.0.2.4",
+                        "network.peer.port": "6379",
+                        "network.type": "ipv4",
+                        "server.address": "10.0.2.4",
+                        "server.port": "6379"
+                    }
+                }
+            ]
+        }
+    ]
+}

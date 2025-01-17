@@ -1,0 +1,69 @@
+{
+    "name": "skywalking-redis",
+    "traceId": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800003",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730791981180000000,
+                    "duration": 499000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "GET:/redis/query",
+                    "spanId": "8117319bec6eda42",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800002-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "url.full": "http://localhost:19999/redis/query"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730791981640000000,
+                    "duration": 21000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "Lettuce/EXISTS",
+                    "spanId": "8017319bec6eda42",
+                    "pSpanId": "8117319bec6eda42",
+                    "kind": 3,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800002-1",
+                        "apm.span.type": "SKYWALKING",
+                        "db.statement": "EXISTS",
+                        "db.system": "redis",
+                        "net.peer.name": "10.0.2.4:6379"
+                    }
+                },
+                {
+                    "startTime": 1730791981670000000,
+                    "duration": 2000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "Lettuce/SET",
+                    "spanId": "8317319bec6eda42",
+                    "pSpanId": "8117319bec6eda42",
+                    "kind": 3,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "e88b5321f02a43fdab774ca64339a4bf.41.17307919811800002-2",
+                        "apm.span.type": "SKYWALKING",
+                        "db.operation": "write",
+                        "db.statement": "SET",
+                        "db.system": "redis",
+                        "net.peer.name": "10.0.2.4:6379"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "name": "jaeger-http",
+    "traceId": "a24a4162af4cba9f2de8f0a9b9ac1fa6",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1707269281347000000,
+                    "duration": 1981277000,
+                    "serviceName": "stuck-tomcat",
+                    "name": "GET /wait/callOthers",
+                    "spanId": "e839fc54b8e0b748",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "e839fc54b8e0b748",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.route": "/wait/callOthers",
+                        "http.scheme": "http",
+                        "http.status_code": "200",
+                        "http.target": "/wait/callOthers?url=http%3A%2F%2F10.0.2.4%3A9999%2Fcpu%2Floop%2F1",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "52026",
+                        "net.transport": "ip_tcp",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1707269281528153000,
+                    "duration": 1541444000,
+                    "serviceName": "stuck-tomcat",
+                    "name": "GET",
+                    "spanId": "16fed07908c73983",
+                    "pSpanId": "742d158d1a80e47d",
+                    "nextSpanId": "3073e355ddc1b8f6",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "16fed07908c73983",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "http.url": "http://10.0.2.4:9999/cpu/loop/1",
+                        "net.peer.name": "10.0.2.4",
+                        "net.peer.port": "9999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.transport": "ip_tcp"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1707269281737000000,
+                            "duration": 1288524000,
+                            "serviceName": "stuck-undertow",
+                            "name": "GET /cpu/loop/{times}",
+                            "spanId": "3073e355ddc1b8f6",
+                            "pSpanId": "16fed07908c73983",
+                            "kind": 2,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "3073e355ddc1b8f6",
+                                "apm.span.type": "OTEL",
+                                "http.method": "GET",
+                                "http.route": "/cpu/loop/{times}",
+                                "http.scheme": "http",
+                                "http.status_code": "200",
+                                "http.target": "/cpu/loop/1",
+                                "net.host.name": "10.0.2.4",
+                                "net.host.port": "9999",
+                                "net.protocol.name": "http",
+                                "net.protocol.version": "1.1",
+                                "net.sock.peer.addr": "10.0.2.4",
+                                "net.sock.peer.port": "34586",
+                                "net.transport": "ip_tcp",
+                                "user_agent.original": "Apache-HttpClient/4.5.13 (Java/1.8.0_162)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "name": "jaeger-1.32-redis",
+    "traceId": "32382b5a3439ac46a2aa1e58961ba3d4",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730961964347000000,
+                    "duration": 2303351000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "GET /redis/query",
+                    "spanId": "4f6fa1492b50ef13",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "4f6fa1492b50ef13",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.route": "/redis/query",
+                        "http.scheme": "http",
+                        "http.status_code": "200",
+                        "http.target": "/redis/query?name=aa",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.host.port": "19999",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "57391",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730961966521214000,
+                    "duration": 5908000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "SET",
+                    "spanId": "c0067407d121c5a7",
+                    "pSpanId": "0e6a735f2bf15860",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "c0067407d121c5a7",
+                        "apm.span.type": "OTEL",
+                        "db.statement": "SET aa ?",
+                        "db.system": "redis",
+                        "net.sock.peer.addr": "10.0.2.4",
+                        "net.sock.peer.name": "10.0.2.4",
+                        "net.sock.peer.port": "6379"
+                    }
+                },
+                {
+                    "startTime": 1730961966382718000,
+                    "duration": 52620000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "EXISTS",
+                    "spanId": "a13257e2332f7dde",
+                    "pSpanId": "0e6a735f2bf15860",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "a13257e2332f7dde",
+                        "apm.span.type": "OTEL",
+                        "db.statement": "EXISTS aa",
+                        "db.system": "redis",
+                        "net.sock.peer.addr": "10.0.2.4",
+                        "net.sock.peer.name": "10.0.2.4",
+                        "net.sock.peer.port": "6379"
+                    }
+                }
+            ]
+        }
+    ]
+}

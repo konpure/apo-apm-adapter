@@ -1,0 +1,78 @@
+{
+    "name": "skywalking-rocketmq",
+    "traceId": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100001",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730778870710000000,
+                    "duration": 1965000000,
+                    "serviceName": "rocketmq-provider",
+                    "name": "GET:/send",
+                    "spanId": "674569984ff43c17",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100000-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "url.full": "http://localhost:19999/send"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730778870713000000,
+                    "duration": 1961000000,
+                    "serviceName": "rocketmq-provider",
+                    "name": "RocketMQ/cart-item-add-topic/Producer",
+                    "spanId": "664569984ff43c17",
+                    "pSpanId": "674569984ff43c17",
+                    "nextSpanId": "2875268e3fbeb894",
+                    "kind": 4,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "9baaa27e1ec746f19c1a7073ab4e47e6.173.17307788707100000-1",
+                        "apm.span.type": "SKYWALKING",
+                        "messaging.destination.name": "cart-item-add-topic",
+                        "messaging.system": "rocketmq",
+                        "net.peer.name": "10.0.2.15:10911"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730778873163000000,
+                            "duration": 1000000,
+                            "serviceName": "rocketmq-consumer",
+                            "name": "RocketMQ/cart-item-add-topic/Consumer",
+                            "spanId": "2875268e3fbeb894",
+                            "pSpanId": "664569984ff43c17",
+                            "kind": 5,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "3de1d82f6d3847bea5d5cc3678fbc22a.125.17307788731630000-0",
+                                "apm.span.type": "SKYWALKING",
+                                "messaging.destination.name": "cart-item-add-topic",
+                                "messaging.system": "rocketmq",
+                                "net.peer.name": "10.0.2.15:10911",
+                                "transmission.latency": "2450"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

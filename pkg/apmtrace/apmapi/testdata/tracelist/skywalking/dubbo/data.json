@@ -1,0 +1,88 @@
+{
+    "data": {
+        "trace": {
+            "spans": [
+                {
+                    "traceId": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370001",
+                    "segmentId": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [],
+                    "serviceCode": "dubbo-consumer",
+                    "startTime": 1706164669139,
+                    "endTime": 1706164670057,
+                    "endpointName": "GET:/dubbo/{sleepA}/{sleepB}/{sleepC}",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "SpringMVC",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "http://localhost:19999/dubbo/0/0/100"
+                        },
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370001",
+                    "segmentId": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370000",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "dubbo-consumer",
+                    "startTime": 1706164669451,
+                    "endTime": 1706164669987,
+                    "endpointName": "io.kindling.dubbo.api.service.OrderService.order2(long,long)",
+                    "type": "Exit",
+                    "peer": "10.0.2.4:30002",
+                    "component": "Dubbo",
+                    "isError": false,
+                    "layer": "RPCFramework",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "dubbo://10.0.2.4:30002/io.kindling.dubbo.api.service.OrderService.order2(long,long)"
+                        }
+                    ],
+                    "logs": []
+                },
+                {
+                    "traceId": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370001",
+                    "segmentId": "40a7589d1cff47eea27a7ee5321a3256.47.17061646698000000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370001",
+                            "parentSegmentId": "1aa50e3f8f18446292f33e108dabb65c.48.17061646691370000",
+                            "parentSpanId": 1,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "dubbo-provider",
+                    "startTime": 1706164669803,
+                    "endTime": 1706164669918,
+                    "endpointName": "io.kindling.dubbo.api.service.OrderService.order2(long,long)",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "Dubbo",
+                    "isError": false,
+                    "layer": "RPCFramework",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "dubbo://10.0.2.4:30002/io.kindling.dubbo.api.service.OrderService.order2(long,long)"
+                        }
+                    ],
+                    "logs": []
+                }
+            ]
+        }
+    }
+}

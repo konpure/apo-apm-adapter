@@ -1,0 +1,736 @@
+{
+    "data": [
+        {
+            "traceID": "0f6d0fbf08c1a2d71749a4930467c24a",
+            "spans": [
+                {
+                    "traceID": "0f6d0fbf08c1a2d71749a4930467c24a",
+                    "spanID": "16cfe3650b5edc18",
+                    "operationName": "GET /send",
+                    "references": [],
+                    "startTime": 1730960622564000,
+                    "duration": 839549,
+                    "tags": [
+                        {
+                            "key": "http.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "net.protocol.version",
+                            "type": "string",
+                            "value": "1.1"
+                        },
+                        {
+                            "key": "http.scheme",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.response_content_length",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "net.protocol.name",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "net.host.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "http.route",
+                            "type": "string",
+                            "value": "/send"
+                        },
+                        {
+                            "key": "net.sock.host.addr",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "net.sock.peer.port",
+                            "type": "int64",
+                            "value": 56253
+                        },
+                        {
+                            "key": "net.sock.host.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 21
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "http.target",
+                            "type": "string",
+                            "value": "/send?name=ccc"
+                        },
+                        {
+                            "key": "net.sock.peer.addr",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "net.host.name",
+                            "type": "string",
+                            "value": "localhost"
+                        },
+                        {
+                            "key": "user_agent.original",
+                            "type": "string",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "0f6d0fbf08c1a2d71749a4930467c24a",
+                    "spanID": "d71f931ffd9ee234",
+                    "operationName": "ActiveMQQueue publish",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "0f6d0fbf08c1a2d71749a4930467c24a",
+                            "spanID": "7c9808990a8ad933"
+                        }
+                    ],
+                    "startTime": 1730960623274512,
+                    "duration": 66282,
+                    "tags": [
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "ActiveMQQueue"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "publish"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "messaging.message.id",
+                            "type": "string",
+                            "value": "ID:localhost.localdomain-42669-1730960622825-1:1:1:1:1"
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "jms"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 21
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "producer"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.jms-1.1"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "0f6d0fbf08c1a2d71749a4930467c24a",
+                    "spanID": "7c9808990a8ad933",
+                    "operationName": "ProviderController.send",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "0f6d0fbf08c1a2d71749a4930467c24a",
+                            "spanID": "16cfe3650b5edc18"
+                        }
+                    ],
+                    "startTime": 1730960622566785,
+                    "duration": 793381,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-1"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 21
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-webmvc-3.1"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": null
+                },
+                {
+                    "traceID": "0f6d0fbf08c1a2d71749a4930467c24a",
+                    "spanID": "aefa1c4fa3f8a3d4",
+                    "operationName": "ActiveMQQueue process",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "0f6d0fbf08c1a2d71749a4930467c24a",
+                            "spanID": "d71f931ffd9ee234"
+                        }
+                    ],
+                    "startTime": 1730960623484000,
+                    "duration": 15395,
+                    "tags": [
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "ActiveMQQueue"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "process"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "DefaultMessageListenerContainer-1"
+                        },
+                        {
+                            "key": "messaging.message.id",
+                            "type": "string",
+                            "value": "ID:localhost.localdomain-42669-1730960622825-1:1:1:1:1"
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "jms"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 18
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-jms-2.0"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p4",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "activemq-provider",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=activemq-provider -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m -jar /root/app/apps/mq/activemq/activemq-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 29786
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "activemq-provider"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "activemq-provider",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.jms-1.1"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=activemq-provider -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m -jar /root/app/apps/mq/activemq/activemq-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 29786
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "activemq-provider"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "activemq-provider",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-webmvc-3.1"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=activemq-provider -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m -jar /root/app/apps/mq/activemq/activemq-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 29786
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "activemq-provider"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                },
+                "p4": {
+                    "serviceName": "activemq-consumer",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-jms-2.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=activemq-consumer -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m -jar /root/app/apps/mq/activemq/activemq-consumer.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 29796
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "activemq-consumer"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

@@ -1,0 +1,676 @@
+{
+    "data": [
+        {
+            "traceID": "980ef9a7db1902e55d6ecb9cc7583de4",
+            "spans": [
+                {
+                    "traceID": "980ef9a7db1902e55d6ecb9cc7583de4",
+                    "spanID": "e71d73f777cfd371",
+                    "operationName": "GET /db/query",
+                    "references": [],
+                    "startTime": 1730960035366000,
+                    "duration": 1852569,
+                    "tags": [
+                        {
+                            "key": "http.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "net.protocol.version",
+                            "type": "string",
+                            "value": "1.1"
+                        },
+                        {
+                            "key": "http.scheme",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "net.protocol.name",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "net.host.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "http.route",
+                            "type": "string",
+                            "value": "/db/query"
+                        },
+                        {
+                            "key": "net.sock.host.addr",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "net.sock.peer.port",
+                            "type": "int64",
+                            "value": 55777
+                        },
+                        {
+                            "key": "net.sock.host.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 30
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-8"
+                        },
+                        {
+                            "key": "http.target",
+                            "type": "string",
+                            "value": "/db/query?value=12"
+                        },
+                        {
+                            "key": "net.sock.peer.addr",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "net.host.name",
+                            "type": "string",
+                            "value": "localhost"
+                        },
+                        {
+                            "key": "user_agent.original",
+                            "type": "string",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "980ef9a7db1902e55d6ecb9cc7583de4",
+                    "spanID": "8fc2daaf77bea002",
+                    "operationName": "SELECT test.weather",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "980ef9a7db1902e55d6ecb9cc7583de4",
+                            "spanID": "8d6cd27df0e8ec22"
+                        }
+                    ],
+                    "startTime": 1730960037021003,
+                    "duration": 75991,
+                    "tags": [
+                        {
+                            "key": "db.name",
+                            "type": "string",
+                            "value": "test"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-8"
+                        },
+                        {
+                            "key": "net.peer.port",
+                            "type": "int64",
+                            "value": 3306
+                        },
+                        {
+                            "key": "db.operation",
+                            "type": "string",
+                            "value": "SELECT"
+                        },
+                        {
+                            "key": "db.sql.table",
+                            "type": "string",
+                            "value": "weather"
+                        },
+                        {
+                            "key": "db.system",
+                            "type": "string",
+                            "value": "mysql"
+                        },
+                        {
+                            "key": "db.statement",
+                            "type": "string",
+                            "value": "select count(?) from weather where temp_hi\u003e?"
+                        },
+                        {
+                            "key": "db.user",
+                            "type": "string",
+                            "value": "root"
+                        },
+                        {
+                            "key": "db.connection_string",
+                            "type": "string",
+                            "value": "mysql://10.0.2.4:3306"
+                        },
+                        {
+                            "key": "net.peer.name",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 30
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.jdbc"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "980ef9a7db1902e55d6ecb9cc7583de4",
+                    "spanID": "7db95a197465c5d4",
+                    "operationName": "SELECT test.weather",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "980ef9a7db1902e55d6ecb9cc7583de4",
+                            "spanID": "8d6cd27df0e8ec22"
+                        }
+                    ],
+                    "startTime": 1730960037171531,
+                    "duration": 2948,
+                    "tags": [
+                        {
+                            "key": "db.name",
+                            "type": "string",
+                            "value": "test"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-8"
+                        },
+                        {
+                            "key": "net.peer.port",
+                            "type": "int64",
+                            "value": 3306
+                        },
+                        {
+                            "key": "db.operation",
+                            "type": "string",
+                            "value": "SELECT"
+                        },
+                        {
+                            "key": "db.sql.table",
+                            "type": "string",
+                            "value": "weather"
+                        },
+                        {
+                            "key": "db.system",
+                            "type": "string",
+                            "value": "mysql"
+                        },
+                        {
+                            "key": "db.statement",
+                            "type": "string",
+                            "value": "select id, city, prcpe from weather where temp_lo\u003c=? and temp_hi\u003e=?"
+                        },
+                        {
+                            "key": "db.user",
+                            "type": "string",
+                            "value": "root"
+                        },
+                        {
+                            "key": "db.connection_string",
+                            "type": "string",
+                            "value": "mysql://10.0.2.4:3306"
+                        },
+                        {
+                            "key": "net.peer.name",
+                            "type": "string",
+                            "value": "10.0.2.4"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 30
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "client"
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.jdbc"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "980ef9a7db1902e55d6ecb9cc7583de4",
+                    "spanID": "8d6cd27df0e8ec22",
+                    "operationName": "DbController.query",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "980ef9a7db1902e55d6ecb9cc7583de4",
+                            "spanID": "e71d73f777cfd371"
+                        }
+                    ],
+                    "startTime": 1730960035367468,
+                    "duration": 1849191,
+                    "tags": [
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-8"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 30
+                        },
+                        {
+                            "key": "otel.scope.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-webmvc-3.1"
+                        },
+                        {
+                            "key": "otel.scope.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "stuck-demo-tomcat",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=stuck-demo-tomcat -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m /root/app/apps/http/stuck-demo-tomcat.jar --server.port=19999"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 28906
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "stuck-demo-tomcat"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "stuck-demo-tomcat",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.jdbc"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=stuck-demo-tomcat -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m /root/app/apps/http/stuck-demo-tomcat.jar --server.port=19999"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 28906
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "stuck-demo-tomcat"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "stuck-demo-tomcat",
+                    "tags": [
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "127.0.0.1"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "opentelemetry-java"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.spring-webmvc-3.1"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "1.32.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-1.32.0/opentelemetry-javaagent.jar -Dotel.resource.attributes=service.name=stuck-demo-tomcat -Dotel.metrics.exporter=none -Dotel.traces.exporter=jaeger -Dotel.exporter.jaeger.endpoint=http://10.0.2.15:14250 -Xmx500m /root/app/apps/http/stuck-demo-tomcat.jar --server.port=19999"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 28906
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.name",
+                            "type": "string",
+                            "value": "stuck-demo-tomcat"
+                        },
+                        {
+                            "key": "telemetry.auto.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.32.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

@@ -1,0 +1,92 @@
+{
+    "name": "jaeger-1.32-rocketmq",
+    "traceId": "058725656cf79da55dd949f7bd0255bc",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730961289379000000,
+                    "duration": 33951000,
+                    "serviceName": "rocketmq-provider",
+                    "name": "GET /send",
+                    "spanId": "67d44c72f125ac62",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "67d44c72f125ac62",
+                        "apm.span.type": "OTEL",
+                        "http.method": "GET",
+                        "http.response_content_length": "0",
+                        "http.route": "/send",
+                        "http.scheme": "http",
+                        "http.status_code": "200",
+                        "http.target": "/send?name=ccc",
+                        "net.host.name": "localhost",
+                        "net.host.port": "19999",
+                        "net.protocol.name": "http",
+                        "net.protocol.version": "1.1",
+                        "net.sock.host.addr": "10.0.2.4",
+                        "net.sock.host.port": "19999",
+                        "net.sock.peer.addr": "10.0.2.2",
+                        "net.sock.peer.port": "56783",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730961289385382000,
+                    "duration": 16725000,
+                    "serviceName": "rocketmq-provider",
+                    "name": "cart-item-add-topic publish",
+                    "spanId": "e52cf776d125a8f1",
+                    "pSpanId": "cd3d85d852dd7f33",
+                    "nextSpanId": "44eb6d1e904911f3",
+                    "kind": 4,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "e52cf776d125a8f1",
+                        "apm.span.type": "OTEL",
+                        "messaging.destination.name": "cart-item-add-topic",
+                        "messaging.message.id": "AC11000177B961BCBCCE220714A90003",
+                        "messaging.operation": "publish",
+                        "messaging.system": "rocketmq"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730961307212000000,
+                            "duration": 269084000,
+                            "serviceName": "rocketmq-consumer",
+                            "name": "cart-item-add-topic process",
+                            "spanId": "44eb6d1e904911f3",
+                            "pSpanId": "e52cf776d125a8f1",
+                            "kind": 5,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "44eb6d1e904911f3",
+                                "apm.span.type": "OTEL",
+                                "messaging.destination.name": "cart-item-add-topic",
+                                "messaging.message.id": "AC11000177B961BCBCCE220714A90003",
+                                "messaging.message.payload_size_bytes": "29",
+                                "messaging.operation": "process",
+                                "messaging.system": "rocketmq"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

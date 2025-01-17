@@ -1,0 +1,95 @@
+{
+    "name": "jaeger-kafka",
+    "traceId": "aeef29289969799b0fdf2f99f9701387",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730793912573000000,
+                    "duration": 4036000,
+                    "serviceName": "kafka-provider",
+                    "name": "GET /send",
+                    "spanId": "791ffe785bab9958",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "791ffe785bab9958",
+                        "apm.span.type": "OTEL",
+                        "client.address": "10.0.2.2",
+                        "http.request.method": "GET",
+                        "http.response.status_code": "200",
+                        "http.route": "/send",
+                        "network.peer.address": "10.0.2.2",
+                        "network.peer.port": "63806",
+                        "network.protocol.version": "1.1",
+                        "server.address": "localhost",
+                        "server.port": "19999",
+                        "url.path": "/send",
+                        "url.query": "name=ccc",
+                        "url.scheme": "http",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730793912574554000,
+                    "duration": 4268000,
+                    "serviceName": "kafka-provider",
+                    "name": "topic_login publish",
+                    "spanId": "e27b36d8a6336b50",
+                    "pSpanId": "791ffe785bab9958",
+                    "nextSpanId": "ec50f3a414b0e272",
+                    "kind": 4,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "e27b36d8a6336b50",
+                        "apm.span.type": "OTEL",
+                        "messaging.client_id": "producer-1",
+                        "messaging.destination.name": "topic_login",
+                        "messaging.destination.partition.id": "2",
+                        "messaging.kafka.message.offset": "0",
+                        "messaging.operation": "publish",
+                        "messaging.system": "kafka"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730793912580000000,
+                            "duration": 578000,
+                            "serviceName": "kafka-consumer",
+                            "name": "topic_login process",
+                            "spanId": "ec50f3a414b0e272",
+                            "pSpanId": "e27b36d8a6336b50",
+                            "kind": 5,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "ec50f3a414b0e272",
+                                "apm.span.type": "OTEL",
+                                "messaging.client_id": "consumer-group1-1",
+                                "messaging.destination.name": "topic_login",
+                                "messaging.destination.partition.id": "2",
+                                "messaging.kafka.consumer.group": "group1",
+                                "messaging.kafka.message.offset": "0",
+                                "messaging.message.body.size": "80",
+                                "messaging.operation": "process",
+                                "messaging.system": "kafka"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

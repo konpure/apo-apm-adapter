@@ -1,0 +1,90 @@
+{
+    "name": "jaeger-dubbo",
+    "traceId": "ddc71c11418a49ec92c3acfc8f646a63",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730807326331000000,
+                    "duration": 424162000,
+                    "serviceName": "dubbo-consumer",
+                    "name": "GET /dubbo/{sleepA}/{sleepB}/{sleepC}",
+                    "spanId": "f9e7d9e10db59547",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "f9e7d9e10db59547",
+                        "apm.span.type": "OTEL",
+                        "client.address": "10.0.2.2",
+                        "http.request.method": "GET",
+                        "http.response.status_code": "200",
+                        "http.route": "/dubbo/{sleepA}/{sleepB}/{sleepC}",
+                        "network.peer.address": "10.0.2.2",
+                        "network.peer.port": "54869",
+                        "network.protocol.version": "1.1",
+                        "server.address": "localhost",
+                        "server.port": "19999",
+                        "url.path": "/dubbo/0/0/100",
+                        "url.scheme": "http",
+                        "user_agent.original": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730807326430379000,
+                    "duration": 304018000,
+                    "serviceName": "dubbo-consumer",
+                    "name": "io.kindling.dubbo.api.service.OrderService/order2",
+                    "spanId": "23b65d878841b7fc",
+                    "pSpanId": "f9e7d9e10db59547",
+                    "nextSpanId": "acab4e23ebb1e64b",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "23b65d878841b7fc",
+                        "apm.span.type": "OTEL",
+                        "rpc.method": "order2",
+                        "rpc.service": "io.kindling.dubbo.api.service.OrderService",
+                        "rpc.system": "apache_dubbo",
+                        "server.address": "10.0.2.4",
+                        "server.port": "30002"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730807326572000000,
+                            "duration": 137309000,
+                            "serviceName": "dubbo-provider",
+                            "name": "io.kindling.dubbo.api.service.OrderService/order2",
+                            "spanId": "acab4e23ebb1e64b",
+                            "pSpanId": "23b65d878841b7fc",
+                            "kind": 2,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "acab4e23ebb1e64b",
+                                "apm.span.type": "OTEL",
+                                "network.peer.address": "10.0.2.4",
+                                "network.peer.port": "45176",
+                                "rpc.method": "order2",
+                                "rpc.service": "io.kindling.dubbo.api.service.OrderService",
+                                "rpc.system": "apache_dubbo"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

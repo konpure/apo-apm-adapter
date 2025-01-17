@@ -1,0 +1,174 @@
+{
+    "data": {
+        "trace": {
+            "spans": [
+                {
+                    "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+                    "segmentId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060000",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [],
+                    "serviceCode": "kafka-provider",
+                    "serviceInstanceName": "9d766efe10a247b8aeba3e98b0938e78@172.19.0.1",
+                    "startTime": 1730793356906,
+                    "endTime": 1730793356908,
+                    "endpointName": "GET:/send",
+                    "type": "Entry",
+                    "peer": "",
+                    "component": "SpringMVC",
+                    "isError": false,
+                    "layer": "Http",
+                    "tags": [
+                        {
+                            "key": "url",
+                            "value": "http://localhost:19999/send"
+                        },
+                        {
+                            "key": "http.method",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "value": "200"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+                    "segmentId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060000",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [],
+                    "serviceCode": "kafka-provider",
+                    "serviceInstanceName": "9d766efe10a247b8aeba3e98b0938e78@172.19.0.1",
+                    "startTime": 1730793356907,
+                    "endTime": 1730793356908,
+                    "endpointName": "Kafka/topic_login/Producer",
+                    "type": "Exit",
+                    "peer": "10.0.2.15:9092",
+                    "component": "kafka-producer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.broker",
+                            "value": "10.0.2.15:9092"
+                        },
+                        {
+                            "key": "mq.topic",
+                            "value": "topic_login"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+                    "segmentId": "0d84b9fffaf14aa98546b17a62f1812e.153.17307933569160004",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+                            "parentSegmentId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060000",
+                            "parentSpanId": 1,
+                            "type": "CROSS_PROCESS"
+                        }
+                    ],
+                    "serviceCode": "kafka-consumer",
+                    "serviceInstanceName": "b4d52aa0cfe348d09101308488e1f6b1@172.19.0.1",
+                    "startTime": 1730793356916,
+                    "endTime": 1730793356917,
+                    "endpointName": "Kafka/topic_login/Consumer/group1",
+                    "type": "Entry",
+                    "peer": "10.0.2.15:9092",
+                    "component": "kafka-consumer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.broker",
+                            "value": "10.0.2.15:9092"
+                        },
+                        {
+                            "key": "mq.topic",
+                            "value": "topic_login"
+                        },
+                        {
+                            "key": "transmission.latency",
+                            "value": "9"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+                    "segmentId": "ca1910af24564b64b6cbee923f85f81d.167.17307933569130004",
+                    "spanId": 1,
+                    "parentSpanId": 0,
+                    "refs": [
+                        {
+                            "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+                            "parentSegmentId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060000",
+                            "parentSpanId": 1,
+                            "type": "CROSS_THREAD"
+                        }
+                    ],
+                    "serviceCode": "kafka-provider",
+                    "serviceInstanceName": "9d766efe10a247b8aeba3e98b0938e78@172.19.0.1",
+                    "startTime": 1730793356914,
+                    "endTime": 1730793356914,
+                    "endpointName": "Kafka/Producer/Callback",
+                    "type": "Local",
+                    "peer": "",
+                    "component": "kafka-producer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.topic",
+                            "value": "topic_login"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                },
+                {
+                    "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+                    "segmentId": "ca1910af24564b64b6cbee923f85f81d.167.17307933569130004",
+                    "spanId": 0,
+                    "parentSpanId": -1,
+                    "refs": [
+                        {
+                            "traceId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060001",
+                            "parentSegmentId": "ca1910af24564b64b6cbee923f85f81d.155.17307933569060000",
+                            "parentSpanId": 1,
+                            "type": "CROSS_THREAD"
+                        }
+                    ],
+                    "serviceCode": "kafka-provider",
+                    "serviceInstanceName": "9d766efe10a247b8aeba3e98b0938e78@172.19.0.1",
+                    "startTime": 1730793356913,
+                    "endTime": 1730793356914,
+                    "endpointName": "Kafka/Producer/Callback",
+                    "type": "Local",
+                    "peer": "",
+                    "component": "kafka-producer",
+                    "isError": false,
+                    "layer": "MQ",
+                    "tags": [
+                        {
+                            "key": "mq.topic",
+                            "value": "topic_login"
+                        }
+                    ],
+                    "logs": [],
+                    "attachedEvents": []
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,1188 @@
+{
+    "transactionId": "stuck-demo-tomcat^1718104578621^1",
+    "completeState": "Complete",
+    "logLinkEnable": false,
+    "logButtonName": "",
+    "logPageUrl": "",
+    "disableButtonMessage": "",
+    "applicationName": "/cpu/loop/1",
+    "agentId": "stuck-demo-undertow",
+    "applicationId": "stuck-demo-undertow",
+    "loggingTransactionInfo": false,
+    "callStack": [
+        [
+            "",
+            1718104634862,
+            1718104639140,
+            false,
+            "stuck-demo-tomcat",
+            0,
+            "1",
+            "",
+            true,
+            true,
+            "Servlet Process",
+            "/wait/callOthers",
+            "19:17:14 862",
+            "0",
+            "4278",
+            "0",
+            "22",
+            "",
+            "100",
+            "TOMCAT",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            1,
+            "2",
+            "1",
+            false,
+            false,
+            "http.status.code",
+            "200",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            1,
+            "3",
+            "1",
+            false,
+            false,
+            "REMOTE_ADDRESS",
+            "10.0.2.2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104634882,
+            1718104639138,
+            false,
+            "stuck-demo-tomcat",
+            1,
+            "4",
+            "1",
+            true,
+            false,
+            "invoke(Request request, Response response)",
+            "",
+            "19:17:14 882",
+            "20",
+            "4256",
+            "0",
+            "75",
+            "StandardHostValve",
+            "0",
+            "TOMCAT_METHOD",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            2,
+            "5",
+            "4",
+            false,
+            false,
+            "http.param",
+            "httpClient=ApacheAsyncClient4&timeout=5&url=http://localhost:9999/cpu/loop/1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104634957,
+            1718104639138,
+            false,
+            "stuck-demo-tomcat",
+            2,
+            "6",
+            "4",
+            true,
+            false,
+            "doGet(HttpServletRequest request, HttpServletResponse response)",
+            "",
+            "19:17:14 957",
+            "75",
+            "4181",
+            "0",
+            "164",
+            "FrameworkServlet",
+            "0",
+            "SPRING",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104635014,
+            1718104639031,
+            false,
+            "stuck-demo-tomcat",
+            3,
+            "7",
+            "6",
+            true,
+            false,
+            "callOthers(String url, String param, int timeout, String httpClient)",
+            "",
+            "19:17:15 014",
+            "57",
+            "4017",
+            "0",
+            "1264",
+            "WaitController",
+            "0",
+            "SPRING_BEAN",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104635679,
+            1718104635844,
+            false,
+            "stuck-demo-tomcat",
+            4,
+            "8",
+            "7",
+            true,
+            false,
+            "execute(HttpUriRequest request, FutureCallback callback)",
+            "",
+            "19:17:15 679",
+            "665",
+            "165",
+            "0",
+            "64",
+            "CloseableHttpAsyncClient",
+            "0",
+            "HTTP_CLIENT_4",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104635742,
+            1718104635843,
+            false,
+            "stuck-demo-tomcat",
+            5,
+            "9",
+            "8",
+            true,
+            false,
+            "start()",
+            "http://localhost:9999/cpu/loop/1",
+            "19:17:15 742",
+            "63",
+            "101",
+            "0",
+            "101",
+            "DefaultClientExchangeHandlerImpl",
+            "0",
+            "HTTP_CLIENT_4",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104636100,
+            1718104636191,
+            false,
+            "stuck-demo-undertow",
+            6,
+            "10",
+            "9",
+            true,
+            true,
+            "Servlet Process",
+            "/cpu/loop/1",
+            "19:17:16 100",
+            "358",
+            "91",
+            "0",
+            "29",
+            "",
+            "100",
+            "UNDERTOW",
+            "stuck-demo-undertow",
+            true,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            7,
+            "11",
+            "10",
+            false,
+            false,
+            "http.status.code",
+            "200",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            0,
+            0,
+            false,
+            null,
+            7,
+            "12",
+            "10",
+            false,
+            false,
+            "REMOTE_ADDRESS",
+            "127.0.0.1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "0",
+            "",
+            null,
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104636126,
+            1718104636188,
+            false,
+            "stuck-demo-undertow",
+            7,
+            "13",
+            "10",
+            true,
+            false,
+            "executeRootHandler(HttpHandler handler, HttpServerExchange exchange)",
+            "",
+            "19:17:16 126",
+            "26",
+            "62",
+            "0",
+            "62",
+            "Connectors",
+            "0",
+            "UNDERTOW_METHOD",
+            "stuck-demo-undertow",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104638430,
+            1718104638436,
+            false,
+            "stuck-demo-tomcat",
+            6,
+            "14",
+            "9",
+            true,
+            false,
+            "Asynchronous Invocation",
+            "",
+            "19:17:18 430",
+            "2688",
+            "6",
+            "0",
+            "1",
+            "",
+            "200",
+            "ASYNC",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104638431,
+            1718104638436,
+            false,
+            "stuck-demo-tomcat",
+            7,
+            "15",
+            "14",
+            true,
+            false,
+            "completed(Object result)",
+            "",
+            "19:17:18 431",
+            "1",
+            "5",
+            "0",
+            "5",
+            "BasicFuture",
+            "0",
+            "HTTP_CLIENT_4",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ],
+        [
+            "",
+            1718104635844,
+            1718104638432,
+            false,
+            "stuck-demo-tomcat",
+            4,
+            "16",
+            "7",
+            true,
+            false,
+            "get(long timeout, TimeUnit unit)",
+            "",
+            "19:17:15 844",
+            "0",
+            "2588",
+            "0",
+            "2588",
+            "BasicFuture",
+            "0",
+            "HTTP_CLIENT_4",
+            "stuck-demo-tomcat",
+            false,
+            false,
+            true
+        ]
+    ],
+    "callStackStart": 1718104634862,
+    "callStackIndex": {
+        "barWidth": 15,
+        "executionMilliseconds": 16,
+        "agent": 20,
+        "hasException": 22,
+        "simpleClassName": 17,
+        "title": 10,
+        "isFocused": 21,
+        "parentId": 7,
+        "excludeFromTimeline": 3,
+        "isAuthorized": 23,
+        "depth": 0,
+        "methodType": 18,
+        "tab": 5,
+        "hasChild": 9,
+        "gap": 13,
+        "isMethod": 8,
+        "end": 2,
+        "arguments": 11,
+        "id": 6,
+        "begin": 1,
+        "applicationName": 4,
+        "apiType": 19,
+        "executeTime": 12,
+        "elapsedTime": 14
+    },
+    "applicationMapData": {
+        "nodeDataArray": [
+            {
+                "key": "stuck-demo-tomcat^USER",
+                "applicationName": "USER",
+                "category": "USER",
+                "serviceType": "USER",
+                "serviceTypeCode": "2",
+                "isWas": false,
+                "isQueue": false,
+                "isAuthorized": true,
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 1,
+                "hasAlert": false,
+                "histogram": {
+                    "1s": 0,
+                    "3s": 0,
+                    "5s": 1,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "agentHistogram": {},
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "agentTimeSeriesHistogram": {},
+                "instanceCount": 0,
+                "instanceErrorCount": 0,
+                "agentIds": [],
+                "serverList": {}
+            },
+            {
+                "key": "stuck-demo-undertow^SPRING_BOOT",
+                "applicationName": "stuck-demo-undertow",
+                "category": "SPRING_BOOT",
+                "serviceType": "SPRING_BOOT",
+                "serviceTypeCode": "1210",
+                "isWas": true,
+                "isQueue": false,
+                "isAuthorized": true,
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "hasAlert": false,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "agentHistogram": {
+                    "stuck-demo-undertow": {
+                        "1s": 1,
+                        "3s": 0,
+                        "5s": 0,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "agentTimeSeriesHistogram": {
+                    "stuck-demo-undertow": [
+                        {
+                            "key": "1s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    1
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "3s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "5s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Slow",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Error",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "instanceCount": 0,
+                "instanceErrorCount": 0,
+                "agentIds": [],
+                "serverList": {}
+            },
+            {
+                "key": "stuck-demo-tomcat^SPRING_BOOT",
+                "applicationName": "stuck-demo-tomcat",
+                "category": "SPRING_BOOT",
+                "serviceType": "SPRING_BOOT",
+                "serviceTypeCode": "1210",
+                "isWas": true,
+                "isQueue": false,
+                "isAuthorized": true,
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 1,
+                "hasAlert": false,
+                "histogram": {
+                    "1s": 0,
+                    "3s": 0,
+                    "5s": 1,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "agentHistogram": {
+                    "stuck-demo-tomcat": {
+                        "1s": 0,
+                        "3s": 0,
+                        "5s": 1,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "agentTimeSeriesHistogram": {
+                    "stuck-demo-tomcat": [
+                        {
+                            "key": "1s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "3s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "5s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    1
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Slow",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Error",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "instanceCount": 0,
+                "instanceErrorCount": 0,
+                "agentIds": [],
+                "serverList": {}
+            }
+        ],
+        "linkDataArray": [
+            {
+                "key": "stuck-demo-tomcat^USER~stuck-demo-tomcat^SPRING_BOOT",
+                "from": "stuck-demo-tomcat^USER",
+                "to": "stuck-demo-tomcat^SPRING_BOOT",
+                "toAgent": [],
+                "sourceInfo": {
+                    "applicationName": "stuck-demo-tomcat",
+                    "serviceType": "USER",
+                    "serviceTypeCode": 2,
+                    "isWas": false
+                },
+                "targetInfo": {
+                    "applicationName": "stuck-demo-tomcat",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "filterApplicationName": "stuck-demo-tomcat",
+                "filterApplicationServiceTypeCode": 1210,
+                "filterApplicationServiceTypeName": "SPRING_BOOT",
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 1,
+                "histogram": {
+                    "1s": 0,
+                    "3s": 0,
+                    "5s": 1,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "sourceHistogram": {
+                    "stuck-demo-tomcat": {
+                        "1s": 0,
+                        "3s": 0,
+                        "5s": 1,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "targetHistogram": {
+                    "stuck-demo-tomcat": {
+                        "1s": 0,
+                        "3s": 0,
+                        "5s": 1,
+                        "Slow": 0,
+                        "Error": 0
+                    }
+                },
+                "sourceTimeSeriesHistogram": {
+                    "stuck-demo-tomcat": [
+                        {
+                            "key": "1s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "3s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "5s",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    1
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Slow",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        },
+                        {
+                            "key": "Error",
+                            "values": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    1718104620000,
+                                    0
+                                ]
+                            ]
+                        }
+                    ]
+                },
+                "hasAlert": false
+            },
+            {
+                "key": "stuck-demo-tomcat^SPRING_BOOT~stuck-demo-undertow^SPRING_BOOT",
+                "from": "stuck-demo-tomcat^SPRING_BOOT",
+                "to": "stuck-demo-undertow^SPRING_BOOT",
+                "fromAgent": [],
+                "toAgent": [],
+                "sourceInfo": {
+                    "applicationName": "stuck-demo-tomcat",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "targetInfo": {
+                    "applicationName": "stuck-demo-undertow",
+                    "serviceType": "SPRING_BOOT",
+                    "serviceTypeCode": 1210,
+                    "isWas": true
+                },
+                "filterApplicationName": "stuck-demo-tomcat",
+                "filterApplicationServiceTypeCode": 1210,
+                "filterApplicationServiceTypeName": "SPRING_BOOT",
+                "filterTargetRpcList": [],
+                "totalCount": 1,
+                "errorCount": 0,
+                "slowCount": 0,
+                "histogram": {
+                    "1s": 1,
+                    "3s": 0,
+                    "5s": 0,
+                    "Slow": 0,
+                    "Error": 0
+                },
+                "timeSeriesHistogram": [
+                    {
+                        "key": "1s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                1
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "3s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "5s",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Slow",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    },
+                    {
+                        "key": "Error",
+                        "values": [
+                            [
+                                0,
+                                0
+                            ],
+                            [
+                                1718104620000,
+                                0
+                            ]
+                        ]
+                    }
+                ],
+                "sourceHistogram": {},
+                "targetHistogram": {},
+                "sourceTimeSeriesHistogram": {},
+                "hasAlert": false
+            }
+        ]
+    },
+    "callStackEnd": 1718104639140
+}

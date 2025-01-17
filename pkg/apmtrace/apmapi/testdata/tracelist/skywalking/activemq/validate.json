@@ -1,0 +1,78 @@
+{
+    "name": "skywalking-activemq",
+    "traceId": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130001",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1730778283217000000,
+                    "duration": 1476000000,
+                    "serviceName": "activemq-provider",
+                    "name": "GET:/send",
+                    "spanId": "fb9245dd1fef6738",
+                    "kind": 2,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130000-0",
+                        "apm.span.type": "SKYWALKING",
+                        "http.method": "GET",
+                        "http.status_code": "200",
+                        "url.full": "http://localhost:19999/send"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1730778284548000000,
+                    "duration": 52000000,
+                    "serviceName": "activemq-provider",
+                    "name": "ActiveMQ/Queue/ActiveMQQueue/Producer",
+                    "spanId": "fa9245dd1fef6738",
+                    "pSpanId": "fb9245dd1fef6738",
+                    "nextSpanId": "9dc0ee47267c4446",
+                    "kind": 4,
+                    "code": 1,
+                    "attributes":
+                    {
+                        "apm.original.span.id": "8d9b8782c9844d2ba60e4d68a5161713.37.17307782832130000-1",
+                        "apm.span.type": "SKYWALKING",
+                        "messaging.destination.name": "ActiveMQQueue",
+                        "messaging.system": "activemq",
+                        "net.peer.name": "10.0.2.15:61616"
+                    }
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1730778284680000000,
+                            "duration": 20000000,
+                            "serviceName": "activemq-consumer",
+                            "name": "ActiveMQ/Queue/ActiveMQQueue/Consumer",
+                            "spanId": "9dc0ee47267c4446",
+                            "pSpanId": "fa9245dd1fef6738",
+                            "kind": 5,
+                            "code": 1,
+                            "attributes":
+                            {
+                                "apm.original.span.id": "5c7ad325d0e24e0891d1535a86e3374e.38.17307782846770000-0",
+                                "apm.span.type": "SKYWALKING",
+                                "messaging.destination.name": "ActiveMQQueue",
+                                "messaging.system": "activemq",
+                                "net.peer.name": "10.0.2.15:61616",
+                                "transmission.latency": "141"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

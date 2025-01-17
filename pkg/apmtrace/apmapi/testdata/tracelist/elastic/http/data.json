@@ -1,0 +1,1036 @@
+{
+    "took" : 2092,
+    "timed_out" : false,
+    "_shards" : {
+      "total" : 3,
+      "successful" : 3,
+      "skipped" : 0,
+      "failed" : 0
+    },
+    "hits" : {
+      "total" : {
+        "value" : 12,
+        "relation" : "eq"
+      },
+      "max_score" : null,
+      "hits" : [
+        {
+          "_index" : "apm-7.17.20-transaction-000001",
+          "_type" : "_doc",
+          "_id" : "aNYazY4BTtiQlewB6F3G",
+          "_score" : null,
+          "_source" : {
+            "source" : {
+              "ip" : "192.168.1.6"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "transaction"
+            },
+            "url" : {
+              "path" : "/api/jpa-demo/get",
+              "scheme" : "http",
+              "port" : 12380,
+              "domain" : "dev.kindling.lan",
+              "query" : "sleep=1000",
+              "full" : "http://dev.kindling.lan:12380/api/jpa-demo/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:02.668Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "7b131f32118399588495ef1d3e907cd8632cf7566bf17601b93dcec0e5014bb9"
+              },
+              "framework" : {
+                "name" : "Spring Web MVC",
+                "version" : "5.2.15.RELEASE"
+              },
+              "name" : "spring-requesttemplate-gateway",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "192.168.1.6",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "192.168.1.6"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200,
+                "finished" : true,
+                "headers_sent" : true
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-11T12:21:16.608000373Z",
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "result" : "HTTP 2xx",
+              "duration" : {
+                "us" : 3150090
+              },
+              "name" : "ApiController#getData",
+              "span_count" : {
+                "dropped" : 0,
+                "started" : 1
+              },
+              "id" : "bf884a39ae15b7f7",
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1712838062668019
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "transaction"
+            ]
+          },
+          "sort" : [
+            1712838062668019
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "Z9YazY4BTtiQlewB6F3G",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "bf884a39ae15b7f7"
+            },
+            "destination" : {
+              "address" : "spring-requesttemplate-demo-svc",
+              "port" : 8080
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "url" : {
+              "original" : "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:02.676Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-requesttemplate-gateway"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200
+              }
+            },
+            "event" : {
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "id" : "bf884a39ae15b7f7"
+            },
+            "span" : {
+              "duration" : {
+                "us" : 3130705
+              },
+              "subtype" : "http",
+              "destination" : {
+                "service" : {
+                  "resource" : "spring-requesttemplate-demo-svc:8080"
+                }
+              },
+              "name" : "GET spring-requesttemplate-demo-svc",
+              "http" : {
+                "method" : "GET",
+                "response" : {
+                  "status_code" : 200
+                }
+              },
+              "http.url.original" : "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=1000",
+              "id" : "287690d7576070c8",
+              "type" : "external"
+            },
+            "timestamp" : {
+              "us" : 1712838062676581
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1712838062676581
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-transaction-000001",
+          "_type" : "_doc",
+          "_id" : "TdYazY4BTtiQlewB1U1a",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "287690d7576070c8"
+            },
+            "source" : {
+              "ip" : "10.244.0.62"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "transaction"
+            },
+            "url" : {
+              "path" : "/api/jpa-demo/get",
+              "scheme" : "http",
+              "port" : 8080,
+              "query" : "sleep=1000",
+              "domain" : "spring-requesttemplate-demo-svc",
+              "full" : "http://spring-requesttemplate-demo-svc:8080/api/jpa-demo/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:02.686Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "a058c20c48884252f68f9187d2cf483dac0951aceddc4cfdf150725be2a876ea"
+              },
+              "framework" : {
+                "name" : "Spring Web MVC",
+                "version" : "5.2.15.RELEASE"
+              },
+              "name" : "spring-requesttemplate-demo",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "192.168.1.6",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "10.244.0.62"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200,
+                "finished" : true,
+                "headers_sent" : true
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-11T12:21:11.640130906Z",
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "result" : "HTTP 2xx",
+              "duration" : {
+                "us" : 3125010
+              },
+              "name" : "ApiController#getData",
+              "span_count" : {
+                "dropped" : 0,
+                "started" : 3
+              },
+              "id" : "b429ab1608d0e881",
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1712838062686165
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "transaction"
+            ]
+          },
+          "sort" : [
+            1712838062686165
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "StYazY4BTtiQlewB1U1a",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "b429ab1608d0e881"
+            },
+            "destination" : {
+              "address" : "jpa-demo",
+              "port" : 18888
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "url" : {
+              "original" : "http://jpa-demo:18888/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:02.689Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-requesttemplate-demo"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200
+              }
+            },
+            "event" : {
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "id" : "b429ab1608d0e881"
+            },
+            "span" : {
+              "duration" : {
+                "us" : 1037615
+              },
+              "subtype" : "http",
+              "name" : "GET jpa-demo",
+              "destination" : {
+                "service" : {
+                  "resource" : "jpa-demo:18888"
+                }
+              },
+              "http" : {
+                "method" : "GET",
+                "response" : {
+                  "status_code" : 200
+                }
+              },
+              "http.url.original" : "http://jpa-demo:18888/get?sleep=1000",
+              "id" : "a731a5b2d20441f1",
+              "type" : "external"
+            },
+            "timestamp" : {
+              "us" : 1712838062689573
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1712838062689573
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-transaction-000001",
+          "_type" : "_doc",
+          "_id" : "ftYazY4BTtiQlewB3VI-",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "a731a5b2d20441f1"
+            },
+            "source" : {
+              "ip" : "10.244.68.100"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "transaction"
+            },
+            "url" : {
+              "path" : "/get",
+              "scheme" : "http",
+              "port" : 18888,
+              "domain" : "jpa-demo",
+              "query" : "sleep=1000",
+              "full" : "http://jpa-demo:18888/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:02.694Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "d4c4c28a293cfb43233c4a5200c906e2e59ddf097b0150638234cf3ee93d905d"
+              },
+              "framework" : {
+                "name" : "Spring Web MVC",
+                "version" : "5.2.15.RELEASE"
+              },
+              "name" : "spring-jpa-demo",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "192.168.1.6",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "10.244.68.100"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200,
+                "finished" : true,
+                "headers_sent" : true
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-11T12:21:13.613931008Z",
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "result" : "HTTP 2xx",
+              "duration" : {
+                "us" : 1034682
+              },
+              "name" : "MainController#ListUsers",
+              "id" : "fec467c2694d8d8a",
+              "span_count" : {
+                "dropped" : 0,
+                "started" : 1
+              },
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1712838062694100
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "transaction"
+            ]
+          },
+          "sort" : [
+            1712838062694100
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "fdYazY4BTtiQlewB3VI-",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "fec467c2694d8d8a"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:02.708Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-jpa-demo"
+            },
+            "destination" : {
+              "address" : "mysql-nejan-test",
+              "port" : 3306
+            },
+            "event" : {
+              "outcome" : "success"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "transaction" : {
+              "id" : "fec467c2694d8d8a"
+            },
+            "timestamp" : {
+              "us" : 1712838062708508
+            },
+            "span" : {
+              "duration" : {
+                "us" : 1011779
+              },
+              "subtype" : "mysql",
+              "name" : "SELECT FROM user",
+              "destination" : {
+                "service" : {
+                  "resource" : "mysql/demo"
+                }
+              },
+              "action" : "query",
+              "id" : "d3756726e3cffd6c",
+              "type" : "db",
+              "db" : {
+                "instance" : "demo",
+                "statement" : "SELECT user_id ,email ,name,timestamp FROM user  u JOIN (SELECT SLEEP(?) as ts ) t ON u.user_id != t.ts where name != ?",
+                "type" : "sql"
+              }
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1712838062708508
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "S9YazY4BTtiQlewB1U1a",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "b429ab1608d0e881"
+            },
+            "destination" : {
+              "address" : "jpa-demo",
+              "port" : 18888
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "url" : {
+              "original" : "http://jpa-demo:18888/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:03.730Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-requesttemplate-demo"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200
+              }
+            },
+            "event" : {
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "id" : "b429ab1608d0e881"
+            },
+            "span" : {
+              "duration" : {
+                "us" : 1027262
+              },
+              "subtype" : "http",
+              "name" : "GET jpa-demo",
+              "destination" : {
+                "service" : {
+                  "resource" : "jpa-demo:18888"
+                }
+              },
+              "http" : {
+                "method" : "GET",
+                "response" : {
+                  "status_code" : 200
+                }
+              },
+              "http.url.original" : "http://jpa-demo:18888/get?sleep=1000",
+              "id" : "5a7cc25b00b12c94",
+              "type" : "external"
+            },
+            "timestamp" : {
+              "us" : 1712838063730639
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1712838063730639
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-transaction-000001",
+          "_type" : "_doc",
+          "_id" : "gNYazY4BTtiQlewB3VI-",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "5a7cc25b00b12c94"
+            },
+            "source" : {
+              "ip" : "10.244.68.100"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "transaction"
+            },
+            "url" : {
+              "path" : "/get",
+              "scheme" : "http",
+              "port" : 18888,
+              "query" : "sleep=1000",
+              "domain" : "jpa-demo",
+              "full" : "http://jpa-demo:18888/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:03.735Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "d4c4c28a293cfb43233c4a5200c906e2e59ddf097b0150638234cf3ee93d905d"
+              },
+              "framework" : {
+                "name" : "Spring Web MVC",
+                "version" : "5.2.15.RELEASE"
+              },
+              "name" : "spring-jpa-demo",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "192.168.1.6",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "10.244.68.100"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200,
+                "finished" : true,
+                "headers_sent" : true
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-11T12:21:13.615559243Z",
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "duration" : {
+                "us" : 1026487
+              },
+              "result" : "HTTP 2xx",
+              "name" : "MainController#ListUsers",
+              "span_count" : {
+                "dropped" : 0,
+                "started" : 1
+              },
+              "id" : "0847fcb22c1b994d",
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1712838063735098
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "transaction"
+            ]
+          },
+          "sort" : [
+            1712838063735098
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "f9YazY4BTtiQlewB3VI-",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "0847fcb22c1b994d"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:03.742Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-jpa-demo"
+            },
+            "destination" : {
+              "address" : "mysql-nejan-test",
+              "port" : 3306
+            },
+            "event" : {
+              "outcome" : "success"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "transaction" : {
+              "id" : "0847fcb22c1b994d"
+            },
+            "timestamp" : {
+              "us" : 1712838063742119
+            },
+            "span" : {
+              "duration" : {
+                "us" : 1005920
+              },
+              "subtype" : "mysql",
+              "destination" : {
+                "service" : {
+                  "resource" : "mysql/demo"
+                }
+              },
+              "name" : "SELECT FROM user",
+              "action" : "query",
+              "id" : "cde01bf154212c76",
+              "type" : "db",
+              "db" : {
+                "instance" : "demo",
+                "statement" : "SELECT user_id ,email ,name,timestamp FROM user  u JOIN (SELECT SLEEP(?) as ts ) t ON u.user_id != t.ts where name != ?",
+                "type" : "sql"
+              }
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1712838063742119
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "TNYazY4BTtiQlewB1U1a",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "b429ab1608d0e881"
+            },
+            "destination" : {
+              "address" : "jpa-demo",
+              "port" : 18888
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "url" : {
+              "original" : "http://jpa-demo:18888/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:04.765Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-requesttemplate-demo"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200
+              }
+            },
+            "event" : {
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "id" : "b429ab1608d0e881"
+            },
+            "span" : {
+              "duration" : {
+                "us" : 1037297
+              },
+              "subtype" : "http",
+              "name" : "GET jpa-demo",
+              "destination" : {
+                "service" : {
+                  "resource" : "jpa-demo:18888"
+                }
+              },
+              "http" : {
+                "method" : "GET",
+                "response" : {
+                  "status_code" : 200
+                }
+              },
+              "http.url.original" : "http://jpa-demo:18888/get?sleep=1000",
+              "id" : "046c9791807a7fce",
+              "type" : "external"
+            },
+            "timestamp" : {
+              "us" : 1712838064765128
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1712838064765128
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-transaction-000001",
+          "_type" : "_doc",
+          "_id" : "gtYazY4BTtiQlewB3VI-",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "046c9791807a7fce"
+            },
+            "source" : {
+              "ip" : "10.244.68.100"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "transaction"
+            },
+            "url" : {
+              "path" : "/get",
+              "scheme" : "http",
+              "port" : 18888,
+              "query" : "sleep=1000",
+              "domain" : "jpa-demo",
+              "full" : "http://jpa-demo:18888/get?sleep=1000"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:04.774Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "node" : {
+                "name" : "d4c4c28a293cfb43233c4a5200c906e2e59ddf097b0150638234cf3ee93d905d"
+              },
+              "framework" : {
+                "name" : "Spring Web MVC",
+                "version" : "5.2.15.RELEASE"
+              },
+              "name" : "spring-jpa-demo",
+              "runtime" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "language" : {
+                "name" : "Java",
+                "version" : "11.0.13"
+              },
+              "version" : "0.0.1-SNAPSHOT"
+            },
+            "host" : {
+              "os" : {
+                "platform" : "Linux"
+              },
+              "ip" : "192.168.1.6",
+              "architecture" : "amd64"
+            },
+            "client" : {
+              "ip" : "10.244.68.100"
+            },
+            "http" : {
+              "request" : {
+                "method" : "GET"
+              },
+              "response" : {
+                "status_code" : 200,
+                "finished" : true,
+                "headers_sent" : true
+              },
+              "version" : "1.1"
+            },
+            "event" : {
+              "ingested" : "2024-04-11T12:21:13.616997581Z",
+              "outcome" : "success"
+            },
+            "transaction" : {
+              "result" : "HTTP 2xx",
+              "duration" : {
+                "us" : 1031300
+              },
+              "name" : "MainController#ListUsers",
+              "span_count" : {
+                "dropped" : 0,
+                "started" : 1
+              },
+              "id" : "5142634ce5adb968",
+              "type" : "request",
+              "sampled" : true
+            },
+            "timestamp" : {
+              "us" : 1712838064774125
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "transaction"
+            ]
+          },
+          "sort" : [
+            1712838064774125
+          ]
+        },
+        {
+          "_index" : "apm-7.17.20-span-000001",
+          "_type" : "_doc",
+          "_id" : "gdYazY4BTtiQlewB3VI-",
+          "_score" : null,
+          "_source" : {
+            "parent" : {
+              "id" : "5142634ce5adb968"
+            },
+            "trace" : {
+              "id" : "60f5bbc2ebffe7c886b108bee5be9b32"
+            },
+            "@timestamp" : "2024-04-11T12:21:04.787Z",
+            "ecs" : {
+              "version" : "1.12.0"
+            },
+            "service" : {
+              "name" : "spring-jpa-demo"
+            },
+            "destination" : {
+              "address" : "mysql-nejan-test",
+              "port" : 3306
+            },
+            "event" : {
+              "outcome" : "success"
+            },
+            "processor" : {
+              "name" : "transaction",
+              "event" : "span"
+            },
+            "transaction" : {
+              "id" : "5142634ce5adb968"
+            },
+            "timestamp" : {
+              "us" : 1712838064787538
+            },
+            "span" : {
+              "duration" : {
+                "us" : 1006365
+              },
+              "subtype" : "mysql",
+              "name" : "SELECT FROM user",
+              "destination" : {
+                "service" : {
+                  "resource" : "mysql/demo"
+                }
+              },
+              "action" : "query",
+              "id" : "6cc9281fa58dfff8",
+              "type" : "db",
+              "db" : {
+                "instance" : "demo",
+                "statement" : "SELECT user_id ,email ,name,timestamp FROM user  u JOIN (SELECT SLEEP(?) as ts ) t ON u.user_id != t.ts where name != ?",
+                "type" : "sql"
+              }
+            }
+          },
+          "fields" : {
+            "processor.event" : [
+              "span"
+            ]
+          },
+          "sort" : [
+            1712838064787538
+          ]
+        }
+      ]
+    }
+  }

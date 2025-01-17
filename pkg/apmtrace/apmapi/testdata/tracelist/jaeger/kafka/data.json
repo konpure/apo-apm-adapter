@@ -1,0 +1,579 @@
+{
+    "data": [
+        {
+            "traceID": "aeef29289969799b0fdf2f99f9701387",
+            "spans": [
+                {
+                    "traceID": "aeef29289969799b0fdf2f99f9701387",
+                    "spanID": "e27b36d8a6336b50",
+                    "operationName": "topic_login publish",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "aeef29289969799b0fdf2f99f9701387",
+                            "spanID": "791ffe785bab9958"
+                        }
+                    ],
+                    "startTime": 1730793912574554,
+                    "duration": 4268,
+                    "tags": [
+                        {
+                            "key": "messaging.client_id",
+                            "type": "string",
+                            "value": "producer-1"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-2"
+                        },
+                        {
+                            "key": "messaging.kafka.message.offset",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "topic_login"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "publish"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 139
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "kafka"
+                        },
+                        {
+                            "key": "messaging.destination.partition.id",
+                            "type": "string",
+                            "value": "2"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "producer"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "aeef29289969799b0fdf2f99f9701387",
+                    "spanID": "791ffe785bab9958",
+                    "operationName": "GET /send",
+                    "references": [],
+                    "startTime": 1730793912573000,
+                    "duration": 4036,
+                    "tags": [
+                        {
+                            "key": "http.request.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.route",
+                            "type": "string",
+                            "value": "/send"
+                        },
+                        {
+                            "key": "network.peer.address",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "network.peer.port",
+                            "type": "int64",
+                            "value": 63806
+                        },
+                        {
+                            "key": "server.address",
+                            "type": "string",
+                            "value": "localhost"
+                        },
+                        {
+                            "key": "client.address",
+                            "type": "string",
+                            "value": "10.0.2.2"
+                        },
+                        {
+                            "key": "url.path",
+                            "type": "string",
+                            "value": "/send"
+                        },
+                        {
+                            "key": "url.query",
+                            "type": "string",
+                            "value": "name=ccc"
+                        },
+                        {
+                            "key": "url.scheme",
+                            "type": "string",
+                            "value": "http"
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "http-nio-19999-exec-2"
+                        },
+                        {
+                            "key": "http.response.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 139
+                        },
+                        {
+                            "key": "network.protocol.version",
+                            "type": "string",
+                            "value": "1.1"
+                        },
+                        {
+                            "key": "server.port",
+                            "type": "int64",
+                            "value": 19999
+                        },
+                        {
+                            "key": "user_agent.original",
+                            "type": "string",
+                            "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p2",
+                    "warnings": null
+                },
+                {
+                    "traceID": "aeef29289969799b0fdf2f99f9701387",
+                    "spanID": "ec50f3a414b0e272",
+                    "operationName": "topic_login process",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "aeef29289969799b0fdf2f99f9701387",
+                            "spanID": "e27b36d8a6336b50"
+                        }
+                    ],
+                    "startTime": 1730793912580000,
+                    "duration": 578,
+                    "tags": [
+                        {
+                            "key": "messaging.client_id",
+                            "type": "string",
+                            "value": "consumer-group1-1"
+                        },
+                        {
+                            "key": "messaging.kafka.message.offset",
+                            "type": "int64",
+                            "value": 0
+                        },
+                        {
+                            "key": "thread.name",
+                            "type": "string",
+                            "value": "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1"
+                        },
+                        {
+                            "key": "messaging.destination.name",
+                            "type": "string",
+                            "value": "topic_login"
+                        },
+                        {
+                            "key": "messaging.operation",
+                            "type": "string",
+                            "value": "process"
+                        },
+                        {
+                            "key": "messaging.kafka.consumer.group",
+                            "type": "string",
+                            "value": "group1"
+                        },
+                        {
+                            "key": "thread.id",
+                            "type": "int64",
+                            "value": 138
+                        },
+                        {
+                            "key": "messaging.system",
+                            "type": "string",
+                            "value": "kafka"
+                        },
+                        {
+                            "key": "messaging.destination.partition.id",
+                            "type": "string",
+                            "value": "2"
+                        },
+                        {
+                            "key": "messaging.message.body.size",
+                            "type": "int64",
+                            "value": 80
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "consumer"
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "otlp"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p3",
+                    "warnings": [
+                        "clock skew adjustment disabled; not applying calculated delta of -3.600343ms"
+                    ]
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "kafka-provider",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "34fcb2cb63b600318a2eefcca325e0b4d50e5d57f6958e69744a6f8decc39360"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.kafka-clients-0.11"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=kafka-provider -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/kafka/kafka-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 32233
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "848be150-426c-49e6-93d3-e51cac50ed19"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                },
+                "p2": {
+                    "serviceName": "kafka-provider",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "34fcb2cb63b600318a2eefcca325e0b4d50e5d57f6958e69744a6f8decc39360"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.tomcat-7.0"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=kafka-provider -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/kafka/kafka-provider.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 32233
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "848be150-426c-49e6-93d3-e51cac50ed19"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                },
+                "p3": {
+                    "serviceName": "kafka-consumer",
+                    "tags": [
+                        {
+                            "key": "container.id",
+                            "type": "string",
+                            "value": "34fcb2cb63b600318a2eefcca325e0b4d50e5d57f6958e69744a6f8decc39360"
+                        },
+                        {
+                            "key": "host.arch",
+                            "type": "string",
+                            "value": "amd64"
+                        },
+                        {
+                            "key": "host.name",
+                            "type": "string",
+                            "value": "localhost.localdomain"
+                        },
+                        {
+                            "key": "os.description",
+                            "type": "string",
+                            "value": "Linux 4.19.1-1.el7.elrepo.x86_64"
+                        },
+                        {
+                            "key": "os.type",
+                            "type": "string",
+                            "value": "linux"
+                        },
+                        {
+                            "key": "otel.library.name",
+                            "type": "string",
+                            "value": "io.opentelemetry.kafka-clients-0.11"
+                        },
+                        {
+                            "key": "otel.library.version",
+                            "type": "string",
+                            "value": "2.3.0-alpha"
+                        },
+                        {
+                            "key": "process.command_line",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java -javaagent:/root/app/agents/opentelemetry-java/opentelemetry-java-2.3.0/opentelemetry-javaagent-2.3.0.jar -Dotel.resource.attributes=service.name=kafka-consumer -Dotel.exporter.otlp.endpoint=http://10.0.2.15:4317 -Dotel.exporter.otlp.protocol=grpc -Dotel.logs.exporter=none -Xmx500m -jar /root/app/apps/mq/kafka/kafka-consumer.jar"
+                        },
+                        {
+                            "key": "process.executable.path",
+                            "type": "string",
+                            "value": "/usr/local/java/jdk1.8.0_162/jre/bin/java"
+                        },
+                        {
+                            "key": "process.pid",
+                            "type": "int64",
+                            "value": 32243
+                        },
+                        {
+                            "key": "process.runtime.description",
+                            "type": "string",
+                            "value": "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.162-b12"
+                        },
+                        {
+                            "key": "process.runtime.name",
+                            "type": "string",
+                            "value": "Java(TM) SE Runtime Environment"
+                        },
+                        {
+                            "key": "process.runtime.version",
+                            "type": "string",
+                            "value": "1.8.0_162-b12"
+                        },
+                        {
+                            "key": "service.instance.id",
+                            "type": "string",
+                            "value": "eb0a37a5-53c3-4713-ad7b-b818b53dd66d"
+                        },
+                        {
+                            "key": "service.version",
+                            "type": "string",
+                            "value": "1.0.0"
+                        },
+                        {
+                            "key": "telemetry.distro.name",
+                            "type": "string",
+                            "value": "opentelemetry-java-instrumentation"
+                        },
+                        {
+                            "key": "telemetry.distro.version",
+                            "type": "string",
+                            "value": "2.3.0"
+                        },
+                        {
+                            "key": "telemetry.sdk.language",
+                            "type": "string",
+                            "value": "java"
+                        },
+                        {
+                            "key": "telemetry.sdk.name",
+                            "type": "string",
+                            "value": "opentelemetry"
+                        },
+                        {
+                            "key": "telemetry.sdk.version",
+                            "type": "string",
+                            "value": "1.37.0"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}

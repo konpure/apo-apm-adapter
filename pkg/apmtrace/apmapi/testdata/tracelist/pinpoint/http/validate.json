@@ -1,0 +1,77 @@
+{
+    "name": "pinpoint-http",
+    "traceId": "stuck-demo-tomcat^1718104578621^1",
+    "services":
+    [
+        {
+            "entrySpans":
+            [
+                {
+                    "startTime": 1718104634862000000,
+                    "duration": 4278000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "/wait/callOthers",
+                    "spanId": "1",
+                    "kind": 2,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "http.status_code": "200",
+                        "http.url": "/wait/callOthers"
+                    }
+                }
+            ],
+            "exitSpans":
+            [
+                {
+                    "startTime": 1718104635742000000,
+                    "duration": 101000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "DefaultClientExchangeHandlerImpl.start()",
+                    "spanId": "9",
+                    "pSpanId": "8",
+                    "nextSpanId": "10",
+                    "kind": 3,
+                    "code": 0,
+                    "attributes":
+                    {
+                        "http.url": "http://localhost:9999/cpu/loop/1"
+                    }
+                },
+                {
+                    "startTime": 1718104635844000000,
+                    "duration": 2588000000,
+                    "serviceName": "stuck-demo-tomcat",
+                    "name": "BasicFuture.get(long timeout, TimeUnit unit)",
+                    "spanId": "16",
+                    "pSpanId": "7",
+                    "kind": 3,
+                    "code": 0
+                }
+            ],
+            "children":
+            [
+                {
+                    "entrySpans":
+                    [
+                        {
+                            "startTime": 1718104636100000000,
+                            "duration": 91000000,
+                            "serviceName": "stuck-demo-undertow",
+                            "name": "/cpu/loop/1",
+                            "spanId": "10",
+                            "pSpanId": "9",
+                            "kind": 2,
+                            "code": 0,
+                            "attributes":
+                            {
+                                "http.status_code": "200",
+                                "http.url": "/cpu/loop/1"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

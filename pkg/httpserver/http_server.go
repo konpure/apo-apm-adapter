@@ -58,7 +58,7 @@ func queryTraceList(ctx iris.Context) {
 		return
 	}
 
-	result, err := global.TRACE_CLIENT.QueryTraceList(request.ApmType, request.TraceId, request.StartTime)
+	result, err := global.TRACE_CLIENT.QueryTraceList(request.ApmType, request.TraceId, request.StartTime, request.Attributes)
 	if err != nil {
 		log.Printf("[QueryTraceList] apmType: %s, traceId: %s, error: %v", request.ApmType, request.TraceId, err)
 		responseWithError(ctx, err)
@@ -80,7 +80,8 @@ func responseWithError(ctx iris.Context, err error) {
 }
 
 type TraceListRequest struct {
-	ApmType   string `json:"apmType"`
-	TraceId   string `json:"traceId"`
-	StartTime int64  `json:"startTime"`
+	ApmType    string `json:"apmType"`
+	TraceId    string `json:"traceId"`
+	StartTime  int64  `json:"startTime"`
+	Attributes string `json:"attributes"`
 }

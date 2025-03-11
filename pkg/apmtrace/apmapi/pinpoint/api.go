@@ -22,7 +22,7 @@ func NewPinpointApi(address string, timeout int64) (ppApi *PinpointApi, err erro
 	}, nil
 }
 
-func (pinpoint *PinpointApi) QueryList(traceId string, startTimeMs int64) ([]*model.OtelServiceNode, error) {
+func (pinpoint *PinpointApi) QueryList(traceId string, startTimeMs int64, attributes string) ([]*model.OtelServiceNode, error) {
 	client := &http.Client{
 		Timeout: pinpoint.Timeout,
 	}

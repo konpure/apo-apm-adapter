@@ -123,10 +123,9 @@ func buildPinpointApi(conf *config.PinpointConfig, apiMap map[string]apmapi.Quer
 	apiMap[APMTYPE_PINPOINT] = ppAPMClient
 }
 
-func (client *ApmTraceClient) QueryTraceList(apmType string, traceId string, startTimeMs int64) ([]*model.OtelServiceNode, error) {
+func (client *ApmTraceClient) QueryTraceList(apmType string, traceId string, startTimeMs int64, attributes string) ([]*model.OtelServiceNode, error) {
 	if api, exist := client.apiMap[apmType]; exist {
-		return api.QueryList(traceId, startTimeMs)
+		return api.QueryList(traceId, startTimeMs, attributes)
 	}
 	return nil, fmt.Errorf("unknown apmType: %s", apmType)
 }
-

@@ -5,5 +5,5 @@ import (
 )
 
 type QueryByApmApi interface {
-	QueryList(traceId string, startTimeMs int64) ([]*model.OtelServiceNode, error)
+	QueryList(traceId string, startTimeMs int64, attributes string) ([]*model.OtelServiceNode, error)
 }

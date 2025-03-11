@@ -21,7 +21,7 @@ func NewJaegerApi(address string, timeout int64) *JaegerApi {
 	}
 }
 
-func (jaeger *JaegerApi) QueryList(traceId string, startTimeMs int64) ([]*model.OtelServiceNode, error) {
+func (jaeger *JaegerApi) QueryList(traceId string, startTimeMs int64, attributes string) ([]*model.OtelServiceNode, error) {
 	client := &http.Client{
 		Timeout: jaeger.Timeout,
 	}

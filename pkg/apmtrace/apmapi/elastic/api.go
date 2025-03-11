@@ -40,7 +40,7 @@ func NewELASTICApi(addr string, username string, password string, timeout int64)
 	return esapi, err
 }
 
-func (api *ELASTICApi) QueryList(traceId string, startTimeMs int64) ([]*model.OtelServiceNode, error) {
+func (api *ELASTICApi) QueryList(traceId string, startTimeMs int64, attributes string) ([]*model.OtelServiceNode, error) {
 	searchResp, err := api.searchSpans(traceId, "apm-*-span", "apm-*-transaction", "apm-*-error")
 	if err != nil {
 		return nil, err

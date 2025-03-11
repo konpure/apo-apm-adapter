@@ -1,7 +1,7 @@
 github.com/BurntSushi/toml v1.3.2 h1:o7IhLm0Msx3BaB+n3Ag7L8EVlByGnpq14C4YWiu/gL8=
 github.com/BurntSushi/toml v1.3.2/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
-github.com/CloudDetail/apo-module/apm/client v0.0.0-20250117023909-15f015544de7 h1:hifdSOemvslV7sculgAzY4MALk2cdjWJGZwRn95Smx8=
-github.com/CloudDetail/apo-module/apm/client v0.0.0-20250117023909-15f015544de7/go.mod h1:zF+uNa3aDPc36aSV4wKS0GHNFtgh6Rj12du5XaCErrs=
+github.com/CloudDetail/apo-module/apm/client v0.0.0-20250310033028-3df9cd80157b h1:rDiVyZR2KxupOpfiIV4mxciO9b/gOskSdECw1zwXso0=
+github.com/CloudDetail/apo-module/apm/client v0.0.0-20250310033028-3df9cd80157b/go.mod h1:zF+uNa3aDPc36aSV4wKS0GHNFtgh6Rj12du5XaCErrs=
 github.com/CloudDetail/apo-module/apm/model v0.0.0-20250117023909-15f015544de7 h1:Gc3vQppf3zHqf6Hyz3Y/Ue6YAazUN2Q7sr6ocZ+q6wI=
 github.com/CloudDetail/apo-module/apm/model v0.0.0-20250117023909-15f015544de7/go.mod h1:1CHcR5KaNC6ae6Wj41ONYKeDqxuS4IBpgBdMcxgPzfk=
 github.com/CloudDetail/apo-module/model v0.0.0-20250117023909-15f015544de7 h1:BJpjcsJZBYp4lhggMVVwuu0/FxeGhLt13gEyM3R7dT4=

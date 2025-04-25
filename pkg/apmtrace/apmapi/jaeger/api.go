@@ -22,10 +22,7 @@ func NewJaegerApi(address string, timeout int64) *JaegerApi {
 }
 
 func (jaeger *JaegerApi) QueryList(traceId string, startTimeMs int64, attributes string) ([]*model.OtelServiceNode, error) {
-	client := &http.Client{
-		Timeout: jaeger.Timeout,
-	}
-	resp, err := client.Get(fmt.Sprintf("%s/%s", jaeger.Address, traceId))
+	resp, err := queryJson(fmt.Sprintf("%s/%s", jaeger.Address, traceId), jaeger.Timeout)
 	if err != nil {
 		return nil, err
 	}
@@ -38,4 +35,11 @@ func (jaeger *JaegerApi) QueryList(traceId string, startTimeMs int64, attributes
 		return nil, fmt.Errorf("[x Trace NotFound] Jaeger traceId: %s", traceId)
 	}
 	return ConvertToServiceNodes(&response.Data[0])
+}
+
+func queryJson(url string, timeout time.Duration) (*http.Response, error) {
+	client := &http.Client{
+		Timeout: timeout,
+	}
+	return client.Get(url)
 }

@@ -1,6 +1,7 @@
 package pinpoint
 
 import (
+	"errors"
 	"strings"
 
 	"github.com/CloudDetail/apo-module/apm/model/v1"
@@ -10,6 +11,10 @@ var otSpanTagsMapping = map[string]string{
 	"Servlet Process":  model.AttributeHTTPURL,
 	"http.status.code": model.AttributeHTTPStatusCode,
 }
+
+var (
+	ErrMissRootSpan error = errors.New("miss RootSpan")
+)
 
 type PinpointResponse struct {
 	TraceId    string             `json:"transactionId"`
@@ -28,7 +33,7 @@ func (resp *PinpointResponse) ConvertToServiceNodes() ([]*model.OtelServiceNode,
 	spanMap := make(map[string]*model.OtelSpan, 0)
 	childrenSpans := make(map[string][]*model.OtelSpan, 0)
 	clientServerSpans := make(map[string]bool, 0)
-	var rootSpan *model.OtelSpan
+	var rootSpan *model.OtelSpan = nil
 
 	for _, callStack := range resp.CallStacks {
 		parentSpanId := callStack[7].(string)
@@ -92,6 +97,9 @@ func (resp *PinpointResponse) ConvertToServiceNodes() ([]*model.OtelServiceNode,
 		}
 	}
 
+	if rootSpan == nil {
+		return nil, ErrMissRootSpan
+	}
 	checkClientServerSpans(spanMap, childrenSpans, clientServerSpans)
 	checkMiddlewareSpans(childrenSpans, clientServerSpans, rootSpan)
 

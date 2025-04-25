@@ -23,10 +23,7 @@ func NewPinpointApi(address string, timeout int64) (ppApi *PinpointApi, err erro
 }
 
 func (pinpoint *PinpointApi) QueryList(traceId string, startTimeMs int64, attributes string) ([]*model.OtelServiceNode, error) {
-	client := &http.Client{
-		Timeout: pinpoint.Timeout,
-	}
-	resp, err := client.Get(fmt.Sprintf("%s?traceId=%s", pinpoint.Address, strings.ReplaceAll(traceId, "^", "%5E")))
+	resp, err := queryJson(fmt.Sprintf("%s?traceId=%s", pinpoint.Address, strings.ReplaceAll(traceId, "^", "%5E")), pinpoint.Timeout)
 	if err != nil {
 		return nil, err
 	}
@@ -42,4 +39,11 @@ func (pinpoint *PinpointApi) QueryList(traceId string, startTimeMs int64, attrib
 		return nil, fmt.Errorf("[x Trace NotComplete] Pinpoint traceId: %s", traceId)
 	}
 	return response.ConvertToServiceNodes()
+}
+
+func queryJson(url string, timeout time.Duration) (*http.Response, error) {
+	client := &http.Client{
+		Timeout: timeout,
+	}
+	return client.Get(url)
 }

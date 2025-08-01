@@ -90,7 +90,7 @@ jobs:
           context: .
           platforms: linux/arm64
           push: true
-          tags: ${{ env.APM_ADAPTER_IMAGE_FULL_TAG_AMD64 }}
+          tags: ${{ env.APM_ADAPTER_IMAGE_FULL_TAG_ARM64 }}
 
       - name: push tag
         if: github.event_name == 'workflow_dispatch'
